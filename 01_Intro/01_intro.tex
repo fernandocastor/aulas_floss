@@ -1,0 +1,485 @@
+% Author: Fernando Castor. You can contact the author at castor in the cin.ufpe.br domain. 
+
+%THIS WORK IS LICENSED UNDER A CREATIVE COMMONS ATTRIBUTION-NONCOMMERCIAL-SHAREALIKE 3.0 UNPORTED LICENSE. THE WORK (AS DEFINED BY THE LICENSE) IS PROVIDED UNDER THE TERMS OF THIS CREATIVE COMMONS PUBLIC LICENSE ("CCPL" OR "LICENSE"). THE WORK IS PROTECTED BY COPYRIGHT AND/OR OTHER APPLICABLE LAW. ANY USE OF THE WORK OTHER THAN AS AUTHORIZED UNDER THIS LICENSE OR COPYRIGHT LAW IS PROHIBITED.
+%
+%BY EXERCISING ANY RIGHTS TO THE WORK PROVIDED HERE, YOU ACCEPT AND AGREE TO BE BOUND BY THE TERMS OF THIS LICENSE. TO THE EXTENT THIS LICENSE MAY BE CONSIDERED TO BE A CONTRACT, THE LICENSOR GRANTS YOU THE RIGHTS CONTAINED HERE IN CONSIDERATION OF YOUR ACCEPTANCE OF SUCH TERMS AND CONDITIONS.
+%PLEASE REFER TO THE DESCRIPTION OF THE LICENSE (http://creativecommons.org/licenses/by-nc-sa/3.0/) AND TO ITS FULL TEXT (http://creativecommons.org/licenses/by-nc-sa/3.0/legalcode) FOR MORE INFORMATION.
+
+% THIS WORK USES A NUMBER OF IMAGES FROM THIRD-PARTIES. THE COPYRIGHT OF THESE IMAGES REMAIN WITH THEIR OWNERS. 
+
+% Build this file with pdflatex
+\documentclass[xcolor=dvipsnames]{beamer}
+\usecolortheme[named=Brown]{structure} 
+%\usetheme{Rochester}
+\usetheme{Frankfurt}
+
+\usepackage{booktabs}
+\usepackage{graphics}
+\usepackage{multirow}
+\usepackage[latin1]{inputenc}   % para os acentos
+\usepackage[brazil]{babel}      % para hifeniza\c{c}\~{a}o
+\usepackage{color}
+
+%\usepackage[english]{babel}
+%\usepackage[utf8]{inputenc}
+
+\definecolor{lightgrey}{rgb}{0.8, 0.8, 0.8}
+\newcommand{\shd}[1]{\colorbox{lightgrey}{#1}}
+
+\newcommand{\tblue}[1]{\textcolor{blue}{#1}}
+\newcommand{\tred}[1]{\textcolor{red}{#1}}
+\newcommand{\tgreen}[1]{\textcolor{green}{#1}}
+\newcommand{\tyellow}[1]{\textcolor{yellow}{#1}}
+
+
+\newcommand{\byellow}[1]{\colorbox{yellow}{#1}}
+\newcommand{\bred}[1]{\colorbox{red}{\textcolor{white}{#1}}}
+\newcommand{\bgreen}[1]{\colorbox{green}{#1}}
+
+\definecolor{lightestgrey}{rgb}{0.91, 0.91, 0.91}
+\newcommand{\lshd}[1]{\colorbox{lightestgrey}{#1}}
+
+\title{Introdução -- Desenvolvimento de Software de Código Aberto e Livre (IF722)}
+\author{Fernando Castor}
+\pgfdeclareimage[height=0.4cm]{cc}{license}
+
+\institute{Centro de Informática -- Universidade Federal de Pernambuco \\[2.0cm] {\tiny Alguns direitos reservados }\pgfuseimage{cc} }
+\date{}
+\pgfdeclareimage[height=1.0cm]{logo}{ines}
+\pgfdeclareimage[height=0.8cm]{logo2}{spg}
+\pgfdeclareimage[height=0.8cm]{logo3}{cin}
+
+\logo{\pgfuseimage{logo3}\hspace{0.1cm}\pgfuseimage{logo}\hspace{0.1cm}\pgfuseimage{logo2} }
+
+\begin{document}
+
+\frame{\titlepage}
+
+\section{Pergunta}
+\subsection{Pergunta}
+
+\begin{frame}
+	\frametitle{Por que você está aqui?}
+	
+	\pause
+
+	\begin{figure}
+   \begin{center}
+	\includegraphics[scale=0.45]{chipmunk.jpg}\\[0.2cm]
+	{\LARGE \textbf{Hein?}}
+	\end{center}
+	\end{figure}
+
+\end{frame}
+
+\section{Visão Geral da Disciplina}
+\subsection{Visão Geral da Disciplina}
+
+\begin{frame}
+	\frametitle{Informações}
+{\footnotesize
+	\begin{block}{Nome}
+		  \begin{itemize}
+		    \item {\bf Nome}: Desenvolvimento de Software de Código Aberto/Livre.
+		    \item {\bf Na graduação}: Tópicos Avançados em ES -- IF722.
+		    \item {\bf Na pós}: Tópicos Avançados em ES 1 -- IN0977.
+		  \end{itemize}
+	\end{block}
+	\begin{block}{Local/Horários}
+		  \begin{itemize}
+		    \item {\bf Sala}: D224.
+		    \item {\bf Horários}: terças e quintas, 8h-10h e 10h-12h, respectivamente.
+		  \end{itemize}
+	\end{block}
+	\begin{block}{Recursos}
+		  \begin{itemize}
+		    \item {\bf Página}: http://sites.google.com/a/cin.ufpe.br/floss
+		    \item {\bf Lista de discussão}: floss-l@cin.ufpe.br
+		  \end{itemize}
+	\end{block}
+}	
+\end{frame}
+
+%
+%- Como vai ser a cadeira (bem prática)
+%  - Indicar sistemas e sítios
+%  - Relativamente poucas aulas de conteúdo
+%  - Alguns seminários de voluntários
+%
+\begin{frame}
+	\frametitle{Metodologia}
+	\begin{block}{Parte \tyellow{teórica}}
+		  \begin{itemize}
+		    \item Aulas ministradas pelo professor.
+		    \item Seminários ministrados por \bgreen{voluntários}.
+		    \item Apresentações dos alunos.
+		  \end{itemize}
+	\end{block}
+
+\pause
+
+	\begin{block}{Parte \tred{prática}}
+		  \begin{itemize}
+		    \item \bgreen{Envolvimento} com a comunidade FLOSS.
+		    \item Contribuições a um ou mais projetos.
+		    \begin{itemize}
+		      \item Desenvolvimento e correção de bugs
+		      \item Documentação
+		      \item Tradução
+		    \end{itemize}
+		  \end{itemize}
+	\end{block}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Tópicos abordados (parte teórica)}
+		  \begin{enumerate}
+		    \item Visão geral de FLOSS
+		    \begin{itemize}
+		    \item Software livre X de código aberto
+		    \end{itemize}
+		    \item Um pouco de história
+		    \item O processo de desenvolvimento de FLOSS
+		    \item Recursos necessários para iniciar um projeto de FLOSS
+		    \item Modelos de gerenciamento
+		    \item Questões financeiras: quando abrir e quando fechar o software
+		    \item Licenças
+		    \item Estudos de caso e relatos de experiências 
+		  \end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Objetivos de aprendizado}
+	Ao final da disciplina, os alunos deverão ser capazes de
+\begin{itemize}
+\item \tred{Iniciar e conduzir} um novo \tred{projeto} de desenvolvimento de FLOSS
+\pause \vspace{0.2cm}
+\item \tred{Contribuir} ativamente com projetos já existentes
+\pause \vspace{0.2cm}
+\item \tred{Manusear} algumas \tred{ferramentas} necessárias a essa abordagem
+\pause \vspace{0.2cm}
+\item \tred{Distinguir} as principais \tred{licenças} para FLOSS e \tred{escolher} a melhor para um projeto
+\pause \vspace{0.2cm}
+\item \tred{Analisar} se um determinado projeto deve ou não \tred{tornar-se FLOSS}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Avaliação}
+\begin{columns}
+\begin{column}[l]{7cm}
+	{\small
+	\begin{block}{Projetos}
+	  \begin{itemize}
+	    \item Tradução/Documentação
+	    \item Correção de {\em bugs} e implementação de funcionalidades
+	  \end{itemize}
+	\end{block}
+\pause
+\vspace{0.5cm}
+	\begin{block}{Prova e participação}
+	  \begin{itemize}
+	    \item Avaliação de aspectos teóricos
+	    \item Dia-a-dia da disciplina
+	    \item Apresentações 
+	  \end{itemize}
+	\end{block}
+}
+\end{column}
+
+\begin{column}[c]{4cm}
+	\begin{figure}
+	\includegraphics[scale=0.6]{mafalda2.jpg}\\
+	%Fonte: http://1.bp.blogspot.com/_Qcwle0T8Iu4/SGTucgAECGI/AAAAAAAAA0k/qaPChz7kX3I/s400/mafalda.jpg
+	\end{figure}
+\end{column}
+\end{columns}
+
+\end{frame}
+
+\section{Sobre os Projetos}
+\subsection{Sobre os Projetos}
+
+\begin{frame}
+	\frametitle{Equipes para os projetos}
+	{\scriptsize
+	\begin{block}{Opção 1: {\em lone ranger}}
+		  \begin{itemize}
+            \item \tblue{Maior oportunidade de aprendizado}
+            \item \tblue{Impossível ``montar''}
+            \item \tred{Muito tempo em apresentações}
+            \item \tred{Muito trabalhoso}
+		  \end{itemize}
+	\end {block}
+	\pause
+	\begin{block}{Opção 2: duplas ou trios}
+		  \begin{itemize}
+            \item \tblue{Trabalho dividido, mas não muito}
+            \item \tblue{Ainda dá para aprender bastante}
+            \item \tred{Muito tempo em apresentações}
+            \item \tred{``Montar'' já torna-se possível}
+		  \end{itemize}
+	\end {block}
+	\pause
+	\begin{block}{Opção 3: equipes maiores}
+		  \begin{itemize}
+                \item \tred{Alguns membros não fazem nada}
+                \item \tred{Menos oportunidades para aprendizado}
+		  \end{itemize}
+	\end {block}
+	}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Sistemas-alvo}
+	{\footnotesize
+	\begin{block}{Idealmente, escolhidos a partir de repositórios \tblue{{\em on-line}}}
+		  \begin{itemize}
+            \item Sourceforge -- http://www.sourceforge.net
+            \item Google Code -- http://code.google.com/
+            \item Github -- http://github.com/
+            \item Codeplex -- http://www.codeplex.com/
+		  \end{itemize}
+	\end {block}
+%	\pause
+%    \begin{block}{Algumas alternativas}
+%		  \begin{itemize}
+%           \item Amadeus
+%           \item Emergo
+%           \item O do Vinicius
+%           \item ScriptLattes
+%		  \end{itemize}
+%    \end{block}	
+}
+    \pause
+    Criar um projeto FLOSS novo não é uma opção \byellow{(por enquanto)}.
+\end{frame}
+
+\begin{frame}
+	\frametitle{Atividades dos projetos}
+	\begin{block}{Documentação de desenvolvimento ou traduação}
+		  \begin{itemize}
+            \item Sistemas que não estão disponíveis em português
+            \item Sistemas cuja documentação é deficiente
+		  \end{itemize}
+	\end {block}
+	\vspace{0.3cm}
+	\pause
+    \begin{block}{Desenvolvimento}
+		  \begin{itemize}
+           \item Inclusão de novas funcionalidades ou
+           \item Correção de {\em bugs}
+		  \end{itemize}
+    \end{block}	
+    \pause
+	\vspace{0.3cm}
+    \tred{Mais importante:} \bred{\textbf{Envolver-se}} com a comunidade!
+\end{frame}
+
+\begin{frame}
+	\frametitle{Por que documentação/traduação?}
+	\tred{Sua ausência é uma barreira à popularização de um projeto}
+	  \begin{itemize}
+         \item A língua pode limitar a adoção
+         \begin{itemize}
+             \item No Brasil, a maior parte da população \tred{não fala inglês}
+             \item E no resto do mundo, (quase) ninguém fala português
+         \end{itemize}
+     \end{itemize}
+         
+         \vspace{-0.4cm}
+	\begin{columns}
+     \begin{column}[c]{4cm}
+%	Um projeto semm desenvolvedores dificilmente terá usuários e um sem usuários não tem razão de ser.
+	\begin{figure}
+	\includegraphics[scale=0.5]{auditorio}\\
+    %Fonte: http://postphotos.smugmug.com/Photos-of-the-Month/October-2011-Photos-of-the/i-pBPZngH/0/L/102111-NEWS-debate01-EB-L.jpg}
+	\end{figure}
+	\end{column}
+         \pause
+	\begin{column}[l]{5cm}
+	  \begin{itemize}
+         \item Já a falta de documentação...
+         \begin{itemize}
+             \item dificulta a entrada de novos desenvolvedores
+             \item pode aumentar o tempo médio até a correção de um bug
+         \end{itemize}
+     \end{itemize}
+     \end{column}
+     \end{columns}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Um exemplo ilustrativo 1}
+	\begin{figure}
+	\includegraphics[scale=0.45]{galaxy_note}\\
+    %Fonte: http://www.tech-beats.com/wp-content/uploads/2011/12/Galaxy-Note-8.jpg
+	\end{figure}
+	\pause
+    Como seria desenvolver para Android sem tutoriais?
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Um exemplo ilustrativo 2}
+
+	\begin{figure}
+	\includegraphics[scale=0.55]{ffvii_ps3}\\
+    %Fonte: http://www.wired.com/images\_blogs/gamelife/images/2009/04/10/ffvii\_ps3.jpg}
+	\pause
+FF7 não teria vendido \tred{quase 10 milhões de cópias} se fosse apenas em japonês
+   % Até 2007, era o mais vendido da série.	
+	\end{figure}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Documentação e suporte a línguas têm a ver com \tyellow{tornar a aplicação acessível}}
+
+\textit{{\bf Presentation and packaging} comprise a wide range of tasks, all revolving around the theme of \textbf{\tred{reducing the barrier to entry}}. Making the project \tred{inviting to the uninitiated} means writing user and developer documentation [...]. Many programmers unfortunately \bred{treat this work as being of secondary importance} to the code itself. [...] it's crucial that they (presentation and packaging) be a priority from the very start of the project.}
+%	Um projeto semm desenvolvedores dificilmente terá usuários e um sem usuários não tem razão de ser.
+
+\vspace{0.3cm}
+{\footnotesize
+\hspace{6.7cm}Karl Fogel} 
+\\{\tiny \hspace{5.8cm}Desenvolvedor do SVN}
+\\{\tiny \hspace{5cm}(Capítulo 1 de ``Producing Open Source Software'')}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Sobre a escolha dos sistemas-alvo}
+	\begin{block}{Escolha projetos que lhe \tgreen{interessam}, ou seja}
+		  \begin{itemize}
+                 \item que sejam úteis para você; ou
+                 \item que façam algo que você considere importante; ou
+                 \item que você use em seu estágio ou trabalho; 
+                 \item que tenham a ver com sua iniciação científica
+		  \end{itemize}
+	\end {block}
+                 \vspace{0.5cm}
+	\begin{block}{Sistemas que usam ferramentas e tecnologias \tgreen{familiares}}
+               \begin{itemize}
+                 \item Aprender coisas novas é importante, mas o tempo é limitado
+                 \item Tecnologias novas implicam em mais {\em overhead}
+               \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Sobre a escolha dos sistemas-alvo}
+		
+	\begin{block}{\tyellow{Grande} e muito popular}
+	\begin{figure}
+	% Todos as imagens abaixo são facilmente obtíveis através de busca e
+	% image.google.com
+	\includegraphics[height=1.5cm, width=1.5cm]{firefox-logo.jpg}\hspace{0.05cm}
+	\includegraphics[height=1.5cm, width=1.5cm]{oo-logo.jpg}\hspace{0.05cm}
+	\includegraphics[height=1.5cm, width=1.6cm]{linux-logo.jpg}\hspace{0.05cm}
+	\includegraphics[height=1.5cm, width=1.6cm]{apache-logo.jpg}\hspace{0.05cm}
+	\includegraphics[height=1.5cm, width=1.7cm]{notepadpp-logo.jpg}\hspace{0.05cm}
+	% Procurar por notepad++
+	\includegraphics[height=1.5cm, width=1.7cm]{emule-logo.jpg}
+	% Procurar por emule
+	\end{figure}
+	\end {block}
+\pause	
+% Grande: grande visibilidade, possibilidade de influenciar inúmeros usuários, mais chance de fazer diferença no currículo, mais recursos (documentação, bug reports, listas de discussão, gente trabalhando) disponíveis
+% Muito mais difícil de fazer uma contribuição significativa, já que há mais gente trabalhando e o sistema provavelmente é muito complexo
+% Pequeno: nenhuma das vantagens de um projeto grande. Entretanto, se for um projeto com uma infra-estrutura mínima já disponível, você tem uma chance maior de deixar sua marca. O risco é o projeto afundar. 
+\vspace{0.3cm}
+
+	\begin{block}{Pequeno (ou não) e \tyellow{menos conhecido}}
+	\begin{figure}
+	\includegraphics[height=1.5cm, width=1.5cm]{jr-logo.jpg}\hspace{0.05cm}
+	% Fonte: http://www.macupdate.com/util/iconlg/19869.png
+	\includegraphics[height=1.5cm, width=1.5cm]{yi-logo.jpg}\hspace{0.05cm}
+	% Fonte: http://en.wikipedia.org/wiki/File:Yi-logo.png
+	\includegraphics[height=1.5cm, width=1.6cm]{gobolinux-logo.jpg}\hspace{0.05cm}
+	% Fonte: http://a2.twimg.com/profile_images/370623589/gobolinux.png
+	\includegraphics[height=1.5cm, width=1.6cm]{dillo-logo.jpg}\hspace{0.05cm}
+	% Fonte: http://www.dillo.org
+	Lynx\hspace{0.05cm}
+	\includegraphics[height=1.5cm, width=1.8cm]{lame-logo.jpg}\hspace{0.05cm}
+	% Fonte: http://lame.sourceforge.net/
+	\end{figure}
+	\end {block}
+\end{frame}
+
+%    - Equipe vs. Indivíduo -- Melhor que sejam duplas 
+%      + Equipes maiores => mais contribuições
+
+
+%      + Falar sobre meu exemplo
+%  - Mostrar minhas escolhas
+%    - GHC para contribuir
+%    - JabRef para traduzir 
+%
+%- Visão geral de FLOSS: O que é software livre? O que é software de código aberto?
+%
+%- Um pouco de história 
+
+\section{Exemplos de Sistemas-Alvo}
+\subsection{Exemplos de Sistemas-Alvo}
+
+
+\begin{frame}
+	\frametitle{O que eu escolheria para documentar ...}
+	\begin{columns}
+	\begin{column}[l]{5cm}
+	\begin{block}{JabRef}
+		  \begin{itemize}
+            \item Ferramenta para gerenciar referências bibliográficas em \LaTeX
+            \item Não tem versão em português
+              \begin{itemize}
+                 \item Está ativamente recrutando tradutores
+              \end{itemize}
+            \item \tblue{Interesse direto} para mim
+              \begin{itemize}
+                 \item Uso \LaTeX há mais de dez anos 
+              \end{itemize}
+		  \end{itemize}
+	\end {block}
+	\end{column}
+	\begin{column}[l]{5cm}
+	\begin{figure}
+	\includegraphics[scale=0.55]{jabref.png}
+	\end{figure}
+
+	\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{... e para desenvolver}
+	\begin{block}{Glasgow Haskell Compiler}
+		  \begin{itemize}
+            \item Acho que todos vocês conhecem :)
+            \item Projeto em desenvolvimento constante
+            \item Comunidade relativamente pequena, mas \byellow{{\bf muito}} ativa
+            \item \tblue{Interesse direto} para mim
+              \begin{itemize}
+                 \item Além de ensinar Haskell, pesquiso na área
+                 \item Gosto de desenvolver programas que manipulam programas
+              \end{itemize}
+\pause
+            \item Muito \tred{complexo}
+              \begin{itemize}
+                 \item Funcionamento \tred{bem diferente} de um compilador Java
+                 \item Mas com documentação \byellow{razoável}
+                   \begin{itemize}
+                     \item dependendo da parte que lhe \bred{interessa}
+                   \end{itemize}
+                 % Para o compilador propriamente dito, há uma quantidade considerável de documentação. 
+                 % Embora seja pesada e exija tempo e dedicação, ela definitivamente ajuda a entender
+                 % seu funcionamento. Por outro lado, para o interpretador, há pouca documentação e, 
+                 % diferentemente do que pode parecer, é um componente bastante complexo, já que
+                 % o que ele interpreta é uma linguagem de baixíssimo nível.
+              \end{itemize}
+		  \end{itemize}
+	\end {block}
+\end{frame}
+
+\end{document}

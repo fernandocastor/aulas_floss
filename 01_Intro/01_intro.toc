@@ -1,0 +1,10 @@
+\beamer@endinputifotherversion {3.10pt}
+\select@language {brazil}
+\beamer@sectionintoc {1}{Pergunta}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{Pergunta}{2}{0}{1}
+\beamer@sectionintoc {2}{Vis\~ao Geral da Disciplina}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{Vis\~ao Geral da Disciplina}{4}{0}{2}
+\beamer@sectionintoc {3}{Sobre os Projetos}{15}{0}{3}
+\beamer@subsectionintoc {3}{1}{Sobre os Projetos}{15}{0}{3}
+\beamer@sectionintoc {4}{Exemplos de Sistemas-Alvo}{33}{0}{4}
+\beamer@subsectionintoc {4}{1}{Exemplos de Sistemas-Alvo}{33}{0}{4}
