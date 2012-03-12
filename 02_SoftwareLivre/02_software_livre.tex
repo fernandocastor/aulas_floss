@@ -1,0 +1,350 @@
+% Author: Fernando Castor. You can contact the author at castor in the cin.ufpe.br domain. 
+
+%THIS WORK IS LICENSED UNDER A CREATIVE COMMONS ATTRIBUTION-NONCOMMERCIAL-SHAREALIKE 3.0 UNPORTED LICENSE. THE WORK (AS DEFINED BY THE LICENSE) IS PROVIDED UNDER THE TERMS OF THIS CREATIVE COMMONS PUBLIC LICENSE ("CCPL" OR "LICENSE"). THE WORK IS PROTECTED BY COPYRIGHT AND/OR OTHER APPLICABLE LAW. ANY USE OF THE WORK OTHER THAN AS AUTHORIZED UNDER THIS LICENSE OR COPYRIGHT LAW IS PROHIBITED.
+%
+%BY EXERCISING ANY RIGHTS TO THE WORK PROVIDED HERE, YOU ACCEPT AND AGREE TO BE BOUND BY THE TERMS OF THIS LICENSE. TO THE EXTENT THIS LICENSE MAY BE CONSIDERED TO BE A CONTRACT, THE LICENSOR GRANTS YOU THE RIGHTS CONTAINED HERE IN CONSIDERATION OF YOUR ACCEPTANCE OF SUCH TERMS AND CONDITIONS.
+%PLEASE REFER TO THE DESCRIPTION OF THE LICENSE (http://creativecommons.org/licenses/by-nc-sa/3.0/) AND TO ITS FULL TEXT (http://creativecommons.org/licenses/by-nc-sa/3.0/legalcode) FOR MORE INFORMATION.
+
+% THIS WORK USES A NUMBER OF IMAGES FROM THIRD-PARTIES. THE COPYRIGHT OF THESE IMAGES REMAIN WITH THEIR OWNERS, WHEN APPLICABLE. 
+
+% Build this file with pdflatex 02_defs_hist.tex
+
+\documentclass[xcolor=dvipsnames]{beamer}
+\usecolortheme[named=Brown]{structure} 
+%\usetheme{Rochester}
+\usetheme{Frankfurt}
+
+\usepackage{booktabs}
+\usepackage{ulem}
+\usepackage{graphics}
+\usepackage{multirow}
+\usepackage[latin1]{inputenc}   % para os acentos
+\usepackage[brazil]{babel}      % para hifeniza\c{c}\~{a}o
+\usepackage{color}
+
+\definecolor{lightgrey}{rgb}{0.8, 0.8, 0.8}
+\newcommand{\shd}[1]{\colorbox{lightgrey}{#1}}
+
+\newcommand{\tblue}[1]{\textcolor{blue}{#1}}
+\newcommand{\tred}[1]{\textcolor{red}{#1}}
+\newcommand{\tgreen}[1]{\textcolor{green}{#1}}
+\newcommand{\tyellow}[1]{\textcolor{yellow}{#1}}
+
+
+\newcommand{\byellow}[1]{\colorbox{yellow}{#1}}
+\newcommand{\bred}[1]{\colorbox{red}{\textcolor{white}{#1}}}
+\newcommand{\bgreen}[1]{\colorbox{green}{#1}}
+
+\definecolor{lightestgrey}{rgb}{0.91, 0.91, 0.91}
+\newcommand{\lshd}[1]{\colorbox{lightestgrey}{#1}}
+
+\title{Software Livre e \textit{Copyleft}}
+\author{Fernando Castor}
+\pgfdeclareimage[height=0.4cm]{cc}{license}
+
+\institute{Centro de Informática -- Universidade Federal de Pernambuco \\[2.0cm] {\tiny Alguns direitos reservados }\pgfuseimage{cc} }
+\date{}
+\pgfdeclareimage[height=1.0cm]{logo}{ines}
+\pgfdeclareimage[height=0.8cm]{logo2}{spg}
+\pgfdeclareimage[height=0.8cm]{logo3}{cin}
+
+\logo{\pgfuseimage{logo3}\hspace{0.1cm}\pgfuseimage{logo}\hspace{0.1cm}\pgfuseimage{logo2} }
+
+\begin{document}
+
+\frame{\titlepage}
+
+\section{Introdução}
+\subsection{Introdução}
+
+\begin{frame}
+	\frametitle{Mesma coisa?}
+	\begin{figure}
+	\includegraphics[scale=0.9]{mushrooms.jpg}\\
+	Software \bred{Livre} == Software de \bgreen{Código Aberto}?
+	%Fonte: http://1.bp.blogspot.com/_AfREl8pzzjU/TMihEUC6ZSI/AAAAAAAAAqg/syZHsStPOpg/s1600/Super+Mario+World+-+Set02.jpg
+	%Informação de copyright incluída na própria imagem.
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Esta aula (e a próxima)}
+	Fornecem uma visão geral sobre\vspace{0.3cm}
+	\begin{enumerate}
+	\item \byellow{{\bf Software livre}} \vspace{0.3cm}
+	\item \byellow{\textit{Copyleft}} \vspace{0.3cm}
+	\item {\bf Software de código aberto} \vspace{0.3cm}
+	\item Semelhanças e diferenças entre os dois pontos de vista \vspace{0.3cm}
+	\item Um pouco de história
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\vspace{0.2cm}
+\begin{center}
+\Huge{Software Livre}
+\end{center}
+\end{frame}
+
+\section{Software Livre}
+
+\subsection{Software Livre}
+
+\begin{frame}
+	\frametitle{Quem é esse?}
+	\begin{figure}
+	\begin{center}
+	\includegraphics[scale=1.0]{rms.jpg}\\
+	\pause
+	Richard M. Stallman
+    % Richard M. Stallman
+    % Copyright by Victor Powell
+    % http://en.wikipedia.org/wiki/File:Rms_at_pitt.jpg
+    
+    % Criador do conceito de Software Livre e da Free Software Foundation, além de desenvolvedor do GCC e do GNU Emacs. 
+	\end{center}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{O que é Software Livre?}
+	\begin{block}{Ideologicamente}
+		  \begin{itemize}
+		    \item Software cujos usuários têm liberdade para 
+		    \begin{itemize}
+		      \item executar
+		      \item copiar
+		      \item distribuir
+		      \item estudar
+		      \item modificar
+    		      \item melhorar
+		    \end{itemize}
+		    \pause
+		    \vspace{0.2cm}
+		    \item Usuários \tred{controlam} os programas e não o contrário
+		    \item {\bf Premissa básica}: \bgreen{liberdade} é uma \bgreen{coisa boa} para indivíduos e sociedade		    
+%But the ideological basis of free software is the idea that these freedoms are inherently good (or at least good for important political reasons external to technical questions of software quality and profitability), that people have the obligation to respect these freedoms, and that software should be judged in significant part by whether or not it respects these freedoms. 
+%(Fonte: http://askubuntu.com/questions/78958/is-there-a-difference-between-free-software-and-open-source-software)
+		    \begin{itemize}
+		    \item Software livre como um \byellow{\textbf{Movimento Social}}.
+		    \end{itemize}
+		  \end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{O que é Software Livre?}
+	\begin{block}{Estritamente falando}
+	      Um programa é {\bf livre} se seus usuários têm as 4 liberdades essenciais:\pause
+		  \begin{enumerate}
+  		    \item[0] Liberdade de \tred{executar} o programa, para qualquer fim.\vspace{0.1cm}\pause
+		    \item[1] Liberdade para \tred{estudar} o funcionamento do programa e \tred{modificá-lo} para fazer o que você \tred{desejar}.\vspace{0.2cm}\pause
+		    \item[2] Liberdade para \tred{redistribuir} cópias. \vspace{0.1cm}
+		      \begin{itemize}
+		      \item Assim, você ajuda seu vizinho. \vspace{0.1cm}\pause
+		      \end{itemize}
+		    \item[3] Liberdade para \tred{distribuir} cópias de suas \tred{versões modificadas}.
+		      \begin{itemize}
+		      \item Assim, a comunidade toda se beneficia com suas modificações.
+		      \end{itemize}
+		  \end{enumerate}
+		   \vspace{0.1cm}\pause
+		  \bgreen{Acesso ao código fonte} é precondição para as liberdades 1 e 3.
+		  % Originalmente: %
+			%The freedom to run the program, for any purpose (freedom 0).
+			%The freedom to study how the program works, and change it so it does your computing as you wish (freedom 1). 
+			%     Access to the source code is a precondition for this.
+			%The freedom to redistribute copies so you can help your neighbor (freedom 2).
+			%The freedom to distribute copies of your modified versions to others (freedom 3). By doing this you can 
+			%     give the whole community a chance to benefit from your changes. Access to the source code is a precondition for this.
+			%
+		  %"Free as in freedom, not as in free beer"
+
+	\end{block}
+	
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{O que é Software Livre?}
+	\begin{block}{Legalmente}
+		  \begin{itemize}
+		    \item Software distribuído de acordo com uma \bred{\bf licença} que respeita as 4 liberdades
+		  \end{itemize}
+% As quatro liberdades essenciais têm que ser garantidas pela LICENÇA do programa. Por isso licenças são tão
+% importantes quando se fala em Software Livre. Simplesmente tornar disponível um programa sem licença não
+% implica em ele ser livre. Na verdade, não implica nem em ser domínio público. Todo programa é proprietário, 
+% na ausência de uma licença que diga explicitamente que não é.
+		  
+	\end{block}
+	\begin{columns}
+\begin{column}[l]{7cm}
+	\begin{figure}
+	\includegraphics[scale=0.35]{licenca-oo.jpg}\\
+	\end{figure}
+\end{column}
+
+\begin{column}[c]{3cm}
+	\begin{figure}
+	\includegraphics[scale=0.5]{lgpl3.png}\\
+    % Fonte: http://www.gnu.org/graphics/lgplv3-147x51.png
+    %Licença: Creative Commons Attribution-NoDerivs 3.0 United States License.
+	\end{figure}
+	\begin{figure}
+	\includegraphics[scale=0.5]{gpl3.png}\\
+    %Fonte: http://www.gnu.org/graphics/gplv3-127x51.png
+    %Licença: Creative Commons Attribution-NoDerivs 3.0 United States License.
+	\end{figure}
+\end{column}
+\end{columns}	
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Este programa é software Livre?}% NÃO. Licença proprietária com várias restrições de uso e distribuição.
+	\begin{figure}
+	\includegraphics[scale=0.45]{windows7.jpg}\\
+    %Licença: Copyright pertence à Microsoft Corporation. Uso para fins educacionais e não-comerciais com uma figura de
+    % baixa resolução é PROVAVELMENTE considerando um uso justo (fair use) de acordo com a lei americana.
+	\end{figure}	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Este programa é software Livre?}% SIM. Utiliza a GPL v2, que além de livre, é uma licença de copyleft.
+	\begin{figure}
+	\includegraphics[scale=0.45]{tux.png}\\
+	%Fonte: http://en.wikipedia.org/wiki/File:Tux.png
+    %Licença: O dono do copyright da imagem permite que seja usada por qualquer um para qualquer propósito, portanto que
+    % sejam dados créditos a Larry Ewing (lewing@isc.tamu.edu) e The GIMP se alguém perguntar.
+	\end{figure}	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Este programa é software Livre?}% NÃO, apesar de ser gratuito. O código fonte não está disponível, o que 
+	% restringe as liberdades 1 e 3.
+	\begin{figure}
+	\includegraphics[scale=0.45]{avast.png}\\[0.2cm]
+	(considerando apenas a versão gratuita)
+	%Fonte: http://en.wikipedia.org/wiki/File:Avast-2010-Logo.svg
+    %Licença: Copyright pertence à Avast Software. Uso para fins educacionais e não-comerciais com uma figura de
+    % baixa resolução é PROVAVELMENTE considerando um uso justo (fair use) de acordo com a lei americana.
+	\end{figure}	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Este programa é software Livre?}% SIM. O EpiInfo é de domínio público. Isso significa que 
+	% uma pessoa pode fazer o que quiser com uma cópia do programa. Este programa, em particular, é livre 
+	% porque seu código fonte também está disponível. Se não estivesse, continuaria sendo domínio público, 
+	% mas não seria livre.
+	\begin{figure}
+	\includegraphics[scale=1]{epiinfo.jpg}\\[0.2cm]
+	%Fonte: http://ftp.cdc.gov/pub/software/epi_info/Epi_Info_CD_Label.jpg
+    %Licença: domínio público.
+	\end{figure}	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Este programa é software Livre?}% NÃO. Se você o criou, o copyright automaticamente pertence a você e o uso
+	% da obra não é permitido sem sua autorização expressa. De acordo com a Convenção de Berna (http://en.wikipedia.org/wiki/Berne_Convention_for_the_Protection_of_Literary_and_Artistic_Works), qualquer trabalho escrito é automaticamente 
+	% sujeito a copyright. O fato de você não ter especificado a licença que rege a distribuição de um programa
+	% não implica em ele ser de domínio público. Pelo contrário. No caso de projetos desenvolvidos no âmbito
+	% universidade, há uma complicação adicional: seu copyright pertence à própria universidade e não a você. É por
+	% isso que você não pode desenvolver projetos comerciais nas instalações do CIn. 	
+	\begin{center}
+	{\Huge \bgreen{Seu projeto de PLC}}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{O software que roda aqui é Software Livre?}
+%	Este é um caso complicado. O TiVo roda Linux. O Linux usa a GPL v2. O problema é que
+%	o TiVo não permite que versões modificadas do sistema operacional sejam executadas. 
+%	A TiVo Inc. alega que essa restrição se deve a questões de segurança. Devido às
+%	circunstâncias peculiares, essa situação não viola as regras da GPL v2, embora 
+%	claramente seja uma violação da Liberdade 0 (liberdade para USAR o programa). Além
+%	disso, na prática, também limita a Liberdade 3, já que é possível distribuir versões
+%	modificadas da versão do Linux que roda no TiVo mas estas não podem ser usadas. Para
+%	combater essa situação, foi criada a GPL v3. O problema é que Linux Torvalds não adotou
+%	a GPL v3 para o Linux, o que significa que a TiVo Inc. continua podendo restringir 
+%	o uso de versões modificadas do Linux que roda no dispositivo.
+	\begin{figure}
+	\includegraphics[scale=0.7]{tivo.jpg}\\[0.2cm]
+	\pause Sistema operacional \tred{Linux}!
+	%Fonte: http://upload.wikimedia.org/wikipedia/commons/6/69/Series_2_tivo_front.jpg
+    %Licença: Creative Commons Attribution-Share Alike 3.0 Unported
+    %Foto tirada por Jared C. Benedict. 
+	\end{figure}	
+\end{frame}
+
+\section{Copyleft}	
+\subsection{Copyleft}	
+%Copyleft (Boa fonte de informação: http://en.wikipedia.org/wiki/Copyleft)
+%As quatro liberdades do software liver não garantem que ``a derivative work will be distributed under the same liberal terms". Uma licença de copyleft garante que trabalhos derivados de um que utiliza tal licença sejam distribuídos usando a mesma licença ou outra que seja equivalente. Isso garante que a distribuição de trabalhos derivados respeita as mesmas liberdades que as respeitadas na distribuição do trabalho original. Essas licenças são chamadas de "virais" porque se auto-perpetuam.
+\begin{frame}
+	\frametitle{Propagação de liberdades}
+	\begin{block}{Em resumo}
+		  \begin{itemize}
+		    \item Usar regras de \textit{copyright} para \bgreen{evitar a restrição de liberdades}
+		    \item Um programa ser livre não implica em obras derivadas também serem
+		  \end{itemize}
+	\end{block}
+	\pause
+	\vspace{0.2cm}
+\begin{columns}
+\begin{column}[l]{7cm}
+	\begin{block}{\textit{Copyleft}}
+		  \begin{itemize}
+		    \item Trabalho derivados são {\bf obrigados} a ser distribuídos
+		    \begin{itemize}
+		    \item Com a mesma licença que o trabalho original; ou
+		    \item Com uma outra que seja equivalente. 
+		    \end{itemize}
+		  \end{itemize}
+	\end{block}
+\end{column}
+
+\begin{column}[c]{2.5cm}
+	\begin{figure}
+	\includegraphics[scale=0.4]{copyleft.png}\\
+    %Fonte: http://pt.wikipedia.org/wiki/Ficheiro:Copyleft.svg
+    %Licença: domínio público.
+	\end{figure}
+\end{column}
+\end{columns}	
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Mais sobre \textit{copyleft}}
+	%Tirado da Wikipedia (página mencionada acima:)
+%The most well known free software license that uses strong copyleft is the GNU General Public License. Free software licenses that use "weak" copyleft include the GNU Lesser General Public License and the Mozilla Public License. Examples of non-copyleft free software licenses include the X11 license, Apache license and the BSD licenses.
+% A Mozilla Public License impõe algumas restrições a mais que visam preservar a integridade da marca Mozilla.
+	\begin{block}{GNU General Public License (GNU GPL)}
+		  \begin{itemize}
+		    \item Licença de software livre mais popular
+		    \item É uma licença de \textit{copyleft}
+		    \begin{itemize}
+		    \item Detratores dizem que é uma licença \tred{``viral''}. 
+		    \end{itemize}
+		  \end{itemize}
+	\end{block}
+	\vspace{0.2cm}
+	\pause
+	\begin{block}{Licenças de \textit{copyleft} forte e fraco}
+		  \begin{itemize}
+		    \item A GPL usa \textit{copyleft} \textbf{forte}\vspace{0.1cm}
+		    \item \textit{Copyleft} fraco \bred{não exige que todos} os trabalhos derivados usem a mesma licença
+		    \begin{itemize}
+		    \item Normalmente, os que usam o trabalho original sem modificá-lo\vspace{0.1cm}
+		    %Útil, por exemplo, para bibliotecas. A glibc é distribuída com a LGPL.
+		    \item Exs.: GNU Lesser GPL (LGPL) e Mozilla Public License
+		    \end{itemize}
+		   \end{itemize}
+% Uma licença de copyleft fraco aplica as garantias de copyleft a apenas um subconjunto dos trabalhos derivados a partir de um que utiliza uma licença desse tipo. Normalmente é utilizada com bibliotecas, por exemplo, para evitar que um sistema que utiliza uma biblioteca distribuída com uma licença de copyleft fraco sem modificá-la precise também ser distribuído com uma licença de copyleft. O copyleft só se aplica se essa biblioteca tiver sido modificada. 
+
+% Este material de aula, excetuando-se as figuras, utiliza uma licença similar a copyleft. Há algumas diferenças, porém. Em resumo, a licença empregada (CC BY-NC-SA) é mais restritiva, já que proíbe o uso comercial e exige que crédito seja atribuído ao seu autor (sem implicar em endosso de qualquer forma, da parte do autor, a eventuais modificações) quando trabalhos derivados a partir deste forem criados. Neste sentido, ela remove algumas liberdades de pessoas que utilizarem este material. Uma discussão interessante sobre porque NC-SA não é copyleft pode ser encontrada neste endereço: http://robmyers.org/weblog/2008/02/noncommercial-sharealike-is-not-copyleft.html
+	\end{block}
+
+\end{frame}
+
+\end{document}
