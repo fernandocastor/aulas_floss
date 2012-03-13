@@ -64,7 +64,9 @@
 	\item Visitem a página da disciplina (http://sites.google.com/a/cin.ufpe.br/floss) \vspace{0.3cm}
 	\item Assinem a lista \vspace{0.3cm}
 	\item Baixem os slides e os compilem \vspace{0.3cm}
+	\item Registrem as equipes \vspace{0.3cm}
 	\item Escolham os sistemas \vspace{0.3cm}
+	\item Escrevam no {\bf blog}
 	\end{enumerate}
 \end{frame}
 
@@ -304,18 +306,51 @@
 \end{frame}
 
 \begin{frame}
-%	\frametitle{Em pouquíssimas palavras...}
-	
+\frametitle{Pragmaticamente}
 \begin{center}
-\Huge{Existe software de código aberto que não é livre?}
-\end{center}
+\begin{itemize}
+\item Dois meios de atingir o mesmo fim 
+\item \vspace{0.1cm} Práticas {\bf indistinguíveis}
+\begin{itemize}
+\item Principalmente após ``The Cathedral and the Bazaar''\vspace{0.1cm}
+\end{itemize}
+\item Amplo espectro de pontos de vista\vspace{0.1cm}
+\end{itemize}
+\end{center}\pause
+\begin{block}{Em termos de licenceamento}
+\begin{itemize}
+\item Todo programa \bgreen{livre} é de \byellow{código aberto}\vspace{0.1cm}\pause
+\item Todo programa de \byellow{código aberto} é \bgreen{livre}?
+\end{itemize}
+\end{block}
 \end{frame}
 
 
-iPad?
+\begin{frame}
+	\frametitle{Um exemplo}
+	
+\begin{center}
+NASA Open Source Agreement v1.3
+	\begin{figure}
+	\begin{center}
+ 	\includegraphics[scale=0.33]{osi_approved}\\
+    % http://www.opensource.org/trademarks/opensource/OSI-Approved-License-100x137.png
+    % Copyright OpenSourceInitiative
+    % Licença:  Creative Commons Attribution 2.5 License
+	\end{center}
+	\end{figure}\pause \vspace{0.1cm}
+	{\footnotesize \textit{``The NASA Open Source Agreement, version 1.3, is not a free software license because it includes a provision requiring changes to be your `{\em original creation}'.''}}
+	% Fonte: http://www.gnu.org/licenses/license-list.html
+
+% Que liberdade a restrição mencionada nesse texto da FSF fere? 
+% Fere algum critério da OSD?
+\end{center}\pause
+\begin{block}{Exercício para casa}
+Encontrar \tred{\textbf{exemplos}} e comentar sobre eles no blog.
+\end{block}
+\end{frame}
 
 %Perens, Raymond e Stallman: três visões distintas. Interessante é o email de 1999 do Perens, "It's Time to Talk About Free Software Again" (http://lists.debian.org/debian-devel/1999/02/msg01641.html).
-
 %Interessante também (extraído da Wikipedia, http://en.wikipedia.org/wiki/Bruce_Perens): 
 %(Bruce) Perens poses Open Source as a means of marketing the free software philosophy of Richard Stallman to business people who are more concerned with profit than freedom, and states that open source and free software are only two ways of talking about the same phenomenon. This differs from Stallman[5][6] and Raymond. Perens postulates an economic theory for business use of Open Source in his paper The Emerging Economic Paradigm of Open Source and his speech Innovation Goes Public.[7] This differs from Raymond's theory in The Cathedral and the Bazaar, which having been written before there was much business involvement in open source, explains open source as a consequence of programmer motivation and leisure.
 
@@ -646,7 +681,6 @@ Enquanto isso no MIT Artificial Intelligence Lab...
 \end{frame}
 
 \begin{frame}
-
 \frametitle{Linux}
 % HURD = HIRD of UNIX-Replacing Daemons
 % HIRD = HURD of Interfaces Representing Depth
@@ -655,6 +689,7 @@ Enquanto isso no MIT Artificial Intelligence Lab...
 % palavra "herd", GNU HURD soa como "Rebanho de GNUs".
 % Muito mais informações disponíveis em http://en.wikipedia.org/wiki/GNU_Hurd
 % e na página oficial do HURD, http://hurd.gnu.org
+Primeira versão disponível para o público em outubro 1991\\[0.2cm]
   \begin{block}{A importância do Linux} 
   \begin{itemize}
   \item Núcleo usado no GNU (GNU/Linux) \vspace{0.1cm}
@@ -665,23 +700,81 @@ Enquanto isso no MIT Artificial Intelligence Lab...
   \item [Informações interessantes:] http://www.ohloh.net/p/linux
   \end{description}
 \vspace{0.1cm}  \item Principal exemplo de software livre que alcançou o {\bf grande público}
+\vspace{0.1cm}\pause
+  \item Lei de Linus: ``dados olhos suficientes, todos os erros são triviais''
+  % No original: ``Given enough eyeballs, all bugs are shallow''.
+  % Um dos preceitos fundamentais da idéia de Software de Código Aberto.
+ 
+% Linux usa até hoje a GPL v2.0. Linus já declarou que não tem intenção de passar a usar a GPL v3.0.
   \end{itemize}
   \end{block}
 \end{frame}
 
-A popularização do Linux tornou o software livre viável não só para hackers
+\begin{frame}
+\frametitle{O efeito Linux}
+   
+  \begin{block}{Por um lado...}
+  \begin{itemize}
+  \item Usar \bgreen{exclusivamente} software livre tornou-se viável \vspace{0.1cm}
+  \item Algumas aplicações já disponíveis, com outras sendo desenvolvidas \pause
+  \end{itemize}
+  \end{block} 
+\pause
+  \begin{block}{Entretanto...}
+  \begin{itemize}
+  \item Software livre ainda \bred{\textbf{não era popular}} \vspace{0.1cm}\pause
+    \begin{itemize}
+    \item Servidores usavam, mas não {\em desktops}\vspace{0.1cm}
+    \item Quantos de vocês conheciam o Linux antes da universidade?\vspace{0.1cm}\pause
+    \item Há quanto tempo usam, se usam? 
+    \end{itemize}
+  \end{itemize}
+  \end{block}
+\end{frame}
 
-Na época, já havia vários outros programas livres que haviam alcançado certa popularidade
-
-Reunião de 1998 na Netscape
-
-Início do movimento open source
-
-Timeline do sítio
+\begin{frame}
+\frametitle{Enquanto isso, uma guerra global acontecia}
+	\begin{figure}
+	\begin{center}
+	\includegraphics[scale=0.45]{browsers.png}
+	% http://en.wikipedia.org/wiki/File:Browser_Wars.svg
+	% Licença: Creative Commons Attribution-Share Alike 3.0 Unported
+	% Autor: Wereon (usuário da Wikipedia em língua inglesa)
+	\end{center}
+	\end{figure}   
+% Na guerra dos browsers, o Netscape Navigator perdeu mercado rapidamente
+% devido à política da Microsoft de distribuir o Windows junto com o Internet
+% Explorer. Adicionalmente, este último foi integrado ao Windows de tal
+% maneira que tornou-se impossível simplesmente livrar-se dele. Apesar de
+% vários processos na justiça, a manobra da Microsoft foi eficaz. Isso
+% preocupou os executivos da Netscape não pelas razões óbvias. A empresa
+% não obtinha lucros a partir da distribuição do browser, já que esta era
+% feita gratuitamente. Seus lucros eram provenientes de software para
+% servidores. Era importante combater a dominação da Microsoft principalmente
+% porque isso poderia implicar em um monopólio não apenas no software
+% que rodava nos clientes. Esta situação coincidiu com a popularização 
+% do Linux, que já contava com algumas distribuições mais amigáveis, como
+% o Red Hat Linux, e com o texto que apresentou a forma ``open source'' de
+% desenvolver código para o mundo, ``The Cathedral and the Bazaar'' de Eric
+% S. Raymond. Esse texto admitidamente foi o pontapé que a Netscape precisava
+% para liberar o código fonte do seu browser, em janeiro de 1998, e formar o 
+% que se tornaria a Mozilla Foundation.
+\end{frame}
 
 \section{Fim}
 \subsection{Fim}
 
+\begin{frame}
+\vspace{0.2cm}
+\begin{center}
+\Large{O que mais aconteceu?}
+\\[0.4cm]\pause
+\Huge{paginadadisciplina/linhadotempo}
+\\[0.4cm]
+\Large{\tred{Completem a linha!}}\\[0.2cm]
+%Se cada um contribuir com 6 ou 7 entradas, teremos uma linha do tempo bem legal!
+\end{center}
+\end{frame}
 \begin{frame}
 \vspace{0.2cm}
 \begin{center}
