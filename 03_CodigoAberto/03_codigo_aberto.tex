@@ -1,0 +1,374 @@
+% Author: Fernando Castor. You can contact the author at castor in the cin.ufpe.br domain. 
+
+%THIS WORK IS LICENSED UNDER A CREATIVE COMMONS ATTRIBUTION-NONCOMMERCIAL-SHAREALIKE 3.0 UNPORTED LICENSE. THE WORK (AS DEFINED BY THE LICENSE) IS PROVIDED UNDER THE TERMS OF THIS CREATIVE COMMONS PUBLIC LICENSE ("CCPL" OR "LICENSE"). THE WORK IS PROTECTED BY COPYRIGHT AND/OR OTHER APPLICABLE LAW. ANY USE OF THE WORK OTHER THAN AS AUTHORIZED UNDER THIS LICENSE OR COPYRIGHT LAW IS PROHIBITED.
+%
+%BY EXERCISING ANY RIGHTS TO THE WORK PROVIDED HERE, YOU ACCEPT AND AGREE TO BE BOUND BY THE TERMS OF THIS LICENSE. TO THE EXTENT THIS LICENSE MAY BE CONSIDERED TO BE A CONTRACT, THE LICENSOR GRANTS YOU THE RIGHTS CONTAINED HERE IN CONSIDERATION OF YOUR ACCEPTANCE OF SUCH TERMS AND CONDITIONS.
+%PLEASE REFER TO THE DESCRIPTION OF THE LICENSE (http://creativecommons.org/licenses/by-nc-sa/3.0/) AND TO ITS FULL TEXT (http://creativecommons.org/licenses/by-nc-sa/3.0/legalcode) FOR MORE INFORMATION.
+
+% THIS WORK USES A NUMBER OF IMAGES FROM THIRD-PARTIES. THE COPYRIGHT OF THESE IMAGES REMAIN WITH THEIR OWNERS, WHEN APPLICABLE. 
+
+% Build this file with pdflatex 03_codigo_aberto.tex
+
+\documentclass[xcolor=dvipsnames]{beamer}
+\usecolortheme[named=Brown]{structure} 
+%\usetheme{Rochester}
+\usetheme{Frankfurt}
+
+\usepackage{booktabs}
+\usepackage{ulem}
+\usepackage{graphics}
+\usepackage{multirow}
+\usepackage[latin1]{inputenc}   % para os acentos
+\usepackage[brazil]{babel}      % para hifeniza\c{c}\~{a}o
+\usepackage{color}
+
+\definecolor{lightgrey}{rgb}{0.8, 0.8, 0.8}
+\newcommand{\shd}[1]{\colorbox{lightgrey}{#1}}
+
+\newcommand{\tblue}[1]{\textcolor{blue}{#1}}
+\newcommand{\tred}[1]{\textcolor{red}{#1}}
+\newcommand{\tgreen}[1]{\textcolor{green}{#1}}
+\newcommand{\tyellow}[1]{\textcolor{yellow}{#1}}
+
+
+\newcommand{\byellow}[1]{\colorbox{yellow}{#1}}
+\newcommand{\bred}[1]{\colorbox{red}{\textcolor{white}{#1}}}
+\newcommand{\bgreen}[1]{\colorbox{green}{#1}}
+
+\definecolor{lightestgrey}{rgb}{0.91, 0.91, 0.91}
+\newcommand{\lshd}[1]{\colorbox{lightestgrey}{#1}}
+
+\title{Software de Código Aberto}
+\author{Fernando Castor}
+\pgfdeclareimage[height=0.4cm]{cc}{license}
+
+\institute{Centro de Informática -- Universidade Federal de Pernambuco \\[2.0cm] {\tiny Alguns direitos reservados }\pgfuseimage{cc} }
+\date{}
+\pgfdeclareimage[height=1.0cm]{logo}{ines}
+\pgfdeclareimage[height=0.8cm]{logo2}{spg}
+\pgfdeclareimage[height=0.8cm]{logo3}{cin}
+
+\logo{\pgfuseimage{logo3}\hspace{0.1cm}\pgfuseimage{logo}\hspace{0.1cm}\pgfuseimage{logo2} }
+
+\begin{document}
+
+\frame{\titlepage}
+
+\section{Introdução}
+\subsection{Introdução}
+
+
+\begin{frame}
+	\frametitle{AVISOS}
+	\begin{enumerate}
+	\item Visitem a página da disciplina (http://sites.google.com/a/cin.ufpe.br/floss) \vspace{0.3cm}
+	\item Assinem a lista \vspace{0.3cm}
+	\item Baixem os slides e os compilem \vspace{0.3cm}
+	\item Registrem as equipes \vspace{0.3cm}
+	\item Escolham os sistemas \vspace{0.3cm}
+	\item Escrevam no {\bf blog}
+	\end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Esta aula, a anterior e a próxima}
+	Fornecem uma visão geral sobre\vspace{0.3cm}
+	\begin{enumerate}
+	\item {\bf Software livre} \vspace{0.3cm}
+	\item \textit{Copyleft} \vspace{0.3cm}
+	\item \byellow{{\bf Software de código aberto}} \vspace{0.3cm}
+	\item \byellow{Semelhanças e diferenças entre os dois pontos de vista} \vspace{0.3cm}
+	\item \byellow{Um pouco de história}
+	\end{enumerate}
+\end{frame}
+
+\section{Software de Código Aberto}	
+\subsection{Software de Código Aberto}	
+
+\begin{frame}
+\vspace{0.2cm}
+\begin{center}
+\Huge{Software de Código Aberto}
+\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Quem são esses dois?}
+
+	\begin{columns}
+\begin{column}[l]{4.5cm}
+	\begin{figure}
+	\includegraphics[scale=0.3]{esr.jpg}\\
+% Eric S. Raymond
+% Domínio público
+% http://pt.wikipedia.org/wiki/Ficheiro:Esr.jpg
+	\end{figure}
+\end{column}
+\begin{column}[c]{4.5cm}
+	\begin{figure}
+	\includegraphics[scale=0.75]{perens.jpg}\\
+% Bruce Perens
+% Copyright held by Bruce Perens. Foto de divulgação.
+% http://www.perens.com/press/photos/HeadAndShoulders.jpg
+	\end{figure}
+\end{column}
+\end{columns}	
+\pause
+\begin{center}Eric Raymond e Bruce Perens\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{O que é Software de Código Aberto?}
+	\begin{block}{\sout{Ideologicamente}}
+    O foco do movimento Open Source \bgreen{{\em {\bf não é ideológico}}}.
+ 	\end{block}
+	\pause
+\begin{columns}
+\begin{column}[l]{6cm}
+	\begin{block}{Em poucas palavras...}
+		  \begin{itemize}
+		    \item \tred{``Campanha de Marketing''} em prol do Software Livre\vspace{0.1cm}
+		    \begin{itemize}
+		    \item Com foco em vantagens práticas\vspace{0.1cm}
+		    \item Sem viés ideológico\vspace{0.1cm}
+		    \item Para chamar a atenção de grandes corporações 
+		    \end{itemize}
+		  \end{itemize}
+	\end{block}
+\end{column}
+
+\begin{column}[c]{3.5cm}
+	\begin{figure}
+	\includegraphics[scale=0.35]{super_timor.png}\\
+    %Fonte: http://pt.wikipedia.org/wiki/Ficheiro:Copyleft.svg
+    %Licença: domínio público.
+	\end{figure}
+\end{column}
+\end{columns}	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Por que ``Código Aberto''? }
+    \begin{itemize}
+    \item A palavra ``free'' em \textit{Free Software} é problemática
+    \pause
+      \begin{itemize}
+        \item \textit{``Free as in freedom, not free beer''}
+       \end{itemize} 
+    \end{itemize}
+    \pause
+	\begin{figure}
+	\includegraphics[scale=0.40]{dilbert.jpg}\\
+    %Fonte: http://dilbert.com/dyn/str_strip/000000000/00000000/0000000/000000/00000/1000/600/1676/1676.strip.gif
+    %Fonte: http://dilbert.com/strips/comic/2007-08-03/
+    %Para construir os slides, é necessário renomear a imagem e mudar seu formato para .jpg.
+    %Note que o termo de uso da imagem (reproduzido parcialmente abaixo) permite que ela seja
+    %empregada para uso pessoal e não-comercial. 
+    %Termos de uso: Universal Uclick grants you a limited, personal, non-exclusive, non-commercial, revocable, non-assignable and non-transferable license to download, view and/or play one copy of the Materials (excluding source and object code) on any single computer for your personal, non-commercial use only, provided that:
+%you keep intact all copyright and other proprietary notices contained in the original Materials or any copy you may make of the Materials;
+%you make no modifications to the Materials, except as specifically permitted by us (e.g., Collaborative Content as set forth below);
+%you do not allow or aid or abet any third party (whether or not for your benefit):
+%to copy or adapt the object code of the Web Site's software, HTML, JavaScript or other code; and/or
+%reverse engineer, decompile, reverse assemble, modify or attempt to discover any source code that the Web Site creates to generate its web pages or any software or other products or processes accessible through the Web Site;
+%you do not insert any code or product to manipulate the Materials in any way that affects any user?s experience; and
+%You further agree that you will not:
+%
+%modify, frame, reproduce, archive, sell, lease, rent, exchange, encumber, hypothecate, create derivative works from, publish by hard copy or electronic means, publicly perform, display, disseminate, distribute, broadcast, retransmit, circulate to any third party or on any third-party web site, or otherwise use the Materials in any way for any public or commercial purpose (except as specifically permitted by us (e.g., Viral Content Distribution and Collaborative Content creation as set forth below)); and/or
+%use any robot, spider, rover, scraper, or any other data mining technology or automatic or manual process to monitor, cache, frame, mask, extract data from, copy or distribute the Materials (except as may be a result of standard search engine or internet browser usage).
+	\end{figure}
+    \begin{itemize}
+    \item Com ``Código Aberto'' a ênfase fica em algo mais palpável, o código
+% Vale ressaltar que muitos também criticam o termo ``Código aberto''. O motivo é que esse 
+% termo sugere que software de código aberto é simplesmente software cujo código fonte é acessível.
+% Essa é uma noção intuitiva  mas errada. 
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{\textit{Open source doesn't just mean access to the source code}}
+	% Fonte: Open Source Initiative, http://www.opensource.org/docs/osd
+	% Licença: Creative Commons Attribution 2.5 License
+	\begin{block}{\textit{Open Source} é uma {\bf metodologia de desenvolvimento}}
+    \begin{enumerate}
+      \item Para produzir software de qualidade
+      \item Compartilhando custos
+      \item Em uma {\em \textbf{Economia do Dom}}
+      \begin{itemize}
+      \item Abertura do código fonte é uma pré-condição
+      \end{itemize}
+      % Do inglês: ``Gift Economy''
+    \end{enumerate}
+ 	\end{block}
+\pause
+	\begin{block}{Práticas}
+    \begin{enumerate}
+      \item Desenvolvimento distribuído \pause
+      \item Depuração em massa, com usuários envolvidos no desenvolvimento \pause
+      % Para fins de depuração mas também através de solicitações de funcionalidades e de
+      % feedback sobre características não funcionais do programa.  
+      \item Software disponível cedo e frequentemente \pause
+      \item Meritocracia \pause
+      \item Sem uma hierarquia rígida e sem coerção
+      %Mas com um líder, pelo menos no início.
+    \end{enumerate}
+ 	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Definição de Software de Código Aberto}
+	% Fonte: Open Source Initiative, http://www.opensource.org/docs/osd
+	% Licença: Creative Commons Attribution 2.5 License
+	Toda licença de distribuição de OSS deve respeitar os critérios:
+	{\small 
+    \begin{itemize}
+\item[1] Redistribuição livre
+\item[2] Código fonte incluído ou acessível
+\item[3] Trabalhos derivados são permitidos\pause
+\item[4] Integridade do código fonte do autor, restrições controladas à modificação (via \textit{patches})
+%The license may restrict source-code from being distributed in modified form only if the license allows the distribution of "patch files" with the source code for the purpose of modifying the program at build time. The license must explicitly permit distribution of software built from modified source code. The license may require derived works to carry a different name or version number from the original software.
+\item[5] Sem discriminação contra pessoas ou grupos
+\item[6] Sem discriminação contra áreas do conhecimento ou empreendimentos
+%The license must not restrict anyone from making use of the program in a specific field of endeavor. For example, it may not restrict the program from being used in a business, or from being used for genetic research.
+% A cláusula acima parece entrar em conflito com a GPL v3 na questão da Tivoization.
+
+%\item[7] Distribuição da licença
+%The rights attached to the program must apply to all to whom the program is redistributed without the need for execution of an additional license by those parties.
+\item[8 e 9] A licença não pode ser específica para um produto ou distribuição e não deve restringir outros programas
+%The rights attached to the program must not depend on the program's being part of a particular software distribution. If the program is extracted from that distribution and used or distributed within the terms of the program's license, all parties to whom the program is redistributed should have the same rights as those that are granted in conjunction with the original software distribution.
+
+%No item 9, "outros programas" não é a mesma coisa que outras partes de um programa ao qual o programa original, modificado ou não, foi anexado. A idéia é impedir que a licença de um programa que é distribuído "empacotado" com outros influencie as licenças desses outros. Isso poderia ser usado para impor restrições de uso de forma colateral. 
+%The license must not place restrictions on other software that is distributed along with the licensed software. For example, the license must not insist that all other programs distributed on the same medium must be open-source software.
+
+%\item[10] A licença deve ser neutra, em se tratando de tecnologia
+    \end{itemize}}
+\end{frame}
+
+\begin{frame}
+	\frametitle{``Open Source'' é mais popular que ``Free Software''}
+	% A idéia de usar software de código aberto como uma ``Campanha de {\em marketing}'' para 
+	\begin{figure}
+	\begin{center}
+	% Todas as imagens mencionadas abaixo foram tiradas das páginas da Wikipedia que descrevem as respectivas organizações.
+	\includegraphics[scale=0.20]{redhat.png}
+	%Licença: Copyright pertence à Red Hat, Inc. Uso para fins educacionais e não-comerciais com uma figura de
+    % baixa resolução é PROVAVELMENTE considerando um uso justo (fair use) de acordo com a lei americana.
+	\hspace{0.15cm}\includegraphics[scale=0.20]{microsoft.png} \\[0.3cm]
+	%Licença: Esta imagem, ou texto mostrado nela, consiste somente de simples formas geométricas ou texto. 
+	% Elas não se encontram no limiar de originalidade necessário para a proteção de direitos autorais e por 
+	% isso estão em domínio público. Embora seja livre de restrições de direitos autorais, esta imagem ainda 
+	% pode estar sujeita a outras restrições.
+	\hspace{0.15cm}\includegraphics[scale=0.20]{oracle.png}
+	%Licença: Esta imagem, ou texto mostrado nela, consiste somente de simples formas geométricas ou texto. 
+	% Elas não se encontram no limiar de originalidade necessário para a proteção de direitos autorais e por 
+	% isso estão em domínio público. Embora seja livre de restrições de direitos autorais, esta imagem ainda 
+	% pode estar sujeita a outras restrições.
+	\hspace{0.15cm}\includegraphics[scale=0.15]{ibm.png}\\[0.3cm]
+	%Licença: Esta imagem, ou texto mostrado nela, consiste somente de simples formas geométricas ou texto. 
+	% Elas não se encontram no limiar de originalidade necessário para a proteção de direitos autorais e por 
+	% isso estão em domínio público. Embora seja livre de restrições de direitos autorais, esta imagem ainda 
+	% pode estar sujeita a outras restrições.
+	\includegraphics[scale=0.15]{mysql.png}
+	%Licença: Copyright pertence à Red Hat, Inc. Uso para fins educacionais e não-comerciais com uma figura de
+    % baixa resolução é PROVAVELMENTE considerando um uso justo (fair use) de acordo com a lei americana.
+	\hspace{0.2cm}\includegraphics[scale=0.15]{novell.png}
+	%Licença: Esta imagem, ou texto mostrado nela, consiste somente de simples formas geométricas ou texto. 
+	% Elas não se encontram no limiar de originalidade necessário para a proteção de direitos autorais e por 
+	% isso estão em domínio público. Embora seja livre de restrições de direitos autorais, esta imagem ainda 
+	% pode estar sujeita a outras restrições.
+	\hspace{0.2cm}\includegraphics[scale=0.15]{mozilla.png}\\
+	% Licença: This file contains a logo for a Mozilla product (such as the Firefox browser or the Mozilla Thunderbird email client) and is protected by copyright and/or trademark by the Mozilla Foundation and/or its subsidiary Mozilla Corporation. According to the Mozilla trademark policy, the logo is free to use as long as: (i) It is non-confusing and non-disparaging; (ii) It is not used commercially; (iii) It is not modified; (iv) It is not high resolution.
+	\end{center}
+	\end{figure}
+\end{frame}
+
+\section{Diferenças e Semelhancas}
+\subsection{Diferenças e Semelhancas}
+
+\begin{frame}
+\vspace{0.2cm}
+\begin{center}
+\Huge{Diferenças e Semelhanças}
+\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Em pouquíssimas palavras...}
+	
+\begin{center}
+\huge{A democracia é um direito moral} \\[0.2cm]
+\pause
+\large{vs}\\[0.2cm]
+\huge{A democracia é o sistema mais eficiente que se conhece}
+\end{center}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Pragmaticamente}
+\begin{center}
+\begin{itemize}
+\item Dois meios de atingir o mesmo fim 
+\item \vspace{0.1cm} Práticas {\bf indistinguíveis}
+\begin{itemize}
+\item Principalmente após ``The Cathedral and the Bazaar''\vspace{0.1cm}
+\end{itemize}
+\item Amplo espectro de pontos de vista\vspace{0.1cm}
+\end{itemize}
+\end{center}\pause
+\begin{block}{Em termos de licenceamento}
+\begin{itemize}
+\item Todo programa \bgreen{livre} é de \byellow{código aberto}\vspace{0.1cm}\pause
+\item Todo programa de \byellow{código aberto} é \bgreen{livre}?
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Um exemplo}
+	
+\begin{center}
+NASA Open Source Agreement v1.3
+	\begin{figure}
+	\begin{center}
+ 	\includegraphics[scale=0.33]{osi_approved}\\
+    % http://www.opensource.org/trademarks/opensource/OSI-Approved-License-100x137.png
+    % Copyright OpenSourceInitiative
+    % Licença:  Creative Commons Attribution 2.5 License
+	\end{center}
+	\end{figure}\pause \vspace{0.1cm}
+	{\footnotesize \textit{``The NASA Open Source Agreement, version 1.3, is not a free software license because it includes a provision requiring changes to be your `{\em original creation}'.''}}
+	% Fonte: http://www.gnu.org/licenses/license-list.html
+
+% Que liberdade a restrição mencionada nesse texto da FSF fere? 
+% Fere algum critério da OSD?
+\end{center}\pause
+\begin{block}{Exercício para casa}
+Encontrar \tred{\textbf{exemplos}} e comentar sobre eles no blog.
+\end{block}
+\end{frame}
+
+%Perens, Raymond e Stallman: três visões distintas. Interessante é o email de 1999 do Perens, "It's Time to Talk About Free Software Again" (http://lists.debian.org/debian-devel/1999/02/msg01641.html).
+%Interessante também (extraído da Wikipedia, http://en.wikipedia.org/wiki/Bruce_Perens): 
+%(Bruce) Perens poses Open Source as a means of marketing the free software philosophy of Richard Stallman to business people who are more concerned with profit than freedom, and states that open source and free software are only two ways of talking about the same phenomenon. This differs from Stallman[5][6] and Raymond. Perens postulates an economic theory for business use of Open Source in his paper The Emerging Economic Paradigm of Open Source and his speech Innovation Goes Public.[7] This differs from Raymond's theory in The Cathedral and the Bazaar, which having been written before there was much business involvement in open source, explains open source as a consequence of programmer motivation and leisure.
+
+%Software Livre => Não poder {\bf cobrar}  por software? 
+%Não, mas implica em formas diferentes de se cobrar. Como usuários são livres (ou seja, sem restrições de qualquer natureza) para distribuir o sistema, em teoria, depois que uma única pessoa pagasse o preço para obter uma cópia de um sistema, poderia redistribui-la para quem quisesse, o que quebra o esquema de licenciamento por uso adotado para muitos sistemas de software comerciais. 
+%Licenças do tipo "pagar pelo direito de usar em uma máquina", como no Windows, ou do tipo "livre para uso não-comercial" intrinsecamente ferem as quatro liberdades e não fazem sentido. 
+%Mais informações: http://www.gnu.org/philosophy/selling.html 
+
+\section{Fim}
+\subsection{Fim}
+
+\begin{frame}
+\vspace{0.2cm}
+\begin{center}
+\Huge{Obrigado!}
+\end{center}
+\end{frame}
+
+
+
+\end{document}

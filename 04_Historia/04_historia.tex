@@ -1,0 +1,471 @@
+% Author: Fernando Castor. You can contact the author at castor in the cin.ufpe.br domain. 
+
+%THIS WORK IS LICENSED UNDER A CREATIVE COMMONS ATTRIBUTION-NONCOMMERCIAL-SHAREALIKE 3.0 UNPORTED LICENSE. THE WORK (AS DEFINED BY THE LICENSE) IS PROVIDED UNDER THE TERMS OF THIS CREATIVE COMMONS PUBLIC LICENSE ("CCPL" OR "LICENSE"). THE WORK IS PROTECTED BY COPYRIGHT AND/OR OTHER APPLICABLE LAW. ANY USE OF THE WORK OTHER THAN AS AUTHORIZED UNDER THIS LICENSE OR COPYRIGHT LAW IS PROHIBITED.
+%
+%BY EXERCISING ANY RIGHTS TO THE WORK PROVIDED HERE, YOU ACCEPT AND AGREE TO BE BOUND BY THE TERMS OF THIS LICENSE. TO THE EXTENT THIS LICENSE MAY BE CONSIDERED TO BE A CONTRACT, THE LICENSOR GRANTS YOU THE RIGHTS CONTAINED HERE IN CONSIDERATION OF YOUR ACCEPTANCE OF SUCH TERMS AND CONDITIONS.
+%PLEASE REFER TO THE DESCRIPTION OF THE LICENSE (http://creativecommons.org/licenses/by-nc-sa/3.0/) AND TO ITS FULL TEXT (http://creativecommons.org/licenses/by-nc-sa/3.0/legalcode) FOR MORE INFORMATION.
+
+% THIS WORK USES A NUMBER OF IMAGES FROM THIRD-PARTIES. THE COPYRIGHT OF THESE IMAGES REMAIN WITH THEIR OWNERS, WHEN APPLICABLE. 
+
+% Build this file with pdflatex 04_historia.tex
+
+\documentclass[xcolor=dvipsnames]{beamer}
+\usecolortheme[named=Brown]{structure} 
+%\usetheme{Rochester}
+\usetheme{Frankfurt}
+
+\usepackage{booktabs}
+\usepackage{ulem}
+\usepackage{graphics}
+\usepackage{multirow}
+\usepackage[latin1]{inputenc}   % para os acentos
+\usepackage[brazil]{babel}      % para hifeniza\c{c}\~{a}o
+\usepackage{color}
+
+\definecolor{lightgrey}{rgb}{0.8, 0.8, 0.8}
+\newcommand{\shd}[1]{\colorbox{lightgrey}{#1}}
+
+\newcommand{\tblue}[1]{\textcolor{blue}{#1}}
+\newcommand{\tred}[1]{\textcolor{red}{#1}}
+\newcommand{\tgreen}[1]{\textcolor{green}{#1}}
+\newcommand{\tyellow}[1]{\textcolor{yellow}{#1}}
+
+
+\newcommand{\byellow}[1]{\colorbox{yellow}{#1}}
+\newcommand{\bred}[1]{\colorbox{red}{\textcolor{white}{#1}}}
+\newcommand{\bgreen}[1]{\colorbox{green}{#1}}
+
+\definecolor{lightestgrey}{rgb}{0.91, 0.91, 0.91}
+\newcommand{\lshd}[1]{\colorbox{lightestgrey}{#1}}
+
+\title{Um Pouco de História do FLOSS}
+\author{Fernando Castor}
+\pgfdeclareimage[height=0.4cm]{cc}{license}
+
+\institute{Centro de Informática -- Universidade Federal de Pernambuco \\[2.0cm] {\tiny Alguns direitos reservados }\pgfuseimage{cc} }
+\date{}
+\pgfdeclareimage[height=1.0cm]{logo}{ines}
+\pgfdeclareimage[height=0.8cm]{logo2}{spg}
+\pgfdeclareimage[height=0.8cm]{logo3}{cin}
+
+\logo{\pgfuseimage{logo3}\hspace{0.1cm}\pgfuseimage{logo}\hspace{0.1cm}\pgfuseimage{logo2} }
+
+\begin{document}
+
+\frame{\titlepage}
+
+%\section{História}
+%\subsection{História}
+
+\begin{frame}
+	\frametitle{1950s}
+	\begin{columns}
+\begin{column}[l]{5cm}
+	
+	\begin{figure}
+	\begin{center}
+ 	\includegraphics[scale=0.33]{punched.jpg}\\
+    % http://www.computerhistory.org/revolution/memory-storage/8/326
+    % Copyright MITRE Corporation
+    % This image seems to be free for educational use. 
+    % Description: This stack of 62,500 punched cards ? 5 MB worth ? held the control program for the giant SAGE military computer network.
+	\end{center}
+	%No início, 
+	\end{figure}
+\end{column}
+
+\pause
+\begin{column}[c]{4.5cm}
+	\begin{block}{Práticas}
+    \begin{enumerate}
+      \item Software dependente da máquina 
+      \item \bred{\textbf{Solução}}: os primeiros compiladores 
+      \item Compartilhados sem reservas 
+    \end{enumerate}
+ 	\end{block}
+\end{column}
+\end{columns}	
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{1960s}
+Computadores mais fáceis de programar $\Rightarrow$ \bred{mais software}\\
+\begin{columns}
+\begin{column}[l]{3.5cm}	
+	\begin{figure}
+	\begin{center}
+	DEC PDP-11\\
+ 	\includegraphics[scale=0.4]{pdp11.jpg}\\[0.1cm]
+    % http://en.wikipedia.org/wiki/File:Pdp-11-40.jpg
+    % GFDL
+    % PDP-11, da Digital Equipment Corporation. 
+	\end{center}
+	\end{figure}
+\end{column}
+
+\begin{column}[c]{6cm}
+	\begin{figure}
+	\begin{center}
+	IBM System 360\\
+ 	\includegraphics[scale=0.35]{ibm360.jpg}\\[0.1cm]
+    % http://en.wikipedia.org/wiki/File:DM_IBM_S360.jpg
+    % Licença: Creative Commons Attribution 2.5 Generic. Autor: Ben Franske.
+    % Descrição: An IBM System 360/20 computer on display at the Deutsches Museum in Munich Germany. Front panels are removed. 
+    % An IBM 2560 MFCM ( multi-function Card Machine) is shown on the right and the corner of a 2203 printer is visible on the left. 
+	\end{center}
+	\end{figure}
+\end{column}
+\end{columns}	
+\textit{Patches} compartilhados entre usuários e com fabricantes\\
+O importante era vender {\em computadores}\\
+Custo do software era \tred{embutido} 
+% Um desenvolvedor que usasse um computador poderia enviar um patch que produziu para 
+% a empresa fabricante para que esta incorporasse o patch às versões futuras do software.
+% Também era possível para uma pessoa enviar patches para outras. Embora não fosse
+% explicitamente permitida, essa prática era aceita e até encorajada pelos fabricantes,
+% pois isso melhorava a qualidade do software. 
+% Essa situação não parece não diferir muito do desenvolvimento de FLOSS de hoje em 
+% dia, mas há diferenças fundamentais:
+% 1 - Computadores eram todos incompatíveis. O que rodava no PDP-11 não necessariamente
+%     rodava no IBM/360. Embora já houvesse alguma padronização em termos de linguagens
+%     cada empresa usava a sua, ou havia incompatibilidades com o SO ou a arquitetura
+%     subjacentes. A construção de compiladores ainda era, até certo ponto, magia negra.
+% 2 - As empresas tinham foco no hardware. O software era só aquele componente compara-
+%     tivamente mais barato que era necessário para se extrair o máximo de valor a 
+%     partir dos computadores. Isso passou a mudar com a redução gradual nos preços de 
+%     computadores, a menor diferença de desempenho entre as máquinas disponíveis no
+%     mercado e a popularização dos sistemas de compartilhamento de tempo, que ocasionou 
+%     um aumento significativo na complexidade do software e, consequentemente, no seu
+%     custo de produção (já que eles incluiam cada vez mais funcionalidades, apesar das
+%     ferramentas de desenvolvimento cada vez mais evoluídas). 
+% 3 - Não havia a facilidade de se compartilhar código que passou a existir com o 
+%     advento da Internet. Nessa época, compartilhar código era muito mais difícil, exi-
+%     gindo o envio de disquetes ou de fitas magnéticas. Qualquer um desses era caro
+%     de enviar, além de pouco conveniente.
+\end{frame}
+
+\begin{frame}
+	\frametitle{1970s -- UNIX}
+\begin{columns}
+\begin{column}[l]{5.5cm}	
+	\begin{figure}
+	\begin{center}
+	Ken Thompson e Dennis Ritchie\\[0.1cm]
+ 	\includegraphics[scale=0.48]{ken_dennis.jpg}\\
+    % http://en.wikipedia.org/wiki/File:Ken_n_dennis.jpg
+    % Domínio público
+    % Ken Thompson e Dennis Ritchie, principais criadores do UNIX. Doug McIlroy
+    % também influenciou muito o projeto e a conhecidíssima "filosofia Unix" é
+    % idéia dela. É um refinamento de idéias que ele defendia já desde o final da
+    % década de 60. 
+	\end{center}
+	\end{figure}
+\end{column}
+
+\begin{column}[c]{4cm}
+%	\begin{block}{Práticas}
+    \begin{itemize}
+      \item Decorrente do fracasso do Multics 
+      \item Compartilhado sem restrições 
+      % Isso era possível porque, devido decisão judicial de 1956, decorrente
+      % de uma ação antitruste, a AT&T não podia se envolver com nenhum negócio 
+      % que não tivesse a ver com telefonia. Logo, não poderia tirar proveito 
+      % comercial do UNIX ou de qualquer programa que produzisse. 
+      % Só quando o sucesso dele se mostrou enorme, com milhares de cópias
+      % rodando em todas as partes do mundo, seus advogados começaram a tentar
+      % mudar essa situação. Isso deu origem aos problemas com a Universidade
+      % da Califórnia em Berkeley, que tinha seu próprio UNIX, construído
+      % a partir do da AT&T mas com diversos refinamentos, chamado BSD (Berkeley
+      % Software Distribution). É interessante notar que as duas primeiras
+      % versões do BSD nem eram sistemas operacionais completos e sim 
+      % ferramentas para desenvolver programas em Pascal. 
+      \item Fácil de ``portar'' para diferentes máquinas
+      % Ou seja, foi o primeiro operacional usado por muitas pessoas
+      % que não era amarrado a nenhum fabricante específico. Devido
+      % à sua abertura, também podia ser melhorado pelos seus usuários.
+      \item Deu origem à BSD
+    \end{itemize}
+% 	\end{block}
+\end{column}
+\end{columns}
+\pause
+{\footnotesize 
+\begin{block}{Filosofia Unix}
+\begin{itemize}
+\item Escreva programas que façam apenas uma coisa e bem. 
+\item Escreva programas que trabalham juntos. 
+\item Escreva programas que lidem com fluxos de texto porque essa é a interface universal. 
+\end{itemize}
+\end{block}
+}
+\end{frame}
+
+\begin{frame}
+	\frametitle{1970s -- Fechamento do código e hobbistas}
+{\small 
+Software como diferencial competitivo $\Rightarrow$ \bred{código fonte protegido}\\
+\begin{columns}
+\begin{column}[l]{5.5cm}	
+	\begin{figure}
+	\begin{center}
+	MITS Altair 8800\\[0.1cm]
+ 	\includegraphics[scale=0.7]{altair.jpg}\\
+    % http://en.wikipedia.org/wiki/File:Altair_8800_Computer.jpg
+    % Domínio público
+    % MITS Altair 8800, vendido como um kit para ser montado em casa por hobbistas,
+    % muitos consideram que este computador deu início à moda dos computadores
+    % pessoais. Começou a ser vendido em 1975. Vendeu milhares de unidades em 
+    % seu primeiro mês no mercado, algo totalmente inesperado. Era adquirido através 
+    % de anúncios em revistas de eletrônica popular. Para fazer alguma coisa de útil 
+    % com ele, era fundamental ter o Altair BASIC, produzido por uma empresa chamada 
+    % Micro-Soft. 
+	\end{center}
+	\end{figure}
+\end{column}
+
+\begin{column}[c]{4cm}
+	\begin{figure}
+	\begin{center}
+	Carta aberta aos hobbistas\\[0.1cm]
+ 	\includegraphics[scale=0.55]{carta_gates.jpg}\\[0.1cm]
+    % http://www.digibarn.com/collections/newsletters/homebrew/V2_01/gatesletter.html
+    % Licença: Creative Commons Attribution-Noncommercial ShareAlike 3.0 License.
+    % Carta aberta de Bill Gates aos hobbistas do Homebrew Computer Club, de Mountain 
+    % View, na Califórnia. Pode-se dizer que funciona como um manifesto do software
+    % proprietário. 
+	\end{center}
+	\end{figure}
+\end{column}
+\end{columns}
+Justamente quando a Internet facilitou o compartilhamento...\\
+}
+\end{frame}
+% Com a popularização e padronização das linguagens de alto nível, passou a ser possível 
+% rodar um mesmo programa em máquinas de fabricantes distintos e tornou-se mais fácil
+% construir programas mais complexos. Neste cenário, três fatores levaram os fabricantes
+% de hardware a se preocupar com software: (i) a emergente indústria de software; 
+% (ii) leasing de máquinas, que funcionava como um aluguel e não trazia nenhum lucro
+% em termos de software; e (iii) a capacidade de vários clientes dos fabricantes de
+% hardware de atender suas próprias demandas, em termos de software. Software cada vez 
+% mais tornava-se um diferencial competitivo e simplesmente deixar qualquer um 
+% beneficiar-se disso parecia uma má estratégia de negócios. Competidores poderiam tomar
+% como base o software produzido por uma empresa, melhorá-lo e vendê-lo como seu próprio
+% produto. Fabricantes passaram então a dificultar a obtenção do código fonte dos programas
+% e a exigir que a lei de copyright se fizesse cumprir. Na segunda metade da
+% década de 70, popularizou-se a prática de vender licenças de uso, como as que 
+% são usadas até hoje pela Microsoft. 
+
+\begin{frame}
+	\frametitle{1980s -- Software Livre}
+{\small 
+Enquanto isso no MIT Artificial Intelligence Lab...
+\begin{columns}
+\begin{column}[l]{4cm}	
+	\begin{figure}
+	\begin{center}
+	Stata Center\\[0.1cm]
+ 	\includegraphics[scale=0.36]{csail.jpg}\\
+    % http://en.wikipedia.org/wiki/File:Stata_Center1.jpg
+    % GFDL
+    % Stata Center, prédio onde atualmente fica localizado o Computer Science and Artifical Intelligence Laboratory. 
+	\end{center}
+	\end{figure}
+\end{column}
+
+\begin{column}[c]{6cm}
+\begin{block}{A cultura \textit{hacker} ia bem, até que...}
+\begin{itemize}
+\item uma impressora deu problema,
+% e ninguém podia consertar porque o código fonte do driver não estava disponível
+\item o MIT tentou implantar senhas e
+% e Stallman implementou um programa que as quebrava e enviava por email para seus
+% usuários.
+\item a Symbolics Inc. resolveu construir uma máquina LISP\pause
+\begin{itemize}
+\item com os ex-hackers do AI Lab
+\item com código que era do MIT
+\item e proibindo a \tred{\textbf{redistribuição}} do código fonte
+\end{itemize} 
+\end{itemize}
+\end{block}
+\end{column}
+\end{columns}
+}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Nesse ponto Stallman resolveu fundar a FSF}
+	\begin{figure}
+	\begin{center}
+ 	\includegraphics[scale=0.5]{fsf.png}\\[0.5cm]
+    % http://pt.wikipedia.org/wiki/Ficheiro:FSF-Logo.svg
+    % Licença: Creative Commons Attribution-No Derivative Works 3.0 license (or later version)
+    \pause
+    E o projeto GNU {\em (GNU is Not Unix)} \\[0.5cm]
+    \pause
+    E a GPL {\em (General Public License)}
+	\end{center}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Software ``livre'' anterior ao Software Livre}
+	\begin{figure}
+	\begin{center}
+	\includegraphics[scale=0.40]{tex.png}
+	%Licença: Domínio público
+	\hspace{0.30cm}\includegraphics[scale=0.40]{xwindow.png} \\[0.4cm]
+	% Licença:  Creative Commons Attribution-Share Alike 3.0 Unported.
+    % http://en.wikipedia.org/wiki/File:X-Window-System.png
+	\includegraphics[scale=0.45]{bsd.jpg}
+	% Licença: This is a logo owned by BSD Daemon Copyright 1988 by Marshall Kirk McKusick. 
+	%          All Rights Reserved. Drawn by John Lasseter. for FreeBSD.
+	% http://en.wikipedia.org/wiki/File:Bsd_daemon.jpg
+	\end{center}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+
+\frametitle{\textit{Managing a \textbf{HURD} is \textbf{HARD}}}
+% HURD = HIRD of UNIX-Replacing Daemons
+% HIRD = HURD of Interfaces Representing Depth
+% HARD poderia ser "HARD. Astonishingly, Really Difficult". Esse fui eu quem inventou. Sim é bobo. :)
+% Como tanto HIRD quanto HURD são pronunciadas da mesma forma que a
+% palavra "herd", GNU HURD soa como "Rebanho de GNUs".
+% Muito mais informações disponíveis em http://en.wikipedia.org/wiki/GNU_Hurd
+% e na página oficial do HURD, http://hurd.gnu.org
+  \begin{block}{Até 1991...} 
+  \begin{itemize}
+  \item {\bf Compartilhar} código tornou-se mais fácil 
+  \begin{itemize}
+  \item Por causa da Internet e de BBSs
+  \end{itemize}
+  \pause
+\vspace{0.2cm}  \item Software livre de altíssima qualidade estava sendo produzido
+  \begin{itemize}
+  \item GCC, Emacs, vi, GDB\pause
+  \end{itemize}
+\vspace{0.2cm}  \item O sistema operacional GNU estava \bred{quase pronto}\pause
+\vspace{0.2cm}  \item \textbf{Mas faltava o núcleo} 
+  \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Quem é esse?}
+	\begin{figure}
+	\begin{center}
+	\includegraphics[scale=0.6]{lbt.jpg}\\
+	\pause
+	Linus B. Torvalds
+% Linus Torvalds
+% GFDL. Permission of Martin Streicher, Editor-in-Chief, LINUXMAG.com
+% http://en.wikipedia.org/wiki/File:Linus_Torvalds.jpeg
+	\end{center}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Linux}
+% HURD = HIRD of UNIX-Replacing Daemons
+% HIRD = HURD of Interfaces Representing Depth
+% HARD poderia ser "HARD. Astonishingly, Really Difficult". Esse fui eu quem inventou. Sim é bobo. :)
+% Como tanto HIRD quanto HURD são pronunciadas da mesma forma que a
+% palavra "herd", GNU HURD soa como "Rebanho de GNUs".
+% Muito mais informações disponíveis em http://en.wikipedia.org/wiki/GNU_Hurd
+% e na página oficial do HURD, http://hurd.gnu.org
+Primeira versão disponível para o público em outubro 1991\\[0.2cm]
+  \begin{block}{A importância do Linux} 
+  \begin{itemize}
+  \item Núcleo usado no GNU (GNU/Linux) \vspace{0.1cm}
+  \item Feito notável de colaboração 
+  \begin{description}
+  \item [Atualmente:] Mais de 9500 desenvolvedores contribuindo
+  % De acordo com http://www.ohloh.net/p/linux/contributors
+  \item [Informações interessantes:] http://www.ohloh.net/p/linux
+  \end{description}
+\vspace{0.1cm}  \item Principal exemplo de software livre que alcançou o {\bf grande público}
+\vspace{0.1cm}\pause
+  \item Lei de Linus: ``dados olhos suficientes, todos os erros são triviais''
+  % No original: ``Given enough eyeballs, all bugs are shallow''.
+  % Um dos preceitos fundamentais da idéia de Software de Código Aberto.
+ 
+% Linux usa até hoje a GPL v2.0. Linus já declarou que não tem intenção de passar a usar a GPL v3.0.
+  \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{O efeito Linux}
+   
+  \begin{block}{Por um lado...}
+  \begin{itemize}
+  \item Usar \bgreen{exclusivamente} software livre tornou-se viável \vspace{0.1cm}
+  \item Algumas aplicações já disponíveis, com outras sendo desenvolvidas \pause
+  \end{itemize}
+  \end{block} 
+\pause
+  \begin{block}{Entretanto...}
+  \begin{itemize}
+  \item Software livre ainda \bred{\textbf{não era popular}} \vspace{0.1cm}\pause
+    \begin{itemize}
+    \item Servidores usavam, mas não {\em desktops}\vspace{0.1cm}
+    \item Quantos de vocês conheciam o Linux antes da universidade?\vspace{0.1cm}\pause
+    \item Há quanto tempo usam, se usam? 
+    \end{itemize}
+  \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Enquanto isso, uma guerra global acontecia}
+	\begin{figure}
+	\begin{center}
+	\includegraphics[scale=0.45]{browsers.png}
+	% http://en.wikipedia.org/wiki/File:Browser_Wars.svg
+	% Licença: Creative Commons Attribution-Share Alike 3.0 Unported
+	% Autor: Wereon (usuário da Wikipedia em língua inglesa)
+	\end{center}
+	\end{figure}   
+% Na guerra dos browsers, o Netscape Navigator perdeu mercado rapidamente
+% devido à política da Microsoft de distribuir o Windows junto com o Internet
+% Explorer. Adicionalmente, este último foi integrado ao Windows de tal
+% maneira que tornou-se impossível simplesmente livrar-se dele. Apesar de
+% vários processos na justiça, a manobra da Microsoft foi eficaz. Isso
+% preocupou os executivos da Netscape não pelas razões óbvias. A empresa
+% não obtinha lucros a partir da distribuição do browser, já que esta era
+% feita gratuitamente. Seus lucros eram provenientes de software para
+% servidores. Era importante combater a dominação da Microsoft principalmente
+% porque isso poderia implicar em um monopólio não apenas no software
+% que rodava nos clientes. Esta situação coincidiu com a popularização 
+% do Linux, que já contava com algumas distribuições mais amigáveis, como
+% o Red Hat Linux, e com o texto que apresentou a forma ``open source'' de
+% desenvolver código para o mundo, ``The Cathedral and the Bazaar'' de Eric
+% S. Raymond. Esse texto admitidamente foi o pontapé que a Netscape precisava
+% para liberar o código fonte do seu browser, em janeiro de 1998, e formar o 
+% que se tornaria a Mozilla Foundation.
+\end{frame}
+
+\begin{frame}
+\vspace{0.2cm}
+\begin{center}
+\Large{O que mais aconteceu?}
+\\[0.4cm]\pause
+\Huge{paginadadisciplina/linhadotempo}
+\\[0.4cm]
+\Large{\tred{Completem a linha!}}\\[0.2cm]
+%Se cada um contribuir com 6 ou 7 entradas, teremos uma linha do tempo bem legal!
+\end{center}
+\end{frame}
+\begin{frame}
+\vspace{0.2cm}
+\begin{center}
+\Huge{Obrigado!}
+\end{center}
+\end{frame}
+
+
+
+\end{document}
