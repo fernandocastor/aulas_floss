@@ -1,0 +1,399 @@
+% Author: Fernando Castor. You can contact the author at castor in the cin.ufpe.br domain. 
+
+%THIS WORK IS LICENSED UNDER A CREATIVE COMMONS ATTRIBUTION-NONCOMMERCIAL-SHAREALIKE 3.0 UNPORTED LICENSE. THE WORK (AS DEFINED BY THE LICENSE) IS PROVIDED UNDER THE TERMS OF THIS CREATIVE COMMONS PUBLIC LICENSE ("CCPL" OR "LICENSE"). THE WORK IS PROTECTED BY COPYRIGHT AND/OR OTHER APPLICABLE LAW. ANY USE OF THE WORK OTHER THAN AS AUTHORIZED UNDER THIS LICENSE OR COPYRIGHT LAW IS PROHIBITED.
+%
+%BY EXERCISING ANY RIGHTS TO THE WORK PROVIDED HERE, YOU ACCEPT AND AGREE TO BE BOUND BY THE TERMS OF THIS LICENSE. TO THE EXTENT THIS LICENSE MAY BE CONSIDERED TO BE A CONTRACT, THE LICENSOR GRANTS YOU THE RIGHTS CONTAINED HERE IN CONSIDERATION OF YOUR ACCEPTANCE OF SUCH TERMS AND CONDITIONS.
+%PLEASE REFER TO THE DESCRIPTION OF THE LICENSE (http://creativecommons.org/licenses/by-nc-sa/3.0/) AND TO ITS FULL TEXT (http://creativecommons.org/licenses/by-nc-sa/3.0/legalcode) FOR MORE INFORMATION.
+
+% THIS WORK USES A NUMBER OF IMAGES FROM THIRD-PARTIES. THE COPYRIGHT OF THESE IMAGES REMAIN WITH THEIR OWNERS, WHEN APPLICABLE. 
+
+% Build this file with pdflatex 05_praticas_tabus.tex
+
+\documentclass[xcolor=dvipsnames]{beamer}
+\usecolortheme[named=Brown]{structure} 
+%\usetheme{Rochester}
+\usetheme{Frankfurt}
+
+\usepackage{booktabs}
+\usepackage{ulem}
+\usepackage{graphics}
+\usepackage{multirow}
+\usepackage[latin1]{inputenc}   % para os acentos
+\usepackage[brazil]{babel}      % para hifeniza\c{c}\~{a}o
+\usepackage{color}
+
+\definecolor{lightgrey}{rgb}{0.8, 0.8, 0.8}
+\newcommand{\shd}[1]{\colorbox{lightgrey}{#1}}
+
+\newcommand{\tblue}[1]{\textcolor{blue}{#1}}
+\newcommand{\tred}[1]{\textcolor{red}{#1}}
+\newcommand{\tgreen}[1]{\textcolor{green}{#1}}
+\newcommand{\tyellow}[1]{\textcolor{yellow}{#1}}
+
+
+\newcommand{\byellow}[1]{\colorbox{yellow}{#1}}
+\newcommand{\bred}[1]{\colorbox{red}{\textcolor{white}{#1}}}
+\newcommand{\bgreen}[1]{\colorbox{green}{#1}}
+
+\definecolor{lightestgrey}{rgb}{0.91, 0.91, 0.91}
+\newcommand{\lshd}[1]{\colorbox{lightestgrey}{#1}}
+
+\title{Desenvolvimento de FLOSS: Práticas e Tabus}
+\author{Fernando Castor}
+\pgfdeclareimage[height=0.4cm]{cc}{license}
+
+\institute{Centro de Informática -- Universidade Federal de Pernambuco \\[2.0cm] {\tiny Alguns direitos reservados }\pgfuseimage{cc} }
+\date{}
+\pgfdeclareimage[height=1.0cm]{logo}{ines}
+\pgfdeclareimage[height=0.8cm]{logo2}{spg}
+\pgfdeclareimage[height=0.8cm]{logo3}{cin}
+
+\logo{\pgfuseimage{logo3}\hspace{0.1cm}\pgfuseimage{logo}\hspace{0.1cm}\pgfuseimage{logo2} }
+
+\begin{document}
+
+\section{Introdução}
+\subsection{Introdução}
+
+\frame{\titlepage}
+
+
+\begin{frame}
+	\frametitle{O Processo de Desenvolvimento de FLOSS}
+    \begin{enumerate}
+      \item \byellow{Práticas} \vspace{0.2cm}
+      \item \byellow{Tabus} \vspace{0.2cm}
+      \item Modelos de Gerenciamento \vspace{0.2cm}
+      \item Ferramentas \vspace{0.2cm}
+      %Mas com um líder, pelo menos no início.
+    \end{enumerate}
+\end{frame}
+
+
+\section{Práticas}
+\subsection{Práticas}
+
+\begin{frame}
+\vspace{0.2cm}
+\begin{center}
+\Huge{Práticas do Desenvolvimento de Software de Código Aberto}
+\end{center}
+\end{frame}
+
+
+% praticas
+  % A Leis de Linus vs. O homem-mês mítico?  
+  % Escolher uma licença livre ou de código aberto é fundamental (falar sobre como isso afeta questões ligadas
+  % a a motivação de quem trabalha no projeto). 
+  
+% Impacto positivo de cada uma...
+
+% Se essas práticas são tão boas, por que algumas empresas com práticas diametralmente opostas funcionam bem?
+%http://wallpaperstag.net/view-apple_macintosh_pear_logo-1280x1024.html
+% pear.jpg
+% Não consegui descobrir informações sobre o copyright da figura.
+
+% Modelos de gerenciamento
+% Forkability e porque ditadores devem sempre ser benevolentes
+%(incluir fotos de alguns ditadores benevolentes conhecidos)
+% Aquí entra o slide com o garfo
+
+% Tabus
+% You Don't Fork About the Fight Club
+% Motivação?
+
+% Ownership customs (ver Homesteading the Noosphere)
+
+\begin{frame}
+	\frametitle{Revisando: Algumas Práticas do Desenvolvimento \textit{Open Source}}
+    \begin{enumerate}
+      \item Desenvolvimento distribuído \vspace{0.2cm}
+      \item Software disponível cedo e frequentemente \vspace{0.2cm}
+      \item Depuração e testes em massa, com usuários envolvidos no desenvolvimento \vspace{0.2cm}
+      \item Meritocracia \vspace{0.2cm}
+      \item Sem uma hierarquia rígida e sem coerção
+      %Mas com um líder, pelo menos no início.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Desenvolvimento Distribuído}
+    \textbf{Premissa}: mecanismo de comunicação \tred{muitos-para-muitos} tão bom quanto a Internet
+    % Telefone não é suficiente para dar suporte ao desenvolvimento distribuído, por dois 
+    % motivos. Primeiro, porque é obrigatoriamente síncrono, o que significa que as duas 
+    % partes precisam concordar em se comunicar ao mesmo tempo. Além disso, de forma geral,
+    % telefone permite comunicação entre duas partes e isso não é suficiente para o 
+    % desenvolvimento distribuído. Por outro lado, comunicação entre várias partes é fácil 
+    % quando se emprega ferramentas como email, IRC e Skype. 
+    \vspace{0.2cm}
+	\begin{figure}
+	\begin{center}
+ 	\includegraphics[scale=0.35]{distribuicao.jpg}\\[0.1cm]
+	%Distribuição geográfica dos desenvolvedores do Linux.
+	%http://www.ohloh.net/p/linux/map
+	%Copyright pertence a Ohloh
+	%Ohloh grants you a royalty-free, fully paid-up, worldwide, non-transferable, non-exclusive, limited license to use, reproduce, modify and publicly display the ?Ohloh Materials? (?Materials?) on Ohloh?s website in and/or on any of your online publications and/or web pages, provided that you agree to attribute Ohloh as the source of any ?Materials.? 
+	\end{center}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Software disponível cedo e frequentemente}
+    {\LARGE E ouvindo o \textit{feedback} dos usuários! }\pause
+\\[0.3cm]
+Cuidado com as expectativas e com o {\bf cedo demais}!
+\begin{columns}
+\begin{column}[c]{4.5cm}
+	\begin{figure}
+	\begin{center}
+ 	\includegraphics[scale=0.7]{touchpad.jpg}\\[0.1cm]
+	\end{center}
+	\end{figure}
+    %O HP TouchPad tinha potencial para disputar com o iPad. Tinha um diferencial com relação
+    %a outros tablets: usava um sistema operacional próprio, o WebOS. De acordo com reviews 
+    %iniciais, esse SO proporcionava uma boa experiência de uso. Entretanto, o projeto foi
+    %apressado, o lançamento ocorreu cedo demais e o tablet naufragou. O hardware era pesado 
+    %demais e não funcionava bem com o software. Já este último não foi polido tanto quanto 
+    %deveria. A fabricação do dispositivo foi interrompida poucos meses depois do seu lançamento. 
+    %This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic license.
+    %http://en.wikipedia.org/wiki/File:HP_TouchPad.jpg
+    %Autor: Tom Raftery
+\end{column}
+\begin{column}[c]{4.5cm}
+	\begin{figure}
+	\begin{center}
+ 	\includegraphics[scale=0.35]{ubuntu.png}\\[0.1cm]
+	\end{center}
+	\end{figure}
+	%Ubuntu 11.10, Oneiric Ocelot
+	%http://en.wikipedia.org/wiki/File:Ubuntu_11.10_Final.png
+    % Screenshot by Kenny Strawn, Lifemaestro and KiloByte of the English Wikipedia   
+    % Alguns consideram que o Ubuntu 10.10 foi lançado mais cedo do que deveria (a data foi
+    % fixada em 10.10.10). Especula-se que os bugs desse release, combinados com as 
+    % peculiaridades da interface Unity afastaram vários usuários do SO (eu incluso!), que
+    % migraram em grande parte para o Linux Mint.
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Envolvimento dos usuários no desenvolvimento}
+    \begin{block}{A importância de \textit{Feedback}}
+    \begin{enumerate}
+      \item {\bf Qualquer} projeto pode beneficiar-se\vspace{0.1cm}
+      % mesmo que não seja de código aberto/livre
+      \item Bugs apontados antes do lançamento\vspace{0.1cm}
+      \item Problemas de usabilidade corrigidos\vspace{0.1cm}
+      \item Quanto mais usuários, melhor para o projeto\vspace{0.1cm}
+    \end{enumerate}
+    \end{block}\pause
+
+    \begin{block}{A diferença (o diferencial?) de FLOSS}
+    \begin{enumerate}
+      \item Usuários \bgreen{cientes sobre o desenvolvimento}\vspace{0.1cm}
+      \item \textit{Bug reports} mais informativos\vspace{0.1cm}
+      %Como o usuário entende sobre um pouco sobre o sistema ou sobre desenvolvimento, em geral, 
+      %os bug reports fornecem informações mais úteis sobre como reproduzir o bug e sobre 
+      %potenciais causas para o problema.
+      \item O usuário não \tred{\bf precisa} ser um desenvolvedor!
+      \begin{itemize}
+      \item Mas deve {\bf pensar} como um!
+      \end{itemize}
+    \end{enumerate}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+%	\frametitle{Um exemplo do Firefox}
+    \vspace{0.2cm}
+	\begin{figure}
+	\begin{center}
+ 	\includegraphics[scale=0.41]{bug_firefox.jpg}\\[0.1cm]
+	%Um bug report bem feito indicando um problema no Firefox.
+    %https://bugzilla.mozilla.org/show_bug.cgi?id=599581#c0
+    %Texto extraído das diretrizes legais do sítio da Mozilla Foundation: "...the downloading, copying and use of the materials you make available will not infringe the proprietary rights, including but not limited to intellectual property rights, of any third party."
+	\end{center}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+%	\frametitle{Um exemplo do Firefox}
+    \vspace{0.2cm}
+	\begin{figure}
+	\begin{center}
+ 	\includegraphics[scale=0.41]{bug_firefox2.jpg}\\[0.1cm]
+	%Um bug report bem feito indicando um problema no Firefox.
+    %https://bugzilla.mozilla.org/show_bug.cgi?id=599581#c0
+    %Mozilla website content (i.e. text and pictures, not look and feel) is generally licensed under Creative Commons Attribution Share-Alike (CC-SA) licenses. User-generated content, such as comments on our blog posts, are also generally made available under CC-SA, but different Mozilla websites (such as addons.mozilla.org) may allow users to choose other licenses for content that they upload to our sites.
+	\end{center}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Depuração e Testes em Massa}
+	\vspace{0.1cm}
+	{\Large A Lei de Linus: }\\[0.5cm]
+{\LARGE \textit{``Given Enough Eyeballs, Every Bug is Shallow''}}
+\begin{columns}
+\begin{column}[l]{4cm}	
+	\begin{figure}
+	\begin{center}
+ 	\includegraphics[scale=0.35]{beholder.jpg}\vspace{0.2cm}
+    % http://www.wizards.com/dnd/images/leof_gallery/86716.jpg
+    % Copyright Wizards of the Cost. 
+    % Site Content and the Services are the proprietary property of Wizards or its licensors or other Users, and are protected by copyright, trademark, and other intellectual property laws. You are granted a limited, non-sublicenseable license to access and use the Sites and Services, and to electronically copy (except where specified as prohibited) and print to hard copy portions of Site Content and/or Services for your personal, noncommercial use only; provided, that you preserve any copyright, trademark or other similar notices contained in or associated with such Site Content or Services. Such license is subject to these TOU and does not include: (a) any resale or commercial use of the Sites or any Site Content therein and/or Services; (b) the collection and use of any product or service listings, pictures or descriptions; (c) the distribution (electronic or otherwise), public performance, or public display of any Site Content or Services; (d) modifying or otherwise making any derivative uses of the Sites and Site Content or Services, or any portion thereof; (e) use of any data mining, robots or similar data gathering or extraction methods; (f) downloading (other than the page caching) of any portion of the Sites, any Site Content, the Services or any information contained therein, except as expressly permitted on the Sites or pursuant to the Services; or (g) any use of the Sites or Site Content or Services other than for its intended purpose. Any use of the Sites or Site Content or Services other than as specifically authorized herein, without the prior written permission of Wizards, is strictly prohibited and will terminate the license granted herein. This license is revocable at any time.
+     
+    % Em outras palavras, se quiser ver a imagem, é necessário obtê-la a partir do endereço acima.
+	\end{center}
+	\end{figure}
+\end{column}
+\pause
+\begin{column}[c]{6cm}
+	\begin{block}{Isso significa que}
+    \begin{enumerate}
+      \item se os usuários ajudam nos \tred{testes}\vspace{0.1cm}
+      \item (e fornecem informações úteis para \tred{depuração})\vspace{0.1cm}
+      \item e várias pessoas \tred{depuram em paralelo} \vspace{0.1cm}
+      \item alguém achará uma \tred{correção} para o bug
+    \end{enumerate}
+ 	\end{block}
+\end{column}
+\end{columns}	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Meritocracia}
+	\begin{block}{Quem você {\bf é} não importa}
+    \begin{enumerate}
+      \item mas {\bf o que} você fez\vspace{0.1cm}
+      \item e {\bf como} você fez. \vspace{0.1cm}
+      \item Levar para o lado pessoal é difícil se você \bred{nem conhece as pessoas}. \vspace{0.1cm}
+    \end{enumerate}
+ 	\end{block}
+\pause
+\vspace{0.4cm}
+	Quem faz mais e melhor, vira {\bf committer}!
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Ranking de \textit{committers} do Linux desde 2002}
+
+	\begin{figure}
+	\begin{center}
+ 	\includegraphics[scale=0.35]{committers_linux.jpg}
+	%Número de commits por desenvolvedor do Linux, em ordem decrescente. Note que a quantidade 
+	%de commits do Linus duas vezes maior que o do segundo colocado (mais de 27000!).
+    %http://www.ohloh.net/p/linux/contributors
+	%Copyright pertence a Ohloh
+	%Ohloh grants you a royalty-free, fully paid-up, worldwide, non-transferable, non-exclusive, limited license to use, reproduce, modify and publicly display the "Ohloh Materials" ("Materials"?) on Ohloh's website in and/or on any of your online publications and/or web pages, provided that you agree to attribute Ohloh as the source of any "Materials".
+	
+	% Por sinal, esse sítio, Ohloh, é legal. Tem informações interessantes sobre 
+	% vários projetos populares, como o Linux, o Debian e o Mozilla Firefox. 
+	\end{center}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Sem coerção (mas com alguma hierarquia)}
+    \begin{block}{Hierarquia baseada em mérito}
+    \begin{enumerate}
+      \item O {\bf \bgreen{criador}} do projeto é um caso especial\vspace{0.1cm}
+      \item \textit{Committers} e não-\textit{committers}\vspace{0.1cm}
+      \begin{itemize}
+         \item Às vezes há vários níveis de \textit{committers}
+      \end{itemize}
+    \end{enumerate}
+    \end{block}\pause
+
+    \begin{block}{``Norma sem sanção é como fogo que não queima''?} 
+    % Esse dito é atribuído a Rudolf von Jhering (http://en.wikipedia.org/wiki/Rudolf_von_Jhering)
+    \begin{enumerate}
+      \item Projetos \textit{open source} têm regras
+         \begin{itemize}
+         \item Como fazer que sejam seguidas?\vspace{0.1cm}
+         \end{itemize}
+      \item Ditador {\em benevolente}? 
+      \begin{itemize}
+      \item Tem que ser, senão, enFORKa ele\vspace{0.1cm}
+      \end{itemize}
+      \item Reputação é {\bf tudo}
+         \begin{itemize}
+         \item E as regras costumam ser pragmáticas
+         \end{itemize}
+    \end{enumerate}
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+\vspace{0.2cm}
+\begin{center}
+\Huge{Tabus Informais}
+\end{center}
+\end{frame}
+
+\section{Tabus}
+\subsection{Tabus}
+
+
+\begin{frame}
+	\frametitle{Fork Off! (ou Fork You!)}
+	
+	\begin{figure}
+	\begin{center}
+ 	\includegraphics[scale=1 ]{fork.jpg}\\
+    % http://en.wikipedia.org/wiki/File:Forks_Susa_Louvre_MAO421-422-431.jpg
+    % Domínio público.
+    % Description: Bronze forks made in Iran during the 8th or 9th century.
+	\end{center}
+	%No início, 
+	\end{figure}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Thou Shall not Fork (unless you have to)}
+	
+    Alguns \textit{forks} de projetos famosos e os motivos:
+    
+    LibreOffice (OpenOffice)
+    % Motivo: medo de que a Oracle fechasse o projeto, impusesse restrições ou simplesmente 
+    % o abandonasse. Posteriormente, a Oracle simplesmente entregou o projeto para a Apache, 
+    % que o rebatizou de Apache OpenOffice.
+    
+    XEmacs (Emacs)
+    
+    FreeBSD (386BSD), NetBSD (386BSD), OpenBSD (NetBSD)
+    
+    EGCS -- The Enhanced/Experimental GNU Compiler System (GCC)
+    % Motivo: devido à grande popularidade do GCC, a FSF tornou-se muito preocupada com a 
+    % estabilidade do mesmo, o que significava que a inclusão de novas funcionalidades tornou-se
+    % menos prioritária e mais cuidadosa, para evitar prejudicar essa estabilidade. Alguns
+    % desenvolvedores, ansiosos por introduzir melhorias no tronco do código do compilador, 
+    % várias delas já implementadas ao longo dos anos, resolveram criar o EGCS em 1997, que 
+    % inicialmente servia para experimentar com novas funcionalidades ainda não consideradas 
+    % maduras o suficiente para entrar no GCC. Dizer que o EGCS é um fork não é inteiramente 
+    % preciso. Na verdade, ele é o resultado da integração de diversos forks do GCC. Em 1999 
+    % tornou-se o GCC oficial. O GCC até então era desenvolvido em um estilo "Catedral". A 
+    % partir daí, passou a empregar a abordagem "Bazar", já usada no desenvolvimento do EGCS.
+    
+    Apache HTTPd (NCSA HTTPd)
+    % Motivo: O desenvolvimento do NCSA HTTPd ia muito lento na segunda metade da década de 90. Um
+    % grupo de desenvolvedores pegou o código do servidor e criou um fork, o Apache HTTPd. 
+    % Hoje em dia, o Apache não inclui mais código originalmente do NCSA HTTPd.  
+    
+    WebKit (KHTML)
+    
+    Drizzle (MySQL)
+    % Motivo: A Oracle, com a compra da Sun, tornou-se dona do banco de dados comercial mais usado
+    % no mundo e do banco de dados livre mais usado no mundo. Alguns desenvolvedores consideraram
+    % essa situação menos que ideal e criaram um fork. 
+    
+    GNU IceCat (rebranding do Firefox, mas mantido atualizado junto à base de código principal)
+    %Mais informações: http://en.wikipedia.org/wiki/List_of_software_forks
+
+\end{frame}
+
+\end{document}
