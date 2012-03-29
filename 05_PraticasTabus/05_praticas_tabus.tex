@@ -62,6 +62,7 @@
 	\frametitle{O Processo de Desenvolvimento de FLOSS}
     \begin{enumerate}
       \item \byellow{Práticas} \vspace{0.2cm}
+      \item \byellow{\textit{Forks}} \vspace{0.2cm}
       \item \byellow{Tabus} \vspace{0.2cm}
       \item Modelos de Gerenciamento \vspace{0.2cm}
       \item Ferramentas \vspace{0.2cm}
@@ -314,60 +315,128 @@ Cuidado com as expectativas e com o {\bf cedo demais}!
          \begin{itemize}
          \item Como fazer que sejam seguidas?\vspace{0.1cm}
          \end{itemize}
-      \item Ditador {\em benevolente}? 
+         \pause
+      \item Ditador \tred{{\em benevolente}}?
+      % Em um projeto FLOSS, o ditador funciona muito mais como um mediador de
+      % conflitos do que como um ditador de fato. Como discutido a seguir, o 
+      % motivo para isso é a possibilidade sempre presente de se criar um fork. 
+      % Em outras palavras, o ditador não tem nenhum poder de coerção e não
+      % pode ser responsabilizado por manter a ordem e garantir que as regras
+      % sejam cumpridas. 
       \begin{itemize}
       \item Tem que ser, senão, enFORKa ele\vspace{0.1cm}
       \end{itemize}
+      \pause
       \item Reputação é {\bf tudo}
+      % De acordo com Eric Raymond em "Homesteading the Noosphere":
+      % ...Software is freely shared. This abundance creates a situation in which the 
+      % only available measure of competitive success is reputation among one?s peers.
          \begin{itemize}
          \item E as regras costumam ser pragmáticas
+         % Como consequência desse pragmatismo, não seguir as regras tem efeitos 
+         % negativos práticos e observáveis nos outros participantes do projeto. 
+         % Logo, não seguir as regras pode colocar em cheque a competência de um
+         % participante, o que pode arranhar sua reputação. Como reputação é tudo,
+         % desvios das regras são evitados a todo custo. 
          \end{itemize}
     \end{enumerate}
     \end{block}
 \end{frame}
 
+\section{Forks}
+\subsection{Forks}
+
+
 
 \begin{frame}
 \vspace{0.2cm}
 \begin{center}
-\Huge{Tabus Informais}
+\Huge{Forks}
 \end{center}
 \end{frame}
 
-\section{Tabus}
-\subsection{Tabus}
-
-
 \begin{frame}
 	\frametitle{Fork Off! (ou Fork You!)}
-	
+	\begin{columns}
+	\begin{column}[c]{1.5cm}
 	\begin{figure}
 	\begin{center}
- 	\includegraphics[scale=1 ]{fork.jpg}\\
+ 	\includegraphics[scale=0.9 ]{fork.jpg}\\
     % http://en.wikipedia.org/wiki/File:Forks_Susa_Louvre_MAO421-422-431.jpg
     % Domínio público.
     % Description: Bronze forks made in Iran during the 8th or 9th century.
 	\end{center}
 	%No início, 
 	\end{figure}
-
+	\end{column}
+	\begin{column}[c]{7.0cm}
+	\begin{itemize}
+	\item Um \textit{fork} é um projeto de FLOSS iniciado como uma {\bf cópia exata} de um outro. 
+  	  \begin{itemize} 
+	  \item E que \byellow{evolui separadamente}, via de regra\vspace{0.1cm}
+	  \item Com outro nome
+	  \end{itemize}\pause
+	\item Devido a razões
+	  \begin{itemize}
+	  \item técnicas
+	  \item pessoais
+	  \item políticas
+	  \item de qualquer natureza
+	  \end{itemize}
+	\end{itemize}
+    \end{column}
+    \end{columns}\pause
+    {\small \bred{O que é chamado de ``fork'' no Git não é o que chamamos de \textit{fork}!}}
 \end{frame}
 
 \begin{frame}
-	\frametitle{Thou Shall not Fork (unless you have to)}
-	
-    Alguns \textit{forks} de projetos famosos e os motivos:
+  \frametitle{A importância da \textit{fork}abilidade}
+ {\large
+  \begin{itemize}
+  	\item \textit{Forks} são a \tred{cola fundamental} de um projeto de FLOSS
+      \begin{itemize}
+	  \item Mantém a balança de poder\vspace{0.1cm}
+	  \item {\bf \tred{Toda}} licença de FLOSS permite a criação de \textit{forks}
+	  \end{itemize}\vspace{0.4cm}
+\pause
+	  \item Democratizam ditaduras
+        \begin{itemize}
+        \item Poder é {\bf dado} ao ``ditador''
+	    \end{itemize}\vspace{0.4cm}
+	  \item Reduzem as vantagens de fechar o código
+        \begin{itemize}
+        \item Quando uma corporação compra uma outra
+	    \end{itemize}
+	  
+	  % Segundo Karl Fogel: 
+	  % Forks, or rather the potential for forks, are the reason there are no true 
+	  % dictators in free software projects. This may seem like a surprising claim, 
+	  % considering how common it is to hear someone called the "dictator" or "tyrant" 
+	  % in a given open source project. But this kind of tyranny is special, quite 
+	  % different from the conventional understanding of the word. Imagine a king 
+	  % whose subjects could copy his entire kingdom at any time and move to the 
+	  % copy to rule as they see fit. Would not such a king govern very differently 
+	  % from one whose subjects were bound to stay under his rule no matter what he 
+	  % did?
+	  %
+	  % Extraído do Capítulo 4 de "Producing Open Source Software". O livro inteiro 
+	  % está disponível em http://producingoss.com/en/producingoss.html#social-infrastructure.
+	  % A reprodução é permitida. (Licença Creative Commons Attribution-ShareAlike License 3.0).
+  \end{itemize}
+  }
+\end{frame}
+
+\begin{frame}
+	\frametitle{Alguns \textit{forks} famosos}
     
-    LibreOffice (OpenOffice)
+%    Bella e Edward em Forks. :)
+    \begin{itemize}
+    \item LibreOffice (\byellow{OpenOffice})\vspace{0.2cm}\pause
     % Motivo: medo de que a Oracle fechasse o projeto, impusesse restrições ou simplesmente 
     % o abandonasse. Posteriormente, a Oracle simplesmente entregou o projeto para a Apache, 
     % que o rebatizou de Apache OpenOffice.
-    
-    XEmacs (Emacs)
-    
-    FreeBSD (386BSD), NetBSD (386BSD), OpenBSD (NetBSD)
-    
-    EGCS -- The Enhanced/Experimental GNU Compiler System (GCC)
+    \item EGCS -- Enhanced/Experimental GNU Compiler System (\byellow{GCC})\vspace{0.2cm}\pause
+    % EGCS = The Enhanced/Experimental GNU Compiler System
     % Motivo: devido à grande popularidade do GCC, a FSF tornou-se muito preocupada com a 
     % estabilidade do mesmo, o que significava que a inclusão de novas funcionalidades tornou-se
     % menos prioritária e mais cuidadosa, para evitar prejudicar essa estabilidade. Alguns
@@ -379,21 +448,147 @@ Cuidado com as expectativas e com o {\bf cedo demais}!
     % tornou-se o GCC oficial. O GCC até então era desenvolvido em um estilo "Catedral". A 
     % partir daí, passou a empregar a abordagem "Bazar", já usada no desenvolvimento do EGCS.
     
-    Apache HTTPd (NCSA HTTPd)
+    \item Apache HTTPd (\byellow{NCSA HTTPd})\vspace{0.2cm}\pause
     % Motivo: O desenvolvimento do NCSA HTTPd ia muito lento na segunda metade da década de 90. Um
     % grupo de desenvolvedores pegou o código do servidor e criou um fork, o Apache HTTPd. 
     % Hoje em dia, o Apache não inclui mais código originalmente do NCSA HTTPd.  
-    
-    WebKit (KHTML)
-    
-    Drizzle (MySQL)
+        
+    \item Drizzle (\byellow{MySQL})\vspace{0.2cm}\pause
     % Motivo: A Oracle, com a compra da Sun, tornou-se dona do banco de dados comercial mais usado
     % no mundo e do banco de dados livre mais usado no mundo. Alguns desenvolvedores consideraram
     % essa situação menos que ideal e criaram um fork. 
     
-    GNU IceCat (rebranding do Firefox, mas mantido atualizado junto à base de código principal)
+    \item GNU IceCat (\byellow{Mozilla Firefox}) \vspace{0.2cm}\pause
+    % Rebranding do Firefox, mas mantido atualizado junto à base de código principal. A Mozilla
+    % exigiu que o browser usado no Debian mudasse de nome. Foi criado então o IceWeasel. Vale
+    % ressaltar que o código do IceWeasel aproveita todas as funcionalidades e melhorias aplicadas
+    % ao Firefox, mas inclui código adicional. 
     %Mais informações: http://en.wikipedia.org/wiki/List_of_software_forks
 
+    \item FreeBSD (\byellow{386BSD}), NetBSD (\byellow{386BSD}), OpenBSD (\byellow{NetBSD})
+
+    %\item WebKit (KHTML)
+
+    %\item XEmacs (Emacs)
+    \end{itemize}
+    
+\end{frame}
+
+\section{Tabus}
+\subsection{Tabus}
+
+
+\begin{frame}
+\vspace{0.2cm}
+\begin{center}
+\Huge{Tabus}
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{You Shall not Fork! (unless you have to)}
+	
+	\begin{columns}
+  	  \begin{column}[c]{2.5cm}
+	\begin{figure}
+	\begin{center}
+ 	\includegraphics[scale=0.45]{gandalf.jpg}\\
+    % http://29.media.tumblr.com/tumblr_kycryhwP7S1qapxx6o1_500.jpg
+    % Autor: Jeff Rooks
+    % Não consegui encontrar informações de copyright. Logo, suponho que
+    % pertença ao autor. Não dá para saber se é permitido republicar o trabalho, 
+    % logo, não republicá-lo-ei. 
+    % Vale ressaltar que eu cortei fora os lados da imagem para fazê-la ficar boa no slide.
+	\end{center}
+	\end{figure}
+	  \end{column}
+	  \pause
+	  \begin{column}[c]{6.5cm}
+	  \textit{Forks} são, em geral, evitados porque\vspace{0.1cm}
+	  \begin{itemize}
+	  \item dividem a base de usuários\vspace{0.1cm}
+	  \item dividem a base de desenvolvedores\vspace{0.1cm}
+	  \item podem prejudicar reputações\vspace{0.1cm}
+	    \begin{itemize}
+	    \item de desenvolvedores e do projeto 
+	    % Por que podem prejudicar a reputação do projeto? 
+	    % De acordo com ESR: Forking projects is bad because it exposes pre-fork contributors to a reputation 
+	    % risk they can only control by being active in both child projects simultaneously after the fork. 
+	    % (This would generally be too confusing or difficult to be practical.)
+	    \end{itemize}
+	  \end{itemize}
+	  \end{column}
+	\end{columns}
+\end{frame}	
+
+
+\begin{frame}
+	\frametitle{Não use seu santo nome em vão}
+
+	\begin{columns}
+  	  \begin{column}[c]{3.0cm}
+	\begin{figure}
+	\begin{center}
+ 	\includegraphics[scale=0.35]{voldemort.jpg}\\
+	  % http://en.wikipedia.org/wiki/File:Lordvoldemort.jpg
+	  % %Licença: This image is a screenshot from a copyrighted film, and the copyright for it is most likely owned by the studio which produced the film, and possibly also by any actors appearing in the screenshot. Uso para fins educacionais e não-comerciais com uma figura de baixa resolução é PROVAVELMENTE considerando um uso justo (fair use) de acordo com a lei americana.
+	  % Vale ressaltar que eu cortei fora os lados da imagem para fazê-la ficar boa no slide.
+	\end{center}
+	\end{figure}
+
+	  \end{column}
+	  \pause
+	  \begin{column}[c]{6.5cm}
+	  Versões modificadas e \textit{patches} não devem ser distribuídos sem conhecimento dos donos do projeto\vspace{0.2cm}
+	  \begin{itemize}
+	  \item Podem danificar a reputação do projeto\vspace{0.2cm}
+	  \item Alguns se protegem contra isso através de licenças \vspace{0.1cm}
+	    \begin{itemize}
+	    \item Ex. Mozilla Public License 
+	    \end{itemize}
+	  \end{itemize}
+	  \end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{A César o que é de César}
+	
+	\begin{columns}
+  	  \begin{column}[c]{2.5cm}
+	  \begin{figure}
+  	  \begin{center}
+   	  \includegraphics[scale=1.3]{caesar.jpg}\\
+	  % http://en.wikipedia.org/wiki/File:Giulio-cesare-enhanced_1-800x1450.jpg
+	  % Bust of Caesar from the Naples National Archaeological Museum.
+	  % Licença: domínio público.
+	  \end{center}
+	  \end{figure}
+	  \end{column}
+	  \pause
+	  \begin{column}[c]{6.5cm}
+	  \textbf{{\em\tred{NUNCA}}} se remove o nome de uma pessoa ...\vspace{0.2cm}
+	    \begin{enumerate} 
+	    \item do histórico, 
+	    \item dos créditos ou 
+	    \item da lista de mantenedores do projeto\vspace{0.2cm}
+        \end{enumerate}
+	  \begin{itemize}   \pause
+      \item Em uma meritocracia, não reconhecer o mérito é o maior crime\vspace{0.2cm}
+      \item A pessoa ser ``difícil'' não é um motivo
+	  \end{itemize}
+	  \end{column}
+	\end{columns}
+\end{frame}
+
+
+\section{Fim}
+\begin{frame}
+\vspace{0.2cm}
+\begin{center}
+\Huge{Obrigado!}
+\end{center}
 \end{frame}
 
 \end{document}
