@@ -1,0 +1,513 @@
+% Author: Fernando Castor. You can contact the author at castor in the cin.ufpe.br domain. 
+
+%THIS WORK IS LICENSED UNDER A CREATIVE COMMONS ATTRIBUTION-NONCOMMERCIAL-SHAREALIKE 3.0 UNPORTED LICENSE. THE WORK (AS DEFINED BY THE LICENSE) IS PROVIDED UNDER THE TERMS OF THIS CREATIVE COMMONS PUBLIC LICENSE ("CCPL" OR "LICENSE"). THE WORK IS PROTECTED BY COPYRIGHT AND/OR OTHER APPLICABLE LAW. ANY USE OF THE WORK OTHER THAN AS AUTHORIZED UNDER THIS LICENSE OR COPYRIGHT LAW IS PROHIBITED.
+%
+%BY EXERCISING ANY RIGHTS TO THE WORK PROVIDED HERE, YOU ACCEPT AND AGREE TO BE BOUND BY THE TERMS OF THIS LICENSE. TO THE EXTENT THIS LICENSE MAY BE CONSIDERED TO BE A CONTRACT, THE LICENSOR GRANTS YOU THE RIGHTS CONTAINED HERE IN CONSIDERATION OF YOUR ACCEPTANCE OF SUCH TERMS AND CONDITIONS.
+%PLEASE REFER TO THE DESCRIPTION OF THE LICENSE (http://creativecommons.org/licenses/by-nc-sa/3.0/) AND TO ITS FULL TEXT (http://creativecommons.org/licenses/by-nc-sa/3.0/legalcode) FOR MORE INFORMATION.
+
+% THIS WORK USES A NUMBER OF IMAGES FROM THIRD-PARTIES. THE COPYRIGHT OF THESE IMAGES REMAIN WITH THEIR OWNERS, WHEN APPLICABLE. 
+
+% Build this file with pdflatex 06_gerenciamento_ferramentas.tex
+
+\documentclass[xcolor=dvipsnames]{beamer}
+\usecolortheme[named=Brown]{structure} 
+%\usetheme{Rochester}
+\usetheme{Frankfurt}
+
+\usepackage{booktabs}
+\usepackage{ulem}
+\usepackage{graphics}
+\usepackage{multirow}
+\usepackage[latin1]{inputenc}   % para os acentos
+\usepackage[brazil]{babel}      % para hifeniza\c{c}\~{a}o
+\usepackage{color}
+
+\definecolor{lightgrey}{rgb}{0.8, 0.8, 0.8}
+\newcommand{\shd}[1]{\colorbox{lightgrey}{#1}}
+
+\newcommand{\tblue}[1]{\textcolor{blue}{#1}}
+\newcommand{\tred}[1]{\textcolor{red}{#1}}
+\newcommand{\tgreen}[1]{\textcolor{green}{#1}}
+\newcommand{\tyellow}[1]{\textcolor{yellow}{#1}}
+
+
+\newcommand{\byellow}[1]{\colorbox{yellow}{#1}}
+\newcommand{\bred}[1]{\colorbox{red}{\textcolor{white}{#1}}}
+\newcommand{\bgreen}[1]{\colorbox{green}{#1}}
+
+\definecolor{lightestgrey}{rgb}{0.91, 0.91, 0.91}
+\newcommand{\lshd}[1]{\colorbox{lightestgrey}{#1}}
+
+\title{Desenvolvimento de FLOSS: Modelos de Gerenciamento e Ferramentas}
+\author{Fernando Castor}
+\pgfdeclareimage[height=0.4cm]{cc}{license}
+
+\institute{Centro de Informática -- Universidade Federal de Pernambuco \\[2.0cm] {\tiny Alguns direitos reservados }\pgfuseimage{cc} }
+\date{}
+\pgfdeclareimage[height=1.0cm]{logo}{ines}
+\pgfdeclareimage[height=0.8cm]{logo2}{spg}
+\pgfdeclareimage[height=0.8cm]{logo3}{cin}
+
+\logo{\pgfuseimage{logo3}\hspace{0.1cm}\pgfuseimage{logo}\hspace{0.1cm}\pgfuseimage{logo2} }
+
+\begin{document}
+
+\section{Introdução}
+\subsection{Introdução}
+
+\frame{\titlepage}
+
+
+\begin{frame}
+	\frametitle{O Processo de Desenvolvimento de FLOSS}
+    \begin{enumerate}
+      \item Práticas \vspace{0.2cm}
+      \item \textit{Forks} \vspace{0.2cm}
+      \item Tabus \vspace{0.2cm}
+      \item \byellow{Modelos de Gerenciamento} \vspace{0.2cm}
+      \item \byellow{Ferramentas} \vspace{0.2cm}
+      \item \byellow{\textit{Checklist} para novos projetos} \vspace{0.2cm}
+    \end{enumerate}
+\end{frame}
+
+
+\section{Modelos de Gerenciamento}
+\subsection{Modelos de Gerenciamento}
+
+\begin{frame}
+\vspace{0.2cm}
+\begin{center}
+\Huge{Modelos de Gerenciamento para Projetos FLOSS}
+\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Antes, uma palavrinha sobre terminologia...}
+	\begin{block}{Projeto}
+	\begin{quote}
+	``A project is a temporary endeavor with a defined beginning and end (\textbf{usually time-constrained, and often constrained by funding or deliverables}), undertaken to meet unique goals and objectives [...].''
+	\end{quote}
+	% Definição retirada da Wikipédia (http://en.wikipedia.org/wiki/Project_management)
+	% A página da Wikipédia sobre ``Project'' refere-se a projetos de Engenharia, Ciência e Tecnologia (escolas e universidades)
+	% projetos conforme definidos pela área de Gerenciamento de Projetos. Em todos os casos, um projeto tem duração finita. 
+	% A atividade ``do dia-a-dia'' de uma empresa, que não tem um fim, é chamada de operação.
+    \begin{itemize}\pause
+    \item \textbf{Estritamente}, um ``projeto'' FLOSS não é um projeto
+    % Talvez possa ser visto como um conjunto de projetos.
+    \end{itemize}
+    \end{block}
+\pause
+	\begin{block}{Gerenciamento de projetos}
+	Responsabilidades de um gerente de projeto: 
+	\begin{itemize}
+	\item Definição de objetivos (viáveis e claros) para o projetos
+    \item Gerenciamento de recursos 
+    \item \textbf{\tred{Construção}} dos requisitos do projeto
+    % Se usarmos o termo ``construção'', acho que essa definição não é ideal para descrever as atividades do gerente de
+    % um projeto FLOSS. Também não sei se ``elicitação'' e ``priorização'' são bons. O termo ``priorização'' me parece
+    % o mais preciso.  
+    %Da Wikipedia: ``A project manager is the person responsible for accomplishing the stated project objectives.'' Key project management responsibilities include creating clear and attainable project objectives, building the project requirements, and managing the constraints of the project management triangle, which are cost, time, scope, and quality''.
+    % http://en.wikipedia.org/wiki/Project_manager#Overview
+	\end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Quem é este?}
+	\begin{figure}
+	\begin{center}
+ 	\includegraphics[scale=0.35]{guido.jpg}\\[0.1cm]
+	%Guido van Rossum, criador da linguagem Python.
+	%http://en.wikipedia.org/wiki/File:Guido_van_Rossum_OSCON_2006.jpg
+	%Foto por Doc Searls.
+	%Licença: This file is licensed under the Creative Commons Attribution-Share Alike 2.0 Generic
+	\vspace{0.2cm}
+	\pause
+	\byellow{Guido van Rossum, criador e \textbf{BDFL} da linguagem Python}
+	\end{center}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Ditador benevolente (BD)}
+	\begin{block}{O que é?}
+    \begin{itemize}
+    \item Autoridade final na tomada de decisões\vspace{0.1cm}
+    \item Um juiz \textbf{aprovado pela comunidade}\vspace{0.1cm}
+    \item Muitas vezes é o fundador do projeto
+    % É possível perceber que, da mesma forma que um ``projeto'' de FLOSS não é um projeto estritamente
+    % falando, o BD também não é um gerente de projeto, embora haja atribuições comuns. 
+    \end{itemize}
+    \end{block}
+\pause
+	\begin{block}{Quem pode ser?}
+    \begin{itemize}
+    \item Desenvolvedor experiente\vspace{0.1cm}
+      \begin{itemize}
+      \item Não necessariamente o melhor \textit{hacker}
+      \end{itemize}
+    \item {\em Principal habilidade}: reconhecer \bred{boas soluções de projeto}\vspace{0.1cm}
+    \item Via de regra, é óbvio quem {\bf deve} ser o BD   
+    \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Alguns projetos FLOSS com BDs}
+    \begin{itemize}
+    \item Linux\vspace{0.2cm}
+    % Linux Torvalds
+    \item Python\vspace{0.2cm}
+    % Guido Van Rossum
+    \item Perl\vspace{0.2cm}
+    % Larry Wall
+    \item Clojure\vspace{0.2cm}
+    % Rich Hickey
+    \item Ubuntu\vspace{0.2cm}
+    % Mark Richard Shuttleworth
+    \item VIm
+    %Bram Moolenaar
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Democracia baseada em consenso}
+	\begin{block}{Funcionamento básico}
+    \begin{itemize}
+    \item Decisão a ser tomada é apresentada publicamente\vspace{0.1cm}
+    \item Se não houver objeções, consenso é atingido\vspace{0.1cm}
+    \item Decisão pode ser implementada\vspace{0.1cm}
+    % ``implementada'' em um sentido mais amplo. Não precisa ser uma decisão diretamente
+    % ligada ao código. 
+    \end{itemize}
+    \end{block}
+\pause
+	\begin{block}{Complementarmente}
+    \begin{itemize}
+    \item Algumas decisões podem ser tomadas sem discussão\vspace{0.1cm}
+      \begin{itemize}
+      \item Por exemplo, a decisão de corrigir um \textit{bug}
+      \end{itemize}
+    \item Consequências podem ser {\bf desfeitas}\vspace{0.1cm}
+    % A possibilidade de desfazer as consequências de uma má decisão, possível graças ao
+    % sistema de controle de versões, agiliza o processo de tomada de decisão e evita
+    % que muito tempo seja gasto propondo publicamente cursos de ação óbvios. 
+    \item Se consenso não for atingido, é necessário \byellow{votar}  
+    \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Como gerenciamento de versões simplifica consenso}
+	\begin{figure}
+	\begin{center}
+ 	\includegraphics[scale=0.33]{bugfix.jpg}
+	% Image criada por mim. Pode ser distribuída com a mesma licença que este documento.
+	
+	% A imagem mostra uma situação onde o consenso foi atingido sem a necessidade de uma 
+	% discussão pública. Um dos desenvolvedores corrigiu um bug no Glasgow Haskell compiler
+	% e fez o commit no repositório. Além disso, o desenvolvedor indicou que essa correção 
+	% deveria ser incluída na próxima versão do compilador, 7.4.3, mudando o estado do bug
+	% report para ``merge''. Entretanto, um outro desenvolvedor respondeu dizendo que essa 
+	% correção não funcionou corretamente com o branch da versão 7.4 e que, por ser um
+	% problema pequeno, poderia ser deixada para depois. Ele então mudou o estado do bug
+	% report para ``closed'' (para indicar que a correção não deve ser combinada com a 
+	% versão 7.4.3) e estabeleceu um milestone para a versão 7.6.1, o que significa que espera-
+	% se que, nessa versão futura, o problema esteja corrigido.
+	\end{center}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Votação}
+	\begin{block}{Quem pode votar?}
+    \begin{itemize}\pause
+    \item Nem todo mundo\vspace{0.1cm} \pause 
+    \item Resposta fácil: \textit{committers}\vspace{0.1cm}
+    \end{itemize}
+    \end{block}
+\pause
+	\begin{block}{Complicações}
+    \begin{itemize}
+    \item \textit{Committers} parciais\vspace{0.1cm}
+    % ``In projects that offer both full and partial commit access, the question of whether partial committers can vote largely depends on the process by which partial commit access is granted. If the project hands it out liberally, for example as a way of maintaining many third-party contributed tools in the repository, then it should be made clear that partial commit access is really just about committing, not voting.''. Capítulo 4 de Producing Open Source Software, de Karl Fogel. Licença: Creative Commons Attribution-ShareAlike 3.0 Unported.
+      \begin{itemize}
+      \item \textit{committing} == \textit{voting}?
+      \end{itemize}
+    \item Vetos\vspace{0.1cm}
+    % Um veto é uma objeção forte contra uma decisão. Funciona como uma maneira de protelar uma votação para que mais discussão sobre
+    % um determinado tópico aconteça. É feito por uma pessoa com poder de votar. O impacto de um veto varia de projeto para projeto.
+    % Desenvolvedores devem usar vetos de maneira parcimoniosa. O veto não é um mecanismo para que desenvolvedores atrapalhem
+    % votações para tentar impor sua visão de qual curso de ação de ser tomado. 
+    \end{itemize}
+    \end{block}
+    \vspace{0.2cm}\pause
+    Projetos maduros definem \textbf{diretrizes} para várias questões, incluindo votações
+    % Dois exemplos de documentos com recomendações para desenvolvedores:
+    % Surversion: http://subversion.apache.org/docs/community-guide/
+    % Apache Software Foundation: http://www.apache.org/foundation/how-it-works.html e http://www.apache.org/foundation/voting.html 
+\end{frame}
+
+\begin{frame}
+	\frametitle{Votação}
+	\begin{block}{Diretrizes de votação no ...}
+    \begin{itemize}
+    %******************
+    \item Incluir exemplos de diretrizes de votação para algum projeto real. 
+    \end{itemize}
+    \end{block}
+\end{frame}
+
+\section{Ferramentas}
+\subsection{Ferramentas}
+\begin{frame}
+\vspace{0.2cm}
+\begin{center}
+\Huge{Ferramentas e Alguns Conceitos de Controle de Versões}
+\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Um projeto FLOSS emprega várias ferramentas}
+    \begin{block}{Para resolver os seguintes problemas}
+    \begin{itemize}
+    \item {\bf Comunicação} \vspace{0.2cm}
+    \item {\bf Programação}, testes e depuração \vspace{0.2cm}
+    \item {\bf Controle} sobre os artefatos produzidos \vspace{0.2cm}
+    \end{itemize}
+    \end{block}
+    \pause
+    \begin{center}
+    {\LARGE \bgreen{Exemplos?}}
+    \end{center}
+\end{frame}
+
+% Como as ferramentas de comunicação e programação são muito conhecidas pelos alunos, o restante da seção
+% sobre ferramentas apresenta alguns conceitos da área de Gerência de Configuração, mas especificamente 
+% conceitos de controle de versões
+
+\begin{frame}
+	\frametitle{Controle de versões}
+    \begin{block}{Terminologia}
+    \begin{itemize}
+    \item Versão %  É uma instância de um sistema que é funcionalmente distinta, de alguma maneira, de outras instâncias de um sistema.
+    \item Variante % Uma versão de um sistema que tem apenas pequenas diferenças com relação a outras instâncias (normalmente devido a diferenças no hardware/software alvo)?. Por exemplo, o Office para MacOS é uma variante do Office para Windows.
+    \item \textit{Release} % É uma instância de um sistema estável e distribuída para os usuários fora da equipe de desenvolvimento e de testes. Versões que não são releases mas que estão disponíveis para (algumas) pessoas fora da equipe de desenvolvimento são chamadas de versões alpha, beta ou "de desenvolvimento".     \end{itemize}
+    \end{block}
+    
+    Esquemas de numeração registram a evolução do sistema.
+    \pause
+    \begin{block}{Numeração no Linux}
+    \bred{{\bf A}}.\bgreen{{\bf B}}.\byellow{{\bf C}}\tblue{{\bf [.D]}}
+    \begin{itemize}
+    \item \bred{{\bf A}} -- Versão do núcleo (três mudanças, em 1994,1996 e 2011)
+    \item \bgreen{{\bf B}} -- Revisão importante 
+    \item \byellow{{\bf C}} -- mudanças menores (drivers e funcionalidades individuais) 
+    \item \tblue{{\bf [.D]}} -- correções de bugs e atualizações de segurança 
+    \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{\textit{Branching} e \textit{Merging}}
+	\begin{columns}
+	\begin{column}[c]{6cm}
+    \begin{block}{\textit{Brach}}
+    \begin{itemize}
+    \item Um ramo separado de desenvolvimento
+    \item Que \tred{não compartilha código} com outros ramos
+    \item \tred{Similar} a um \textit{fork}
+    \end{itemize}
+    \end{block}
+
+    \begin{block}{\textit{Merge}}
+    \begin{itemize}
+    \item Combinação de dois \textit{branches}
+    \item Pode exigir que conflitos sejam resolvidos
+    \end{itemize}
+    \end{block}
+    \end{column}
+    \begin{column}[c]{4cm}
+ 	\begin{figure}
+	\begin{center}
+ 	\includegraphics[scale=0.35]{tomcat.jpg}
+	\end{center}
+	% A imagem foi feita por mim e não constitui uma violação de copyright já que não mostra
+	% nenhum logotipo registrado. Foi feita a partir da página Web do Apache Tomcat 
+	% (http://tomcat.apache.org/svn.html#Subversion). 
+	\end{figure}
+    \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Por que criar um \textit{branch}?}
+	\begin{columns}
+	\begin{column}[c]{7cm}
+    \begin{itemize}
+     \item Paralelização do desenvolvimento dos componentes\vspace{0.2cm}     \item Separação do desenvolvimento de diferentes versões ou variantes\vspace{0.2cm}
+     \item Organização da equipe\vspace{0.2cm}
+    \end{itemize}
+    \end{column}
+    
+    \begin{column}[c]{4cm}
+ 	\begin{figure}
+	\begin{center}
+ 	\includegraphics[scale=0.8]{branches.jpg}
+	\end{center}
+    %Creative Commons Attribution-Share Alike 3.0 Unported license
+    %Autor: Pixie (http://he.wikipedia.org/wiki/User:Pixie)
+	\end{figure}   
+    \end{column}
+    \end{columns}
+    Pode ser realizado com diferentes {\bf granularidades}.
+\end{frame}
+
+\begin{frame}
+	\frametitle{Algumas estratégias de {\em branching}}
+{\small
+	\begin{columns}
+	\begin{column}[c]{5cm}
+ 	\begin{figure}
+	\textit{Branch} por release
+ 	\includegraphics[scale=0.35]{branch_release.jpg} \\[0.1cm]\pause
+	\textit{Branch} por promoção de código
+ 	\includegraphics[scale=0.35]{branch_cp.jpg} \\[0.1cm]\pause
+    \textit{Branch} por tarefa
+ 	\includegraphics[scale=0.35]{branch_task.jpg}
+	\end{figure}   
+    \end{column}
+    
+    \begin{column}[c]{4.5cm}
+ 	\begin{figure}
+	\begin{center}	\pause
+    \textit{Branch} por componente
+ 	\includegraphics[scale=0.35]{branch_component.jpg} \\[0.1cm]
+	\pause
+    \textit{Branch} por tecnologia
+ 	\includegraphics[scale=0.35]{branch_tech.jpg}
+	\end{center}
+    %Creative Commons Attribution-Share Alike 3.0 Unported license
+    %Autor: Pixie (http://he.wikipedia.org/wiki/User:Pixie)
+	\end{figure}   
+    \end{column}
+    \end{columns}
+}
+\end{frame}
+%Todas as figuras deste slide pertencem à Microsoft Corporation.
+%O uso para fins educacionais por instituições como universidades e escolas, incluindo a republicação, é permitido, bem como o uso comercial não-educacional. Outros usos exigem permissão expressa da Microsoft, conforme dito nos Termos de Uso: Accredited educational institutions, such as K-12 schools, universities, private or public colleges, and state community colleges, may download and reproduce Content for distribution in the classroom for educational purposes. Publication or distribution outside the classroom requires express written permission. 
+%As figuras foram obtidas a partir do endereço http://msdn.microsoft.com/en-us/library/aa730834(VS.80).aspx
+%O autor das figuras é Chris Birmele, que é empregado da Microsoft.
+
+\begin{frame}
+	\frametitle{\textit{Branching} no Git e no SVN}
+    \begin{itemize}
+    \item No Git:
+    \begin{description}
+    \item[] {\texttt{git branch \textit{$<$nome\_do\_branch$>$}}}\vspace{0.1cm}
+    % git branch sem parâmetros diz apenas quais branches o repositório tem.
+    \item[] {\texttt{git checkout \textit{$<$nome\_do\_branch$>$}}} \vspace{0.1cm}
+    % git checkout muda o branch atual. Além disso, atualiza os arquivos na árvore de trabalho de acordo com os do branch.
+    \item[] {\texttt{git merge \textit{$<$nome\_do\_branch$>$}}}
+    \end{description}
+    \item No SVN:
+    \begin{description}
+    \item[] {\texttt{svn copy \textit{$<$url\_1$>$} \textit{$<$url\_2$>$}}}
+    \item[] {\texttt{svn merge \textit{$<$url\_1$>$} \textit{$<$url\_2$>$} \textit{$<copia\_trabalho>$}}}
+    % O comando merge tem um nome esquisito. Ele não simplesmente combina dois branches como o nome sugere. Ao invés disso,
+    % compara duas árvores de repositório (como o comando diff) e aplica as diferenças a uma cópia de trabalho. O comando
+    % merge também pode ser usado para combinar branches. 
+    \end{description}
+    \end{itemize}
+\end{frame}
+
+
+\section{Criando um Projeto}
+\subsection{Criando um Projeto}
+
+\begin{frame}
+\vspace{0.2cm}
+\begin{center}
+\Huge{\textit{Checklist} para Novo Projetos}
+\end{center}
+\end{frame}
+
+% A checklist foi extraída a partir do Capítulo 2 do livro "Producing Open Source Software", de Karl Fogel.
+\begin{frame}
+	\frametitle{Para começar um novo projeto}
+    \begin{itemize}
+    \item Escolha um nome \vspace{0.1cm}
+    \item Defina objetivos de longo prazo\vspace{0.1cm}
+    \item Deixe claro que o projeto é livre\vspace{0.1cm}
+    \item Elenque os requisitos e funcionalidades\vspace{0.1cm}
+    \item Torne o programa baixável em formato fonte \vspace{0.1cm}
+    \item Estabeleça acesso a controle de versões e rastreador de bugs\vspace{0.1cm}
+      % Vários sítios podem ser usados para este fim. Atualmente, o Github é bastante
+      % popular por combinar repositório com controle de versões baseado no Git, bug
+      % tracking e rede social em um só sítio. 
+    \item Estabeleça canais de comunicação (lista, canal de IRC)\vspace{0.1cm}
+    % De forma geral, meios para que pessoas possam se comunicar e cooperar.
+    \item Escolha a licença\vspace{0.1cm}
+    \item \textbf{Anuncie}!
+    % Em http://www.freecode.com
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+	%\frametitle{www.freecode.com}
+	\begin{figure}
+	\begin{center}
+ 	\includegraphics[scale=0.33]{freecode.jpg}
+	\end{center}
+	% Freecode.com é uma marca registrada da GeekNet, Inc. Todos os direitos reservados.
+	% O copyright dos anúncios feitos no sítio pertence aos anunciantes e não é de 
+	% responsabilidade de GeekNet, Inc. 
+	% A imagem foi feita por mim e não constitui uma violação de copyright já que não mostra
+	% nenhum logotipo registrado. Vale ressaltar, porém, que GeekNet, Inc. permite o uso de
+	% seus logotipos dentro das condições estabelecidas no seu Termo de Uso (http://geek.net/trademark-usage). 
+	\end{figure}
+    % Cada anúncio no Freecode inclui, além do nome do projeto, uma breve descrição sobre o sistema, um 
+    % pedaço de suas release notes, um screen shot opcional, a licença de distribuição, palavras-chave
+    % opcionais e link para a homepage. É possível seguir o projeto para obter novas informações
+    % sobre ele à medida que tornam-se disponíveis.  
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{À medida que o projeto evoluir}
+    \begin{itemize}
+    \item Crie listas separadas para discussões distintas\vspace{0.1cm}
+    \item Crie uma página Web
+    \begin{itemize}
+        \item Com exemplos e \textit{screenshots}     \vspace{0.1cm}
+    \end{itemize}
+    % Embora pareça óbvio que um projeto precisa ter uma página (com um domínio) desde o início, não é
+    % o caso. O www.kernel.org, por exemplo, só apareceu em 1997, alguns anos depois do surgimento do
+    % Linux. Basta olhar vários projetos novos. Eles até podem ter uma página, mas muitas vezes é quase
+    % só isso e usando a infra-estrutura oferecida por um sítio de hosting enlatado. 
+    \item Indique a situação atual de desenvolvimento (no início, estável, maduro, etc.)\vspace{0.1cm}
+    \item Documente as diretrizes de desenvolvimento\vspace{0.1cm}
+    \item Produza documentação para usuários e desenvolvedores
+    \end{itemize}
+\end{frame}
+
+
+%Setting the Tone
+%Avoid Private Discussions
+%Nip Rudeness in the Bud
+%Practice Conspicuous Code Review
+
+%When Opening a Formerly Closed Project, be Sensitive to the Magnitude of the Change
+
+%Announcing
+
+
+\section{Fim}
+\begin{frame}
+\vspace{0.2cm}
+\begin{center}
+\Huge{Obrigado!}
+\end{center}
+\end{frame}
+
+\end{document}
