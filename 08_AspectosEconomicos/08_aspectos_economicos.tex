@@ -9,7 +9,7 @@
 
 % This license applies solely to the 08_modelos_negocios.tex file. 
 
-% Build this file with pdflatex 08_modelos_negocios.tex
+% Build this file with pdflatex 08_aspectos_economicos.tex
 
 
 % Partes do material mencionado desta aula foram extraídas do relatório 
@@ -101,16 +101,17 @@
 \begin{frame}
 	\frametitle{Sobre economia de dom}
 	\begin{columns}
-	\begin{column}[c]{5.5cm} 
+	\begin{column}[c]{6cm} 
     \begin{enumerate}
       \item Boa explicação para os primórdios do OSS
         \begin{itemize}
-        \item Em particular, justifica a ação de voluntários \vspace{0.2cm}
+        \item Em particular, justifica a ação de \tgreen{voluntários} \vspace{0.2cm}
         \end{itemize}\pause
       \item Não explica tão bem o interesse de corporações
         \begin{itemize}
-        \item Economia de \tred{escassez} \vspace{0.2cm}
-        \item Por que gastar dinheiro em algo disponível gratuitamente?
+        \item Economia de \tred{escassez}, teoricamente\vspace{0.2cm}
+        \item Por que \tred{gastar dinheiro} em algo disponível gratuitamente?\vspace{0.2cm}
+        \item Por que alguém \tred{abriria} o código do seu produto?
         \end{itemize}
     \end{enumerate}
     \end{column}
@@ -121,6 +122,9 @@
 	% Licença: domínio público
 	% http://en.wikipedia.org/wiki/File:Edward_Curtis_Image_005.jpg
 	% Autor: Edward S. Curtis
+	% Edward Curtis photo of a Kwakwaka'wakw potlatch with dancers and singers. Kwakwaka'wakw people in a 
+	% wedding ceremony, bride in centre. Photo taken by Edward Curtis, 1914. Edward Curtis photo of a 
+	% Kwakwaka'wakw potlatch.
 	\vspace{0.2cm}
 	\end{center}
 	\end{figure}
@@ -128,33 +132,102 @@
     \end{columns}
 \end{frame}
 
+\begin{frame}
+	\frametitle{\textit{Free as in free beer?}}
+    \begin{enumerate}
+      \item A IBM gastou, entre 1995 e 2005, US\$ 1bi no Linux
+        \begin{itemize}
+        \item Para fins de desenvolvimento e promoção
+        \end{itemize}\pause
+      \vspace{0.2cm}
+      \item A Oracle (graças a \textbf{aquisições}) \tred{era} dona, em 2010, de
+      % Aquisições == ela gastou *muito* dinheiro. Talvez não tenha sido com o fim de se
+      % tornar proprietária desses produtos, mas foi o que aconteceu. 
+        \begin{itemize}
+        \item MySQL
+        \item Java
+        \item Berkeley DB
+        \item OpenOffice
+        \item VirtualBox
+        \item Glassfish
+        \end{itemize}\pause
+      \vspace{0.2cm}
+      \item O Google desenvolveu um dos melhores Web Browsers
+        \begin{itemize}
+        \item E abriu quase todo ele, via projeto Chromium
+        \item Incluindo o engenho V8 para JavaScript
+        \end{itemize}
+           
+    \end{enumerate}
+\end{frame}
 
-%1. Código Aberto como uma cultura de dom (Gift Culture). Boa explicação 
-%para uma época em que os fundamentos da economia de FLOSS ainda nõa eram
-%bem entendidos
-%
-%   - Não explica o interesse de corporações em FLOSS
-%  
-%2. Ponto de vista centrado na venda de software como um produto.
-%   Há estimativas de que, nos EUA, em torno de 30% dos programas 
-%   escritos são  vendidos como como produtos.
-%   
-%3. OSS surgiu como uma visão pragmática para software livre.
-%   - A primeira versão de The Cathedral and the Bazaar usava o termo
-%   "Software Livre", ao invés de "Software de Código Aberto". 
-%
-%4. Software como meio
-%mostrar logos de várias empresas que USAM software mas não dependem disso exclusivamente
-%
-%5. Meio vs. Fim
-%Tecnologia "Possibilitadora"
-%vs. Diferenciação de negócios
-%Exemplos: Amazon, Microsoft, REDU, Apple
-%Se o softwre não é a diferenciação, não é um Centro de Lucro, é um Centro de Custo.
-%
-%O que é e o que não é diferencial?
-%
+\begin{frame}
+	\frametitle{Investimento em projetos FLOSS, por projeto}
+	\begin{figure}
+	\begin{center}
+ 	\includegraphics[scale=0.75]{investimento.jpg}\\[0.3cm]
+	% Copyright (c) Dr. Marco Iansiti, Ph.D. and Gregory L. Richards
+	% The Business of Free Software: Enterprise Incentives, Investment, and Motivation in the Open Source Community
+	% http://www.hbs.edu/research/pdf/07-028.pdf
+	% Autors: Marco Iansiti e Gregory L. Richards
+	% O que é interessante notar nessa figura é a irregularidade. Poucos projetos receberam muito dinheiro 
+	% enquanto a maioria recebeu muito menos. O gráfico está desatualizado e as informações são incompletas
+	% (por exemplo, o Google paga o Guido van Rossum para trabalhar em Python o tempo todo e certamente ele não é
+	% o único), mas ainda assim os dados fornecem uma boa idéia sobre como o dinheiro é distribuído. Isso sugere 
+	% que as corporações que investem esse dinheiro tem algum interesse específico em determinados projetos FLOSS
+	% e que esse interesse não está diretamente relacionado à popularidade desses projetos. 
+	\end{center}
+	\end{figure}
+\end{frame}
 
+\begin{frame}
+	\frametitle{Receita relacionada a FLOSS vs. receita por área}
+	Corporações não tem fins humanitários... \pause
+	\begin{figure}
+	\begin{center}
+ 	\includegraphics[scale=0.75]{receita_floss.jpg}\\[0.3cm]
+	% Copyright (c) Dr. Marco Iansiti, Ph.D. and Gregory L. Richards
+	% The Business of Free Software: Enterprise Incentives, Investment, and Motivation in the Open Source Community
+	% http://www.hbs.edu/research/pdf/07-028.pdf
+	% Autors: Marco Iansiti e Gregory L. Richards
+	\end{center}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Dois pontos de vista complementares}
+	\begin{block}{Software pode ou não ser um diferencial de negócios}
+	\begin{enumerate}
+	\item Software livre não é a principal fonte de receita para IBM, Oracle ou Google\vspace{0.1cm}
+	\item Mas \textbf{ajuda a dividir custos e riscos} para produtos que \tred{não são um diferencial de negócios}\vspace{0.1cm}\pause
+	\item Se software não é a diferenciação, é um centro de \textbf{\tred{custo}}, não de \tgreen{lucros}
+	% Esse é o motivo chave que leva várias organizações ligadas a software e hardware a investir em FLOSS.
+	\end{enumerate}
+	\end{block}
+
+	\begin{block}{Tecnologia meio vs. tecnologia fim}
+	\begin{enumerate}
+	\item Software pode ser uma tecnologia ``possibilitadora'' \vspace{0.1cm}
+	\item Desenvolvimento de software proprietário é uma \tred{minoria}
+	  \begin{itemize}
+	  \item Menos de 10\% das vagas para desenvolvimento de software\vspace{0.1cm}
+	  \item Mais de 70\% estão em empresas que são ``usuárias de TI''
+	  \end{itemize}  
+	\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Se tiverem que aprender apenas uma coisa, aprendam isso}
+	{\Large Vale a pena abrir o código para}\vspace{0.1cm}
+	\begin{enumerate}
+	\item software que \tred{não é um diferencial} de negócios\vspace{0.1cm}
+	\item software que é uma \tgreen{tecnologia possibilitadora} para vários negócios\vspace{0.1cm}
+	\end{enumerate}
+	\vspace{0.2cm}\pause 
+	{\large Porque os custos e o risco do desenvolvimento são divididos}\vspace{0.2cm} \pause
+	{\large \bgreen{Software Livre} como parte de um modelo de negócios \tred{``puro''} não é comum}\vspace{0.2cm}
+\end{frame}
 
 \section{Modelos de produção de SW}
 \subsection{Modelos de produção de SW}
@@ -162,9 +235,77 @@
 \begin{frame}
 \vspace{0.2cm}
 \begin{center}
-\Huge{\textit{Modelos de Produção de Software}}
+\Huge{Modelos de Produção de Software}
 \end{center}
 \end{frame}
+
+\begin{frame}
+	\frametitle{Modelos existentes}
+	\begin{enumerate}
+	\item Varejo (\textit{retail})\vspace{0.2cm}
+	\item Interno (\textit{in-house}) ou para um cliente específico \vspace{0.2cm}
+	\item Colaboração sem uma licença de FLOSS\vspace{0.2cm}
+	\item FLOSS
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Dimensões em que os modelos variam}
+	\begin{enumerate}
+	\item Distribuição dos custos de desenvolvimento\vspace{0.2cm}
+	\item Distribuição dos riscos de fracasso\vspace{0.2cm}
+	\item Eficiência em financiar o desenvolvimento e não os \textit{overheads} do processo\vspace{0.2cm}
+	\item Grau em que outros podem ser excluídos de usar o software\vspace{0.2cm}
+	\item Mercado necessário \vspace{0.2cm}
+	\item Proteção de diferenciação (do cliente e de quem desenvolve)
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Comparativo dos modelos}
+	\begin{figure}
+	\begin{center}
+ 	\includegraphics[scale=0.38]{modelos_producao.jpg}
+	% Copyright (c) Dr. Marco Iansiti, Ph.D. and Gregory L. Richards
+	% The Business of Free Software: Enterprise Incentives, Investment, and Motivation in the Open Source Community
+	% http://www.hbs.edu/research/pdf/07-028.pdf
+	% Autors: Marco Iansiti e Gregory L. Richards
+	\end{center}
+	\end{figure}
+\end{frame}
+
+
+%Retail (Varejo?): 
+%a organização que desenvolve arca com os custos do desenvolvimento
+%  - esses custos são repassados para os clientes, mas só depois de algum tempo
+%  - faz mais sentido se houver investidores externos
+%  - muitas fontes de ineficiência (empacotamento, propaganda, setor de vendas, ``jabá'' com quem vende, funcionalidades que quase ninguém usa)
+%uma organização arca com os riscos de fracasso (veja acima)
+%Consequência importante: modelo que só faz sentido para um mercado de massa, caso contrário o preço final do produto seria alto demais, por ser muito ineficiente. Se houver um mercado grande, os custos podem ser melhor divididos, o que implica em um menor preço final (ainda assim, a maior parte do que os clientes pagarão será relativo a overheads, ao invés do custo de desenvolvimento propriamente dito). 
+%Software de varejo nunca ou quase nunca é um diferencial para uma organização (embora ele provavelmente seja para a organização que o produz). Ele não exclui ninguém: todos podem usar, portanto que possam pagar.
+%
+%
+%In-House ou para um cliente específico (contract)
+%programadores pagos para desenvolver software, ao invés de se pagar por um produto que está à venda. Este modelo pode ser usado para desenvolver sistemas novos ou para realizar personalizações mais radicais em produtos pré-existentes.
+%O cliente arca com os custos e riscos se o software for um diferencial para o seu negócio (porque ele não quer que a organização que desenvolveu o sistema o venda para seus potenciais concorrentes).
+%Risco pode ser inteiramente do cliente ou pode ser dividido com outros clientes interessados em produtos derivados. Depende tanto do cliente (e do quanto o sistema é um diferencial de negócio) quanto da organização que desenvolve o sistema.
+%Menos fontes de ineficiência do que o modelo de varejo: custo de encontrar novos clientes, custode contrar experts que podem ser sub-utilizados.
+%Pode excluir todos exceto pelo cliente que pagou pelo desenvolvimento. 
+%
+%
+%Colaboração sem uma licença de código aberto
+%Desenvolvimento em consórcios. Custo de desenvolvimento e risco distribuídos entre as organizações que participam do consórcio. 
+%É um modelo ineficiente devido a dificuldades na tomada de decisões (já que há interesses a ser defendidos que são frequentemente conflitantes e algumas decisões são tomadas com base no volume do aporte de recursos que cada organização fez, ao invés de mérito técnico) e no gerenciamento. 
+%Exclui todos que não fazem parte do consórcio. 
+%
+%
+%O paradigma de código aberto
+%Inicialmente, a organização que cria o projeto de código aberto arca com custos
+%e riscos. Posteriormente, estes podem podem ser distribuídos entre todas os participantes. Esse "posteriormente" parte da premissa de que o projeto é bem sucedido ao atrair desenvolvedores para o projeto e formar uma comunidade. 
+%Overhead não é alto porque custos de coordenação são baixos, há pouco marketing e divulgação e desenvolvedores podem reaproveitar tudo que já foi desenvolvido antes e focar apenas em novas funcionalidades importantes para a organização em que trabalham. 
+%Ninguém é excluído de usar o sistema.
+%Não é uma boa abordagem para desenvolver software que é um diferencial de negócio (porque todos os competidores têm acesso). 
+
 
 \section{Quem contribui}
 \subsection{Quem contribui}
@@ -206,7 +347,7 @@
 %	\frametitle{Explicando de forma resumida} 
 %	\begin{center}
 %	\textit{``massively-parallel drunkard's walk filtered by a Darwinistic process''}
-%	% Quem falou isso foi o Bruce Perens no artigo "?The Emerging Economic Paradigm of Open Source". 
+%	% Quem falou isso foi o Bruce Perens no artigo "The Emerging Economic Paradigm of Open Source". 
 %    \begin{figure}
 % 	\includegraphics[scale=0.45]{drunkard.png}\\[0.1cm]
 %	% Copyright: domínio público.
