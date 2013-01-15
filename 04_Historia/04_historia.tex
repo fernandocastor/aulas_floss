@@ -83,6 +83,7 @@
       \item Software dependente da máquina 
       \item \bred{\textbf{Solução}}: os primeiros compiladores 
       \item Compartilhados sem reservas 
+      % Entre usuários das mesmas plataformas. Um compilador para uma máquina não rodava em outra máquina, mesmo que fosse do mesmo fabricante. 
     \end{enumerate}
  	\end{block}
 \end{column}
@@ -98,7 +99,7 @@ Computadores mais fáceis de programar $\Rightarrow$ \bred{mais software}\\
 	\begin{figure}
 	\begin{center}
 	DEC PDP-11\\
- 	\includegraphics[scale=0.4]{pdp11.jpg}\\[0.1cm]
+ 	\includegraphics[scale=0.35]{pdp11.jpg}\\[0.1cm]
     % http://en.wikipedia.org/wiki/File:Pdp-11-40.jpg
     % GFDL
     % PDP-11, da Digital Equipment Corporation. 
@@ -109,8 +110,8 @@ Computadores mais fáceis de programar $\Rightarrow$ \bred{mais software}\\
 \begin{column}[c]{6cm}
 	\begin{figure}
 	\begin{center}
-	IBM System 360\\
- 	\includegraphics[scale=0.35]{ibm360.jpg}\\[0.1cm]
+	IBM System/360\\
+ 	\includegraphics[scale=0.31]{ibm360.jpg}\\[0.1cm]
     % http://en.wikipedia.org/wiki/File:DM_IBM_S360.jpg
     % Licença: Creative Commons Attribution 2.5 Generic. Autor: Ben Franske.
     % Descrição: An IBM System 360/20 computer on display at the Deutsches Museum in Munich Germany. Front panels are removed. 
@@ -121,7 +122,9 @@ Computadores mais fáceis de programar $\Rightarrow$ \bred{mais software}\\
 \end{columns}	
 \textit{Patches} compartilhados entre usuários e com fabricantes\\
 O importante era vender {\em computadores}\\
-Custo do software era \tred{embutido} 
+Custo do software era \tred{embutido} \\[0.2cm]
+\pause
+Parece FLOSS, mas \tred{não é}.
 % Um desenvolvedor que usasse um computador poderia enviar um patch que produziu para 
 % a empresa fabricante para que esta incorporasse o patch às versões futuras do software.
 % Também era possível para uma pessoa enviar patches para outras. Embora não fosse
@@ -130,17 +133,22 @@ Custo do software era \tred{embutido}
 % Essa situação não parece não diferir muito do desenvolvimento de FLOSS de hoje em 
 % dia, mas há diferenças fundamentais:
 % 1 - Computadores eram todos incompatíveis. O que rodava no PDP-11 não necessariamente
-%     rodava no IBM/360. Embora já houvesse alguma padronização em termos de linguagens
-%     cada empresa usava a sua, ou havia incompatibilidades com o SO ou a arquitetura
-%     subjacentes. A construção de compiladores ainda era, até certo ponto, magia negra.
+%     rodava no IBM System/360. Mesmo os computadore de um mesmo fabricante eram incompatíveis. A
+%     família System/360 foi a primeira a cobrir diversos perfis diferentes de usuário (em termos
+%     de necessidade de recursos computacionais) mantendo compatibilidade em termos de arquitetura e
+%     de software. Em resumo, uma aplicaçõa escrita para um computador da família poderia rodar em 
+%     outro da mesma família sem precisar ser reescrita. Embora já houvesse alguma padronização em 
+%     termos de linguagens cada empresa poderia usar a sua própria versão e esta poderia ter
+%     incompatibilidades com o SO ou a arquitetura subjacentes. A construção de compiladores 
+%     ainda era, até certo ponto, magia negra, principalmente no lado do back-end.
 % 2 - As empresas tinham foco no hardware. O software era só aquele componente compara-
 %     tivamente mais barato que era necessário para se extrair o máximo de valor a 
 %     partir dos computadores. Isso passou a mudar com a redução gradual nos preços de 
 %     computadores, a menor diferença de desempenho entre as máquinas disponíveis no
 %     mercado e a popularização dos sistemas de compartilhamento de tempo, que ocasionou 
 %     um aumento significativo na complexidade do software e, consequentemente, no seu
-%     custo de produção (já que eles incluiam cada vez mais funcionalidades, apesar das
-%     ferramentas de desenvolvimento cada vez mais evoluídas). 
+%     custo de produção (já que eles incluiam cada vez mais funcionalidades), apesar das
+%     ferramentas de desenvolvimento cada vez mais evoluídas. 
 % 3 - Não havia a facilidade de se compartilhar código que passou a existir com o 
 %     advento da Internet. Nessa época, compartilhar código era muito mais difícil, exi-
 %     gindo o envio de disquetes ou de fitas magnéticas. Qualquer um desses era caro
@@ -159,8 +167,9 @@ Custo do software era \tred{embutido}
     % Domínio público
     % Ken Thompson e Dennis Ritchie, principais criadores do UNIX. Doug McIlroy
     % também influenciou muito o projeto e a conhecidíssima "filosofia Unix" é
-    % idéia dela. É um refinamento de idéias que ele defendia já desde o final da
-    % década de 60. 
+    % idéia dele. É um refinamento de idéias que ele defendia já desde o final da
+    % década de 60, quando propôs o uso de "Mass-produced software components". Sim, 
+    % ele é o "inventor" do desenvolvimento de software baseado em componentes.
 	\end{center}
 	\end{figure}
 \end{column}
@@ -170,7 +179,7 @@ Custo do software era \tred{embutido}
     \begin{itemize}
       \item Decorrente do fracasso do Multics 
       \item Compartilhado sem restrições 
-      % Isso era possível porque, devido decisão judicial de 1956, decorrente
+      % Isso era possível porque, devido a decisão judicial de 1956, decorrente
       % de uma ação antitruste, a AT&T não podia se envolver com nenhum negócio 
       % que não tivesse a ver com telefonia. Logo, não poderia tirar proveito 
       % comercial do UNIX ou de qualquer programa que produzisse. 
@@ -186,6 +195,10 @@ Custo do software era \tred{embutido}
       % Ou seja, foi o primeiro operacional usado por muitas pessoas
       % que não era amarrado a nenhum fabricante específico. Devido
       % à sua abertura, também podia ser melhorado pelos seus usuários.
+      
+      % É importante mencionar que, no início da década de 60, não havia sistemas
+      % operacionais como nós os entendemos hoje. Estes só passaram a fazer sentido
+      % com o surgimento dos sitemas de time-sharing, uma novidade à época. 
       \item Deu origem à BSD
     \end{itemize}
 % 	\end{block}
@@ -371,7 +384,10 @@ Enquanto isso no MIT Artificial Intelligence Lab...
 
 \begin{frame}
 \frametitle{Linux}
-Primeira versão disponível para o público em outubro 1991\\[0.2cm]
+Primeiras versões baseadas no MINIX
+% À medida que o Linux foi evoluindo, o código oriundo do MINIX foi gradativamente removido.
+\\[0.2cm]
+Disponível para o público desde outubro de 1991\\[0.2cm]
   \begin{block}{A importância do Linux} 
   \begin{itemize}
   \item Núcleo usado no GNU (GNU/Linux) \vspace{0.1cm}
@@ -385,7 +401,8 @@ Primeira versão disponível para o público em outubro 1991\\[0.2cm]
 \vspace{0.1cm}\pause
   \item Lei de Linus: ``dados olhos suficientes, todos os erros são triviais''
   % No original: ``Given enough eyeballs, all bugs are shallow''.
-  % Um dos preceitos fundamentais da idéia de Software de Código Aberto.
+  % Um dos preceitos fundamentais da idéia de Software de Código Aberto. Premissa que ajudou
+  % a disseminar essa ideia. 
  
 % Linux usa até hoje a GPL v2.0. Linus já declarou que não tem intenção de passar a usar a GPL v3.0.
   \end{itemize}
@@ -398,7 +415,7 @@ Primeira versão disponível para o público em outubro 1991\\[0.2cm]
   \begin{block}{Por um lado...}
   \begin{itemize}
   \item Usar \bgreen{exclusivamente} software livre tornou-se viável \vspace{0.1cm}
-  \item Algumas aplicações já disponíveis, com outras sendo desenvolvidas \pause
+  \item Algumas aplicações já disponíveis, com outras sendo desenvolvidas 
   \end{itemize}
   \end{block} 
 \pause
@@ -449,9 +466,6 @@ Primeira versão disponível para o público em outubro 1991\\[0.2cm]
 \Large{O que mais aconteceu?}
 \\[0.4cm]\pause
 \Huge{paginadadisciplina/linhadotempo}
-\\[0.4cm]
-\Large{\tred{Completem a linha!}}\\[0.2cm]
-%Se cada um contribuir com 6 ou 7 entradas, teremos uma linha do tempo bem legal!
 \end{center}
 \end{frame}
 \begin{frame}
