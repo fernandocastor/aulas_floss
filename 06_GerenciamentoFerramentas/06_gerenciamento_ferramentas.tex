@@ -90,7 +90,7 @@
 	``A project is a temporary endeavor with a defined beginning and end (\textbf{usually time-constrained, and often constrained by funding or deliverables}), undertaken to meet unique goals and objectives [...].''
 	\end{quote}
 	% Definição retirada da Wikipédia (http://en.wikipedia.org/wiki/Project_management)
-	% A página da Wikipédia sobre ``Project'' refere-se a projetos de Engenharia, Ciência e Tecnologia (escolas e universidades)
+	% A página da Wikipédia sobre ``Project'' refere-se a projetos de Engenharia, Ciência e Tecnologia (escolas e universidades),
 	% projetos conforme definidos pela área de Gerenciamento de Projetos. Em todos os casos, um projeto tem duração finita. 
 	% A atividade ``do dia-a-dia'' de uma empresa, que não tem um fim, é chamada de operação.
     \begin{itemize}\pause
@@ -102,7 +102,7 @@
 	\begin{block}{Gerenciamento de projetos}
 	Responsabilidades de um gerente de projeto: 
 	\begin{itemize}
-	\item Definição de objetivos (viáveis e claros) para o projetos
+	\item Definição de objetivos (viáveis e claros) para o projeto
     \item Gerenciamento de recursos 
     \item \textbf{\tred{Construção}} dos requisitos do projeto
     % Se usarmos o termo ``construção'', acho que essa definição não é ideal para descrever as atividades do gerente de
@@ -135,7 +135,7 @@
 	\begin{block}{O que é?}
     \begin{itemize}
     \item Autoridade final na tomada de decisões\vspace{0.1cm}
-    \item Um juiz \textbf{aprovado pela comunidade}\vspace{0.1cm}
+    \item Um \tred{juiz} \textbf{aprovado pela comunidade}\vspace{0.1cm}
     \item Muitas vezes é o fundador do projeto
     % É possível perceber que, da mesma forma que um ``projeto'' de FLOSS não é um projeto estritamente
     % falando, o BD também não é um gerente de projeto, embora haja atribuições comuns. 
@@ -157,11 +157,11 @@
 \begin{frame}
 	\frametitle{Alguns projetos FLOSS com BDs}
     \begin{itemize}
-    \item Linux\vspace{0.2cm}
+    \item {\bf Linux}\vspace{0.2cm}
     % Linux Torvalds
-    \item Python\vspace{0.2cm}
+    \item {\bf Python}\vspace{0.2cm}
     % Guido Van Rossum
-    \item Perl\vspace{0.2cm}
+    \item {\bf Perl}\vspace{0.2cm}
     % Larry Wall
     \item Clojure\vspace{0.2cm}
     % Rich Hickey
@@ -173,11 +173,15 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{Democracia baseada em consenso}
+	\frametitle{Democracia baseada em consenso (com ou sem comitê)}
 	\begin{block}{Funcionamento básico}
     \begin{itemize}
     \item Decisão a ser tomada é apresentada publicamente\vspace{0.1cm}
     \item Se não houver objeções, consenso é atingido\vspace{0.1cm}
+    % No Apache HTTPD, há um comitê chamado Apache HTTP Project Management Committee (PMC, for short). Esse comitê é
+    % quem faz as votações. Para que qualquer 
+    % patch seja committed, é necessário que haja três votos a favor de membros do PMC e nenhum contra. Mais informações
+    % no endereço http://httpd.apache.org/ABOUT_APACHE.html
     \item Decisão pode ser implementada\vspace{0.1cm}
     % ``implementada'' em um sentido mais amplo. Não precisa ser uma decisão diretamente
     % ligada ao código. 
@@ -193,7 +197,8 @@
     \item Consequências podem ser {\bf desfeitas}\vspace{0.1cm}
     % A possibilidade de desfazer as consequências de uma má decisão, possível graças ao
     % sistema de controle de versões, agiliza o processo de tomada de decisão e evita
-    % que muito tempo seja gasto propondo publicamente cursos de ação óbvios. 
+    % que muito tempo seja gasto propondo publicamente cursos de ação óbvios e antecipando 
+    % todas as formas como uma decisão pode não ser boa.
     \item Se consenso não for atingido, é necessário \byellow{votar}  
     \end{itemize}
     \end{block}
@@ -225,7 +230,9 @@
 	\begin{block}{Quem pode votar?}
     \begin{itemize}\pause
     \item Nem todo mundo\vspace{0.1cm} \pause 
-    \item Resposta fácil: \textit{committers}\vspace{0.1cm}
+    \item Resposta fácil: \textit{committers}\vspace{0.1cm}\pause
+    \item Às vezes apenas um subconjunto.
+    % É o casos projetos da Apache Software Foundation e seus PMCs.
     \end{itemize}
     \end{block}
 \pause
@@ -248,16 +255,6 @@
     % Dois exemplos de documentos com recomendações para desenvolvedores:
     % Surversion: http://subversion.apache.org/docs/community-guide/
     % Apache Software Foundation: http://www.apache.org/foundation/how-it-works.html e http://www.apache.org/foundation/voting.html 
-\end{frame}
-
-\begin{frame}
-	\frametitle{Votação}
-	\begin{block}{Diretrizes de votação no ...}
-    \begin{itemize}
-    %******************
-    \item Incluir exemplos de diretrizes de votação para algum projeto real. 
-    \end{itemize}
-    \end{block}
 \end{frame}
 
 \section{Ferramentas}
