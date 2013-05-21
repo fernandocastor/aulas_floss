@@ -66,14 +66,13 @@
 	\begin{block}{Nome}
 		  \begin{itemize}
 		    \item {\bf Nome}: Desenvolvimento de Software de Código Aberto/Livre.
-		    \item {\bf Na graduação}: Tópicos Avançados em Linguagens Computacionais.
-		    \item {\bf Na pós}: Tópicos Avançados em ES 3.
+		    \item {\bf Nome Oficial}: Tópicos Avançados em Sistemas de Informação.
 		  \end{itemize}
 	\end{block}
 	\begin{block}{Local/Horários}
 		  \begin{itemize}
-		    \item {\bf Sala}: B020.
-		    \item {\bf Horários}: quartas e sextas, 8h-10h e 10h-12h, respectivamente.
+		    \item {\bf Sala}: D218.
+		    \item {\bf Horários}: terças e sextas, 18h50m--20h30m e 17h00m--18h40m, respectivamente.
 		  \end{itemize}
 	\end{block}
 	\begin{block}{Recursos}
@@ -85,18 +84,13 @@
 }	
 \end{frame}
 
-%
-%- Como vai ser a cadeira (bem prática)
-%  - Indicar sistemas e sítios
-%  - Relativamente poucas aulas de conteúdo
-%  - Alguns seminários de voluntários
-%
 \begin{frame}
 	\frametitle{Metodologia}
 	\begin{block}{Parte \tyellow{teórica}}
 		  \begin{itemize}
 		    \item Aulas ministradas pelo professor.
-		    \item Seminários ministrados por \bgreen{voluntários}.
+		    \item Palestras ministradas por \bgreen{convidados}.
+		    % Além de convidados, são voluntários!
 		    \item Apresentações dos alunos.
 		  \end{itemize}
 	\end{block}
@@ -127,8 +121,8 @@
 		    \item Um pouco de história
 		    \item O processo de desenvolvimento de FLOSS
 		    \item Modelos de gerenciamento
-		    \item Questões financeiras: quando abrir e quando fechar o software
-		    \item Licenças
+		    \item Questões econômicas: quando abrir e quando fechar o software
+		    \item Aspectos legais e licenças
 		    \item Estudos de caso e relatos de experiências 
 		  \end{enumerate}
 \end{frame}
@@ -141,7 +135,7 @@
 \pause \vspace{0.2cm}
 \item \tred{Manusear} algumas \tred{ferramentas} necessárias a essa abordagem
 \pause \vspace{0.2cm}
-\item \tred{Distinguir} as principais \tred{licenças} para FLOSS e \tred{escolher} a melhor para um projeto
+\item \tred{Diferenciar} contratos, patentes e direito autoral e explicar como esses conceitos do direito se aplicam a FLOSS
 \pause \vspace{0.2cm}
 \item \tred{Analisar} se um determinado projeto deve ou não \tred{tornar-se FLOSS}
 \pause \vspace{0.2cm}
@@ -158,6 +152,10 @@
 	  \begin{itemize}
 	    \item Tradução/Documentação
 	    \item Correção de {\em bugs} e implementação de funcionalidades
+     	       \begin{itemize}
+	       \item Pode haver \tred{mais de um} projeto de implementação
+	       \end{itemize}
+	    
 	  \end{itemize}
 	\end{block}
 \pause
@@ -228,6 +226,14 @@
             \item Gitorious -- http://www.gitorious.org/
 		  \end{itemize}
 	\end {block}
+	\begin{block}{Há algumas alternativas}
+		  \begin{itemize}
+            \item Groundhog -- https://github.com/spgroup/groundhog
+            \item Emergo -- https://subversion.assembla.com/svn/emergo/
+            \item Amadeus --  http://www.softwarepublico.gov.br/ver-comunidade?community\_id=9677539
+		  \end{itemize}
+	\end {block}
+	}
 %	\pause
 %    \begin{block}{Algumas alternativas}
 %		  \begin{itemize}
@@ -237,9 +243,8 @@
 %           \item ScriptLattes
 %		  \end{itemize}
 %    \end{block}	
-}
     \pause
-    Criar um projeto FLOSS novo não é uma opção \byellow{(por enquanto)}.
+    \byellow{Criar um projeto FLOSS novo não é uma opção}.
 \end{frame}
 
 \begin{frame}
@@ -254,9 +259,9 @@
 	\pause
     \begin{block}{Desenvolvimento}
 		  \begin{itemize}
-           \item Inclusão de novas funcionalidades ou
-           \item Correção de {\em bugs}
+           \item Inclusão de novas funcionalidades correção de {\em bugs}
            \item Trabalho pesado -- outra forma de envolvimento
+           \item Pode envolver documentação em caráter \tred{complementar}
 		  \end{itemize}
     \end{block}	
     \pause
@@ -266,7 +271,7 @@
 
 \begin{frame}
 	\frametitle{Por que documentação/traduação?}
-	\tred{Sua ausência é uma barreira à popularização de um projeto}
+	\tred{Ausência de uma das duas é uma barreira à popularização de um projeto}
 	  \begin{itemize}
          \item A língua pode limitar a adoção
          \begin{itemize}
@@ -400,37 +405,16 @@ FF7 não teria vendido \tred{quase 10 milhões de cópias} se fosse apenas em japon
 
 
 \begin{frame}
-	\frametitle{O que eu escolheria para documentar ...}
-	\begin{columns}
-	\begin{column}[l]{5cm}
-	\begin{block}{JabRef}
-		  \begin{itemize}
-            \item Ferramenta para gerenciar referências bibliográficas em \LaTeX
-            \item Não tem versão em português
-              \begin{itemize}
-                 \item Está ativamente recrutando tradutores
-              \end{itemize}
-            \item \tblue{Interesse direto} para mim
-              \begin{itemize}
-                 \item Uso \LaTeX há mais de dez anos 
-              \end{itemize}
-		  \end{itemize}
-	\end {block}
-	\end{column}
-	\begin{column}[l]{5cm}
-	\begin{figure}
-	\includegraphics[scale=0.55]{jabref.png}
-	\end{figure}
-
-	\end{column}
-	\end{columns}
+	\frametitle{O que eu escolheria para traduzir ...}
+	\includegraphics[scale=0.37]{learnyouhaskell.jpg}\hspace{0.05cm}
+	% O livro inteiro está disponível em http://learnyouahaskell.com/
+	% O projeto de tradução está no Github: https://github.com/haskell-br/learnhaskell
 \end{frame}
 
 \begin{frame}
 	\frametitle{... e para desenvolver}
 	\begin{block}{Glasgow Haskell Compiler}
 		  \begin{itemize}
-            \item Acho que todos vocês conhecem :)
             \item Projeto em desenvolvimento constante
             \item Comunidade relativamente pequena, mas \byellow{{\bf muito}} ativa
             \item \tblue{Interesse direto} para mim
