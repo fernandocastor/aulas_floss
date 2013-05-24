@@ -1,0 +1,1 @@
+LGPL exige que um programa que usa uma biblioteca distribuída com essa licença diga isso explicitamente?

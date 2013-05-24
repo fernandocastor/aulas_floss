@@ -176,7 +176,8 @@
 % As quatro liberdades essenciais têm que ser garantidas pela LICENÇA do programa. Por isso licenças são tão
 % importantes quando se fala em Software Livre. Simplesmente tornar disponível um programa sem licença não
 % implica em ele ser livre. Na verdade, não implica nem em ser domínio público. Todo programa é proprietário, 
-% na ausência de uma licença que diga explicitamente que não é.
+% na ausência de uma licença que diga explicitamente que não é. Isso ocorre porque a lei de direito autoral 
+% aplica-se a ele automaticamente. 
 		  
 	\end{block}
 	\begin{columns}
@@ -247,13 +248,15 @@
 
 \begin{frame}
 	\frametitle{Este programa é software Livre?}% NÃO. Se você o criou, o copyright automaticamente pertence a você e o uso
-	% da obra não é permitido sem sua autorização expressa. De acordo com a Convenção de Berna (http://en.wikipedia.org/wiki/Berne_Convention_for_the_Protection_of_Literary_and_Artistic_Works), qualquer trabalho escrito é automaticamente 
+	% da obra não é permitido sem sua autorização expressa. De acordo com a Convenção de Berna (http://en.wikipedia.org/wiki/Berne_Convention_for_the_Protection_of_Literary_and_Artistic_Works), 
+	% qualquer trabalho escrito é automaticamente 
 	% sujeito a copyright. O fato de você não ter especificado a licença que rege a distribuição de um programa
 	% não implica em ele ser de domínio público. Pelo contrário. No caso de projetos desenvolvidos no âmbito
 	% universidade, há uma complicação adicional: seu copyright pertence à própria universidade e não a você. É por
 	% isso que você não pode desenvolver projetos comerciais nas instalações do CIn. 	
 	\begin{center}
-	{\Huge \bgreen{Seu projeto de PLC}}
+	{\Huge \bgreen{Seus projetos nas}} \\
+	{\Huge \bgreen{disciplinas do CIn}}
 	\end{center}
 \end{frame}
 
@@ -269,10 +272,13 @@
 %	combater essa situação, foi criada a GPL v3. O problema é que Linux Torvalds não adotou
 %	a GPL v3 para o Linux, o que significa que a TiVo Inc. continua podendo restringir 
 %	o uso de versões modificadas do Linux que roda no dispositivo.
-% Vale ressaltar que, se o Linus resolver mudar a licença, a TiVo continua podendo usar versões anteriores do Linux, ou fazer um fork para criar sua própria versão, já que as anteriores usam a GPL2.
+%      Vale ressaltar que, se o Linus resolver mudar a licença, a TiVo continua 
+%      podendo usar versões anteriores do Linux, ou fazer um fork para criar sua própria 
+%      versão, já que as anteriores usam a GPL2.
 	\begin{figure}
 	\includegraphics[scale=0.7]{tivo.jpg}\\[0.2cm]
-	\pause Sistema operacional \tred{Linux}!
+	\pause Sistema operacional \tred{Linux} (GPLv2)! \\[0.2cm]
+	\pause E se mudar para {\bf GPLv3}?
 	%Fonte: http://upload.wikimedia.org/wikipedia/commons/6/69/Series_2_tivo_front.jpg
     %Licença: Creative Commons Attribution-Share Alike 3.0 Unported
     %Foto tirada por Jared C. Benedict. 
@@ -289,6 +295,7 @@
 		  \begin{itemize}
 		    \item Usar regras de \textit{copyright} para \bgreen{evitar a restrição de liberdades}
 		    \item Um programa ser livre não implica em obras derivadas também serem
+		    \item Restringir liberdades vs. Restringir restrições
 		  \end{itemize}
 	\end{block}
 	\pause
@@ -350,7 +357,35 @@
 
 % Este material de aula, excetuando-se as figuras, utiliza uma licença similar à copyleft. Há algumas diferenças, porém. Em resumo, a licença empregada (CC BY-NC-SA) é mais restritiva, já que proíbe o uso comercial e exige que crédito seja atribuído ao seu autor (sem implicar em endosso de qualquer forma, da parte do autor, a eventuais modificações) quando trabalhos derivados a partir deste forem criados. Neste sentido, ela remove algumas liberdades de pessoas que utilizarem este material. Uma discussão interessante sobre porque NC-SA não é copyleft pode ser encontrada neste endereço: http://robmyers.org/weblog/2008/02/noncommercial-sharealike-is-not-copyleft.html
 	\end{block}
+\end{frame}
 
+\begin{frame}
+\frametitle{Share Alike}
+\textit{\textbf{Share Alike} -- If you alter, transform, or build upon this work, you may distribute the resulting work only under the same or similar license to this one.}
+	\begin{figure}
+	\includegraphics[scale=0.2]{sharealike.png}
+    %Fonte: http://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Cc-sa.svg/500px-Cc-sa.svg.png
+    %Licença:  Creative Commons Attribution 2.0 Generic license.
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Mais sobre Share Alike}
+
+Família de licenças que inclui as de \textit{copyleft}.
+	\begin{figure}
+	\includegraphics[scale=0.30]{creativecommons.png}
+    %Fonte: http://upload.wikimedia.org/wikipedia/commons/8/86/CC-logo.svg
+    %Licença:  Domínio público.
+	\end{figure}
+% Da Wikipedia (http://en.wikipedia.org/wiki/Creative_Commons): 	
+% Creative Commons (CC) is a non-profit organization headquartered in Mountain View, California, United States devoted to expanding the range of creative works available for others to build upon legally and to share.[1] The organization has released several copyright-licenses known as Creative Commons licenses free of charge to the public. These licenses allow creators to communicate which rights they reserve, and which rights they waive for the benefit of recipients or other creators. An easy-to-understand one-page explanation of rights, with associated visual symbols, explains the specifics of each Creative Commons license. Creative Commons licenses do not replace copyright, but are based upon it. They replace individual negotiations for specific rights between copyright owner (licensor) and licensee, which are necessary under an "all rights reserved" copyright management with a "some rights reserved" management employing standardized licenses for re-use cases where no commercial compensation is sought by the copyright owner. The result is an agile, low-overhead and low-cost copyright-management regime, profiting both copyright owners and licensees. Wikipedia uses one of these licenses.
+
+Estes slides são distribuídos com uma licença \bred{\textbf{ShareAlike}}:\\[0.2cm]
+\begin{center}
+{\small \includegraphics[scale=0.5]{license.png}}\\
+{\small Creative Attribution Noncommercial ShareAlike 3.0 license.}
+\end{center}
 \end{frame}
 
 \end{document}
