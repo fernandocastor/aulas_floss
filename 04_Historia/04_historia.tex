@@ -83,6 +83,7 @@
       \item Software dependente da m·quina 
       \item \bred{\textbf{SoluÁ„o}}: os primeiros compiladores 
       \item Compartilhados sem reservas 
+      \item Antes disso, era difÌcil de falar em software
       % Entre usu·rios das mesmas plataformas. Um compilador para uma m·quina n„o rodava em outra m·quina, mesmo que fosse do mesmo fabricante. 
     \end{enumerate}
  	\end{block}
@@ -103,6 +104,10 @@ Computadores mais f·ceis de programar $\Rightarrow$ \bred{mais software}\\
     % http://en.wikipedia.org/wiki/File:Pdp-11-40.jpg
     % GFDL
     % PDP-11, da Digital Equipment Corporation. 
+    % Em 1960, um PDP-1, o precursos dos minicomputadores, custava US$ 120.000,00. Em 1970, um PDP-8, o precursor direto do 
+    % PDP-11 (o PDP-10 n„o era um minicomputador e custava mais de US$ 180.000,00 -- era uma m·quina para timesharing), 
+    % custava US$ 18.000,00. O PDP-11 em 1970 custava pouco mais de US$ 10.000,00.
+    %FAQ legal sobre o PDP-11: http://www.wolfgang-houben.de/faqpdp11.htm
 	\end{center}
 	\end{figure}
 \end{column}
@@ -133,10 +138,10 @@ Parece FLOSS, mas \tred{n„o È}.
 % Essa situaÁ„o n„o parece n„o diferir muito do desenvolvimento de FLOSS de hoje em 
 % dia, mas h· diferenÁas fundamentais:
 % 1 - Computadores eram todos incompatÌveis. O que rodava no PDP-11 n„o necessariamente
-%     rodava no IBM System/360. Mesmo os computadore de um mesmo fabricante eram incompatÌveis. A
+%     rodava no IBM System/360. Mesmo os computadores de um mesmo fabricante eram incompatÌveis. A
 %     famÌlia System/360 foi a primeira a cobrir diversos perfis diferentes de usu·rio (em termos
 %     de necessidade de recursos computacionais) mantendo compatibilidade em termos de arquitetura e
-%     de software. Em resumo, uma aplicaÁıa escrita para um computador da famÌlia poderia rodar em 
+%     de software. Em resumo, uma aplicaÁ„o escrita para um computador da famÌlia poderia rodar em 
 %     outro da mesma famÌlia sem precisar ser reescrita. Embora j· houvesse alguma padronizaÁ„o em 
 %     termos de linguagens cada empresa poderia usar a sua prÛpria vers„o e esta poderia ter
 %     incompatibilidades com o SO ou a arquitetura subjacentes. A construÁ„o de compiladores 
@@ -147,7 +152,7 @@ Parece FLOSS, mas \tred{n„o È}.
 %     computadores, a menor diferenÁa de desempenho entre as m·quinas disponÌveis no
 %     mercado e a popularizaÁ„o dos sistemas de compartilhamento de tempo, que ocasionou 
 %     um aumento significativo na complexidade do software e, consequentemente, no seu
-%     custo de produÁ„o (j· que eles incluiam cada vez mais funcionalidades), apesar das
+%     custo de produÁ„o (j· que eles incluÌam cada vez mais funcionalidades), apesar das
 %     ferramentas de desenvolvimento cada vez mais evoluÌdas. 
 % 3 - N„o havia a facilidade de se compartilhar cÛdigo que passou a existir com o 
 %     advento da Internet. Nessa Època, compartilhar cÛdigo era muito mais difÌcil, exi-
@@ -156,7 +161,7 @@ Parece FLOSS, mas \tred{n„o È}.
 \end{frame}
 
 \begin{frame}
-	\frametitle{1970s -- UNIX}
+	\frametitle{Fim dos 1960s, InÌcio dos 1970s -- UNIX}
 \begin{columns}
 \begin{column}[l]{5.5cm}	
 	\begin{figure}
@@ -167,9 +172,12 @@ Parece FLOSS, mas \tred{n„o È}.
     % DomÌnio p˙blico
     % Ken Thompson e Dennis Ritchie, principais criadores do UNIX. Doug McIlroy
     % tambÈm influenciou muito o projeto e a conhecidÌssima "filosofia Unix" È
-    % idÈia dele. … um refinamento de idÈias que ele defendia j· desde o final da
-    % dÈcada de 60, quando propÙs o uso de "Mass-produced software components". Sim, 
+    % idÈia principalmente dele. … um refinamento de idÈias que ele defendia j· desde o final 
+    % da dÈcada de 60, quando propÙs o uso de "Mass-produced software components". Sim, 
     % ele È o "inventor" do desenvolvimento de software baseado em componentes.
+    % O UNIX comeÁou a ser desenvolvido no final da dÈcada de 60, para rodar em um PDP-7. 
+    % A linguagem C foi criada quando foi necess·rio portar o UNIX para um PDP-11, para
+    % tirar proveito da capacidade deste de fazer endereÁamento por bytes. 
 	\end{center}
 	\end{figure}
 \end{column}
@@ -300,10 +308,10 @@ Enquanto isso no MIT Artificial Intelligence Lab...
 %% detalhes na entrevista com stallman sobre o periodo:
 %% http://www.gnu.org/gnu/rms-lisp.html
 %%
-%% Alguns excerpts:
+%% Alguns trechos:
 %%
 %% "so you had two competing Lisp machine companies [...]. Thus, the abandonment
-%% of our lab was followed by ‚Äúwar‚Äù in our lab. The abandonment happened when
+%% of our lab was followed by a "war" in our lab. The abandonment happened when
 %% Symbolics hired away all the hackers, except me and the few who worked at LMI
 %% part-time. Then they invoked a rule and eliminated people who worked part-time
 %% for MIT, so they had to leave entirely, which left only me. The AI lab was now
@@ -315,11 +323,11 @@ Enquanto isso no MIT Artificial Intelligence Lab...
 %% licensed. Nobody had envisioned that the AI lab's hacker group would be wiped
 %% out, but it was.
 
-%% So Symbolics came up with a plan (4). They said to the lab, ‚ÄúWe will continue
+%% So Symbolics came up with a plan (4). They said to the lab, "We will continue
 %% making our changes to the system available for you to use, but you can't put
 %% it into the MIT Lisp machine system. Instead, we'll give you access to
 %% Symbolics' Lisp machine system, and you can run it, but that's all you can
-%% do.‚Äù
+%% do."
 
 %% This, in effect, meant that they demanded that we had to choose a side, and
 %% use either the MIT version of the system or the Symbolics version. Whichever
@@ -333,7 +341,7 @@ Enquanto isso no MIT Artificial Intelligence Lab...
 %% Up until that point, I hadn't taken the side of either company, although it
 %% made me miserable to see what had happened to our community and the
 %% software. But now, Symbolics had forced the issue. So, in an effort to help
-%% keep Lisp Machines Inc. going (5) ‚Äî I began duplicating all of the
+%% keep Lisp Machines Inc. going (5)Äî I began duplicating all of the
 %% improvements Symbolics had made to the Lisp machine system. I wrote the
 %% equivalent improvements again myself (i.e., the code was my own).
 
@@ -357,7 +365,7 @@ Enquanto isso no MIT Artificial Intelligence Lab...
 %% left.
 
 %% Once I stopped punishing Symbolics, I had to figure out what to do next. I had
-%% to make a free operating system, that was clear ‚Äî the only way that people
+%% to make a free operating system, that was clear the only way that people
 %% could work together and share was with a free operating system."
 
 \item ColaboraÁ„o virou guerra.
