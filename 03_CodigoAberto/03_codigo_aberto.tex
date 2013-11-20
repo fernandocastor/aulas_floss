@@ -75,7 +75,7 @@
 
 
 \begin{frame}
-	\frametitle{Esta aula, a anterior e a da próxima quarta }
+	\frametitle{Esta aula, a anterior e a próxima}
 	Fornecem uma visão geral sobre\vspace{0.3cm}
 	\begin{enumerate}
 	\item {\bf Software livre} \vspace{0.3cm}
@@ -114,9 +114,13 @@
 % Bruce Perens
 % Copyright held by Bruce Perens. Foto de divulgação.
 % http://www.perens.com/press/photos/HeadAndShoulders.jpg
-% Perens foi quem escreveu a Definição de Código Aberto e, durante algum tempo, foi o responsável
-% pelo projeto Debian (iniciado por Ian Murdock). Eric Raymond escreveu The Cathedral and the Bazaar,
-% um dos pontos de partida do movimento Open Source. É um dos mais famosos advogados desse movimento.
+% Perens foi quem escreveu a Definição de Código Aberto e, durante algum tempo 
+% (entre abril de 1996 e dezembro de 1997), foi o responsável
+% pelo projeto Debian (iniciado por Ian Murdock). A Definição de Código Aberto
+% é praticamente uma cópia da Debian Free Software Guidelines 
+% (http://en.wikipedia.org/wiki/Debian_Free_Software_Guidelines).
+% Eric Raymond escreveu  The Cathedral and the Bazaar, um dos pontos de partida 
+% do movimento Open Source. É um dos mais famosos advogados desse movimento.
 	\end{figure}
 \end{column}
 \end{columns}	
@@ -125,7 +129,7 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{O que é Software de Código Aberto?}
+	\frametitle{O que é Software de Código Aberto?} 
 	\begin{block}{\sout{Ideologicamente}}
     O foco do movimento Open Source \bgreen{{\em {\bf não é ideológico}}}.
  	\end{block}
@@ -171,17 +175,35 @@
     %Para construir os slides, é necessário renomear a imagem e mudar seu formato para .jpg.
     %Note que o termo de uso da imagem (reproduzido parcialmente abaixo) permite que ela seja
     %empregada para uso pessoal e não-comercial. 
-    %Termos de uso: Universal Uclick grants you a limited, personal, non-exclusive, non-commercial, revocable, non-assignable and non-transferable license to download, view and/or play one copy of the Materials (excluding source and object code) on any single computer for your personal, non-commercial use only, provided that:
-%you keep intact all copyright and other proprietary notices contained in the original Materials or any copy you may make of the Materials;
-%you make no modifications to the Materials, except as specifically permitted by us (e.g., Collaborative Content as set forth below);
-%you do not allow or aid or abet any third party (whether or not for your benefit):
-%to copy or adapt the object code of the Web Site's software, HTML, JavaScript or other code; and/or
-%reverse engineer, decompile, reverse assemble, modify or attempt to discover any source code that the Web Site creates to generate its web pages or any software or other products or processes accessible through the Web Site;
-%you do not insert any code or product to manipulate the Materials in any way that affects any user?s experience; and
-%You further agree that you will not:
+    %Termos de uso: Universal Uclick grants you a limited, personal,  
+%non-exclusive, non-commercial, revocable, non-assignable and non-transferable 
+%license to download, view and/or play one copy of the Materials (excluding 
+%source and object code) on any single computer for your personal, 
+%non-commercial use only, provided that:
+%you keep intact all copyright and other proprietary notices contained in 
+%the original Materials or any copy you may make of the Materials;
+%you make no modifications to the Materials, except as specifically permitted 
+%by us (e.g., Collaborative Content as set forth below);
+%you do not allow or aid or abet any third party (whether or not for your 
+%benefit): to copy or adapt the object code of the Web Site's software, HTML, 
+%JavaScript or other code; and/or reverse engineer, decompile, reverse 
+%assemble, modify or attempt to discover any source code that the Web Site 
+%creates to generate its web pages or any software or other products or 
+%processes accessible through the Web Site;
+%you do not insert any code or product to manipulate the Materials in any way 
+%that affects any user?s experience; and You further agree that you will not:
 %
-%modify, frame, reproduce, archive, sell, lease, rent, exchange, encumber, hypothecate, create derivative works from, publish by hard copy or electronic means, publicly perform, display, disseminate, distribute, broadcast, retransmit, circulate to any third party or on any third-party web site, or otherwise use the Materials in any way for any public or commercial purpose (except as specifically permitted by us (e.g., Viral Content Distribution and Collaborative Content creation as set forth below)); and/or
-%use any robot, spider, rover, scraper, or any other data mining technology or automatic or manual process to monitor, cache, frame, mask, extract data from, copy or distribute the Materials (except as may be a result of standard search engine or internet browser usage).
+%modify, frame, reproduce, archive, sell, lease, rent, exchange, encumber, 
+%hypothecate, create derivative works from, publish by hard copy or electronic 
+%means, publicly perform, display, disseminate, distribute, broadcast, 
+%retransmit, circulate to any third party or on any third-party web site, or 
+%otherwise use the Materials in any way for any public or commercial purpose 
+%(except as specifically permitted by us (e.g., Viral Content Distribution and 
+%Collaborative Content creation as set forth below)); and/or
+%%use any robot, spider, rover, scraper, or any other data mining technology or 
+%automatic or manual process to monitor, cache, frame, mask, extract data from, 
+%copy or distribute the Materials (except as may be a result of standard search 
+%engine or internet browser usage).
 	\end{figure}
     \begin{itemize}
     \item Com ``Código Aberto'' a ênfase fica em algo mais palpável, o código
@@ -230,28 +252,63 @@
 	{\small 
     \begin{itemize}
 \item[1] Redistribuição livre
-% Esse item não impede que uma pessoa ou organização cobre uma taxa para redistribuir o programa. Ela apenas garante o direito de redistribuir sem ter que pagar nada para ninguém. 
+% Esse item não impede que uma pessoa ou organização cobre uma taxa para  
+%redistribuir o programa. Ela apenas garante o direito de redistribuir sem ter 
+%que pagar nada para ninguém. 
 \item[2] Código fonte incluído ou acessível
 \item[3] Trabalhos derivados são permitidos\pause
 \item[4] Integridade do código fonte do autor, restrições controladas à modificação (via \textit{patches})
-%The license may restrict source-code from being distributed in modified form only if the license allows the distribution of "patch files" with the source code for the purpose of modifying the program at build time. The license must explicitly permit distribution of software built from modified source code. The license may require derived works to carry a different name or version number from the original software.
-% A licença Mozilla funciona assim.
+%The license may restrict source-code from being distributed in modified form 
+%only if the license allows the distribution of "patch files" with the source 
+%code for the purpose of modifying the program at build time. The license must 
+%explicitly permit distribution of software built from modified source code. 
+%The license may require derived works to carry a different name or version 
+%number from the original software. A licença Mozilla funciona assim.
 \item[5] Sem discriminação contra pessoas ou grupos
 \item[6] Sem discriminação contra áreas do conhecimento ou empreendimentos
-%The license must not restrict anyone from making use of the program in a specific field of endeavor. For example, it may not restrict the program from being used in a business, or from being used for genetic research.
-% A cláusula acima parece entrar em conflito com a GPL v3 na questão da Tivoization.
-
+%The license must not restrict anyone from making use of the program in a 
+%specific field of endeavor. For example, it may not restrict the program from 
+%being used in a business, or from being used for genetic research.
+%A cláusula acima parece entrar em conflito com a GPL v3 na questão da 
+%Tivoization.
 %\item[7] Distribuição da licença
-%The rights attached to the program must apply to all to whom the program is redistributed without the need for execution of an additional license by those parties.
-% Isso significa que, ao distribuir software usando uma licença de código aberto, não é possível agregar outras formas de licença que possam restringir que recebe o programa, por exemplo, não é permitido distribuir software de código aberto para uma pessoa e, ao mesmo tempo, exigir que ela assine um NDA.
-\item[8 e 9] A licença não pode ser específica para um produto ou distribuição e não deve restringir outros programas
-%The rights attached to the program must not depend on the program's being part of a particular software distribution. If the program is extracted from that distribution and used or distributed within the terms of the program's license, all parties to whom the program is redistributed should have the same rights as those that are granted in conjunction with the original software distribution.
+%The rights attached to the program must apply to all to whom the program is 
+%redistributed without the need for execution of an additional license by those 
+%parties.
+% Isso significa que, ao distribuir software usando uma licença de código 
+%aberto, não é possível agregar outras formas de licença que possam restringir 
+%quem recebe o programa, por exemplo, não é permitido distribuir software de 
+%código aberto para uma pessoa e, ao mesmo tempo, exigir que ela assine um NDA.
+\item[8 e 9] A licença não pode ser específica para um produto ou distribuição 
+e não deve restringir outros programas
+%The rights attached to the program must not depend on the program's being part 
+%of a particular software distribution. If the program is extracted from that 
+%distribution and used or distributed within the terms of the program's 
+%license, all parties to whom the program is redistributed should have the same 
+%rights as those that are granted in conjunction with the original software 
+%distribution.
 
-%No item 9, "outros programas" não é a mesma coisa que outras partes de um programa ao qual o programa original, modificado ou não, foi anexado. A idéia é impedir que a licença de um programa que é distribuído "empacotado" com outros influencie as licenças desses outros. Isso poderia ser usado para impor restrições de uso de forma colateral. 
-%The license must not place restrictions on other software that is distributed along  with the licensed software. For example, the license must not insist that all other programs distributed on the same medium must be open-source software.
+%No item 9, "outros programas" não é a mesma coisa que outras partes de um 
+%programa ao qual o programa original, modificado ou não, foi anexado. A idéia 
+%é impedir que a licença de um programa que é distribuído "empacotado" com 
+%outros influencie as licenças desses outros. Isso poderia ser usado para impor 
+%restrições de uso de forma colateral. 
+%The license must not place restrictions on other software that is distributed 
+%along  with the licensed software. For example, the license must not insist 
+%that all other programs distributed on the same medium must be open-source 
+%software.
 
 %\item[10] A licença deve ser neutra, em se tratando de tecnologia
-% Justificativa retirada do sítio da Open Source Initiative: This provision is aimed specifically at licenses which require an explicit gesture of assent in order to establish a contract between licensor and licensee. Provisions mandating so-called "click-wrap" may conflict with important methods of software distribution such as FTP download, CD-ROM anthologies, and web mirroring; such provisions may also hinder code re-use. Conformant licenses must allow for the possibility that (a) redistribution of the software will take place over non-Web channels that do not support click-wrapping of the download, and that (b) the covered code (or re-used portions of covered code) may run in a non-GUI environment that cannot support popup dialogues.
+% Justificativa retirada do sítio da Open Source Initiative: This provision is 
+%aimed specifically at licenses which require an explicit gesture of assent in 
+%order to establish a contract between licensor and licensee. Provisions 
+%mandating so-called "click-wrap" may conflict with important methods of 
+%software distribution such as FTP download, CD-ROM anthologies, and web 
+%mirroring; such provisions may also hinder code re-use. Conformant licenses 
+%must allow for the possibility that (a) redistribution of the software will 
+%take place over non-Web channels that do not support click-wrapping of the 
+%download, and that (b) the covered code (or re-used portions of covered code) 
+%may run in a non-GUI environment that cannot support popup dialogues.
     \end{itemize}}
 \end{frame}
 
@@ -291,6 +348,10 @@
 	% Licença: This file contains a logo for a Mozilla product (such as the Firefox browser or the Mozilla Thunderbird email client) and is protected by copyright and/or trademark by the Mozilla Foundation and/or its subsidiary Mozilla Corporation. According to the Mozilla trademark policy, the logo is free to use as long as: (i) It is non-confusing and non-disparaging; (ii) It is not used commercially; (iii) It is not modified; (iv) It is not high resolution.
 	\end{center}
 	\end{figure}
+
+	% Resultado de uma busca rápida na MSDN.com (brasileira): 
+	% "software livre" (assim, entre aspas) resultou em 143 ocorrências
+	% enquanto "código aberto"  produziu 10.500 ocorrências.
 \end{frame}
 
 \section{Diferenças e Semelhancas}
@@ -323,7 +384,12 @@
 \item \vspace{0.1cm} Práticas {\bf indistinguíveis}
 \begin{itemize}
 \item Principalmente após ``The Cathedral and the Bazaar''\vspace{0.1cm}
-% Inicialmente, todo o texto de The Cathedral and the Bazaar utilizava o termo  ``Free Software''. Em fevereiro de 1998, mais ou menos quando o termo ``Open Source'' foi cunhado, Raymond substituiu no ensaio todos os usos de ``free software'' por ``open source software''. Está no histórico de revisões do ensaio, em http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/.
+% Inicialmente, todo o texto de The Cathedral and the Bazaar utilizava o termo   
+%``Free Software''. Em fevereiro de 1998, mais ou menos quando o termo ``Open 
+%Source'' foi cunhado, Raymond substituiu no ensaio todos os usos de ``free 
+%software'' por ``open source software''. Está no histórico de revisões do 
+%ensaio, em 
+%http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/.
 \end{itemize}
 \item Amplo espectro de pontos de vista\vspace{0.1cm}
 \end{itemize}
@@ -368,11 +434,19 @@ Resposta curta: \textbf{SIM!}
 \begin{itemize}
 \item Não faz sentido\pause
 %Software Livre => Não poder {\bf cobrar}  por software? 
-%Não, mas implica em formas diferentes de se cobrar. Como usuários são livres (ou seja, sem restrições de qualquer natureza) para distribuir o sistema, em teoria, depois que uma única pessoa pagasse o preço para obter uma cópia de um sistema, poderia redistribui-la para quem quisesse, o que quebra o esquema de licenciamento por uso adotado para muitos sistemas de software comerciais. e
-%Licenças do tipo "pagar pelo direito de usar em uma máquina", como no Windows, ou do tipo "livre para uso não-comercial" intrinsecamente ferem as quatro liberdades e os Itens 1, 5 e 6 da OSD. 
+%Não, mas implica em formas diferentes de se cobrar. Como usuários são livres  
+%(ou seja, sem restrições de qualquer natureza) para distribuir o sistema, em 
+%teoria, depois que uma única pessoa pagasse o preço para obter uma cópia de um 
+%sistema, poderia redistribui-la para quem quisesse, o que quebra o esquema de 
+%licenciamento por uso adotado para muitos sistemas de software comerciais. e
+%Licenças do tipo "pagar pelo direito de usar em uma máquina", como no Windows,  
+%ou do tipo "livre para uso não-comercial" intrinsecamente ferem as quatro 
+%liberdades e os Itens 1, 5 e 6 da OSD. 
 %Mais informações: http://www.gnu.org/philosophy/selling.html 
 \item E cobrar por instalações em máquinas, pode?\pause
-%Sim, mas não pode exigir que todos paguem ;), pelo mesmo motivo que nãofaz sentido vender programas (veja acima). Feriria várias liberdades e os Itens 1, 5 e 6 da OSD.
+%Sim, mas não pode exigir que todos paguem ;), pelo mesmo motivo que não faz 
+%sentido vender programas (veja acima). Feriria várias liberdades e os Itens 1, 
+%5 e 6 da OSD.
 \item Restringir uso comercial?
 %Não. Veja acima.
 \end{itemize}
@@ -381,9 +455,20 @@ Resposta curta: \textbf{SIM!}
 \end{frame}
 
 
-%Perens, Raymond e Stallman: três visões distintas. Interessante é o email de 1999 do Perens, "It's Time to Talk About Free Software Again" (http://lists.debian.org/debian-devel/1999/02/msg01641.html).
+%Perens, Raymond e Stallman: três visões distintas. Interessante é o email de  
+%1999 do Perens, "It's Time to Talk About Free Software Again" 
+%(http://lists.debian.org/debian-devel/1999/02/msg01641.html).
 %Interessante também (extraído da Wikipedia, http://en.wikipedia.org/wiki/Bruce_Perens): 
-%(Bruce) Perens poses Open Source as a means of marketing the free software philosophy of Richard Stallman to business people who are more concerned with profit than freedom, and states that open source and free software are only two ways of talking about the same phenomenon. This differs from Stallman[5][6] and Raymond. Perens postulates an economic theory for business use of Open Source in his paper The Emerging Economic Paradigm of Open Source and his speech Innovation Goes Public.[7] This differs from Raymond's theory in The Cathedral and the Bazaar, which having been written before there was much business involvement in open source, explains open source as a consequence of programmer motivation and leisure.
+%(Bruce) Perens poses Open Source as a means of marketing the free software  
+%philosophy of Richard Stallman to business people who are more concerned with 
+%profit than freedom, and states that open source and free software are only 
+%two ways of talking about the same phenomenon. This differs from 
+%Stallman[5][6] and Raymond. Perens postulates an economic theory for business 
+%use of Open Source in his paper The Emerging Economic Paradigm of Open Source 
+%and his speech Innovation Goes Public.[7] This differs from Raymond's theory 
+%in The Cathedral and the Bazaar, which having been written before there was 
+%much business involvement in open source, explains open source as a 
+%consequence of programmer motivation and leisure.
 
 
 \section{Fim}
@@ -392,7 +477,7 @@ Resposta curta: \textbf{SIM!}
 \begin{frame}
 \vspace{0.2cm}
 \begin{center}
-\Large{Discussão em duas semanas: \\The Cathedral and the Bazaar}
+\Large{Discussão em quatro semanas: \\The Cathedral and the Bazaar}
 \end{center}
 \pause
 \begin{block}{Vocês devem:}
